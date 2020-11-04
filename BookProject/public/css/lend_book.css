@@ -1,0 +1,21 @@
+/*中央揃え*/
+#book_p{
+  text-align: center;
+}
+/*横並び*/
+#book{
+  display: inline-block;
+}
+/*中央揃え*/
+#button{
+  text-align: center;
+}
+#lend{
+  text-align: center;
+  color:#666
+}
+/*ヘッダー右寄せ*/
+#header{
+  text-align: right;
+}
+/**/
