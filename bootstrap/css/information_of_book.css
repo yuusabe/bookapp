@@ -1,0 +1,15 @@
+/*本中央よせ*/
+#book_p{
+  text-align: center;
+}
+#button{
+  text-align: center;
+}
+/*横並び*/
+#book{
+  display: inline-block;
+}
+/*ヘッダー右寄せ*/
+#header{
+  text-align: right;
+}

@@ -1,0 +1,12 @@
+/*中央揃え*/
+#account{
+  text-align: center;
+  color: #666;
+}
+#button{
+  text-align: center;
+}
+/*ヘッダー右寄せ*/
+#header{
+  text-align: right;
+}

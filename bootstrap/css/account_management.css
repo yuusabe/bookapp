@@ -1,0 +1,8 @@
+/*中央揃え*/
+#button{
+  text-align: center;
+}
+/*ヘッダー右寄せ*/
+#header{
+  text-align: right;
+}

@@ -1,0 +1,12 @@
+/*中央揃え*/
+#button{
+  text-align: center;
+}
+#text{
+  text-align: center;
+  color: #666;
+}
+/*ヘッダー右寄せ*/
+#header{
+  text-align: right;
+}
