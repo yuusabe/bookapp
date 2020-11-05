@@ -1,7 +1,7 @@
 <?php $title = "DTGBOOK【アカウント削除確認画面】";?>
 <?php $csspath = "css/account_delete_check.css";?>
 
-<?php include("header.php"); ?>
+@extends("common.header");
 
 <main>
   <div id="text">
@@ -18,4 +18,4 @@
   </div>
 </main>
 
-<?php include("footer.php"); ?>
+@section("common.footer");

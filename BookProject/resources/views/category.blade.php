@@ -1,7 +1,7 @@
 <?php $title = "DTGBOOK【カテゴリ管理画面】";?>
 <?php $csspath = "css/category.css";?>
 
-<?php include("header.php"); ?>
+@extends("common.header");
 
 <main>
     <p>カテゴリ</p>
@@ -18,4 +18,4 @@
     </div>
 </main>
 
-<?php include("footer.php"); ?>
+@section("common.footer");
