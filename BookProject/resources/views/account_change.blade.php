@@ -1,7 +1,7 @@
-<?php $title = "DTGBOOK【書籍一覧】";?>
-<?php $csspath = "css/account_management.css";?>
+<?php $title = "DTGBOOK【アカウント編集画面】";?>
+<?php $csspath = "account_change.css";?>
 
-<?php include("header.php"); ?>
+@extends("common.header");
 
 <main>
   <form class="form-inline">
@@ -31,19 +31,14 @@
       </ul>
     </div>
     <div id="button">
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_management_check.html'">
-        アカウント登録
+      <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_management.html'">
+        キャンセル
       </button>
-    </div>
-    <div id="button">
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_change.html'">
-        編集
-      </button>
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_delete_check.html'">
-        削除
+      <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_change_check.html'">
+        更新
       </button>
     </div>
   </form>
 </main>
 
-<?php include("footer.php"); ?>
+@section("common.footer");

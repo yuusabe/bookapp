@@ -1,7 +1,7 @@
 <?php $title = "DTGBOOK【書籍一覧】";?>
 <?php $csspath = "css/book_change.css";?>
 
-<?php include("header.php"); ?>
+@extends("common.header");
 
 <main>
     <div id="text">
@@ -22,4 +22,4 @@
     </div>
 </main>
 
-<?php include("footer.php"); ?>
+@section("common.footer");

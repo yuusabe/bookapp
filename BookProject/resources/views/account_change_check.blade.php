@@ -1,7 +1,7 @@
 <?php $title = "DTGBOOK【アカウント編集確認画面】";?>
 <?php $csspath = "css/account_change_check.css";?>
 
-<?php include("header.php"); ?>
+@extends("common.header");
 
 <main>
     <div id="text">アカウント編集の変更内容はこちらでよろしいでしょうか</p>
@@ -15,4 +15,4 @@
     </div>
 </main>
 
-<?php include("footer.php"); ?>
+@section("common.footer");

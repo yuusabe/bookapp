@@ -1,7 +1,7 @@
 <?php $title = "DTGBOOK【書籍登録確認画面】";?>
 <?php $csspath = "css/book_add_check.css";?>
 
-<?php include("header.php"); ?>
+@extends("common.header");
 
 <main>
     <div id="book">
@@ -18,4 +18,4 @@
     </div>
 </main>
 
-<?php include("footer.php"); ?>
+@section("common.footer");

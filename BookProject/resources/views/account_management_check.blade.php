@@ -1,7 +1,7 @@
 <?php $title = "DTGBOOK【アカウント登録確認画面】";?>
 <?php $csspath = "css/account_management_check.css";?>
 
-<?php include("header.php"); ?>
+@extends("common.header");
 
 <main>
     <div id="account">
@@ -19,4 +19,4 @@
     </div>
 </main>
 
-<?php include("footer.php"); ?>
+@section("common.footer");
