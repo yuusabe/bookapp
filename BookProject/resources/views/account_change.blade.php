@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【アカウント編集画面】";?>
 <?php $csspath = "account_change.css";?>
 
-@extends("common.header");
+@extends("common.header")
+@section('header_body')
 
 <main>
   <form class="form-inline">
@@ -41,4 +42,5 @@
   </form>
 </main>
 
-@section("common.footer");
+@endsection
+@extends("common.footer")

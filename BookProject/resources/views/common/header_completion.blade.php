@@ -14,3 +14,6 @@
     </style>
     <title><?=$title?></title>
 </head>
+<body>
+@yield('header_complition_body')
+</body>

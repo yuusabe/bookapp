@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【書籍一覧】";?>
 <?php $csspath = "css/account_management.css";?>
 
-@extends("common.header");
+@extends("common.header")
+@section('header_body')
 
 <main>
   <form class="form-inline">
@@ -46,4 +47,5 @@
   </form>
 </main>
 
-@section("common.footer");
+@endsection
+@extends("common.footer")

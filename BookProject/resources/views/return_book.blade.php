@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【書籍返却画面】";?>
 <?php $csspath = "css/return_book.css";?>
 
-@extends("common.header");
+@extends("common.header")
+@section('header_body')
 
 <main>
     <div id="book_p">
@@ -28,4 +29,5 @@
     </div>
 </main>
 
-@section("common.footer");
+@endsection
+@extends("common.footer")
