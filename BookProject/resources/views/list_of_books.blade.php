@@ -55,7 +55,7 @@
         詳細表示
       </button>
       
-      <button type="button" class="btn btn-outline-danger pull-light">
+      <button type="button" class="btn btn-outline-danger">
         書籍編集
       </button>
     </div>
