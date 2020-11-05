@@ -5,10 +5,10 @@
 
 <main>
     <div id="apple">
-        <p>
-            完了しました。
-        </p>
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='category.html'">
+        <div id="text">
+            <p>完了しました。</p>
+        </div>
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='category.php'">
             OK
         </button>
     </div>
