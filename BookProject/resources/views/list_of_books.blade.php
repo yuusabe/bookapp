@@ -63,3 +63,4 @@
 </main>
 
 @section("common.footer");
+@extends("js/dropdown.js")
