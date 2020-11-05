@@ -4,8 +4,9 @@
 @extends("common.header");
 
 <main>
-    <div>
+    <div id="book">
         <p>書籍情報<p>
+    </div>
     <div id="text">
         <p>削除する本の内容はこちらでよろしいでしょうか。</p>
     </div>
