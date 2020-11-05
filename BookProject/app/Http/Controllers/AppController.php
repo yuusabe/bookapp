@@ -47,4 +47,20 @@ class AppController extends Controller
     {
         return view('password_change');
     }
+    public function completion()
+    {
+        return view('completion');
+    }
+    public function completion_account()
+    {
+        return view('completion_account');
+    }
+    public function completion_book()
+    {
+        return view('completion_book');
+    }
+    public function completion_category()
+    {
+        return view('completion_category');
+    }
 }
