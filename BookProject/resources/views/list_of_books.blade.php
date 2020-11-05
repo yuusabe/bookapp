@@ -50,16 +50,15 @@
       <p>出版社：技術評論社</p>
       <p>貸出状況：貸出可</p>
     </div>
-    
-    <div id="book">
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='information_of_book.php'">
-        詳細表示
-      </button>
-      
-      <button type="button" class="btn btn-outline-danger">
-        書籍編集
-      </button>
-    </div>
+  </div>
+  
+  <div id="book">
+    <button type="button" class="btn btn-outline-secondary" onclick="location.href='information_of_book.php'">
+      詳細表示
+    </button>
+    <button type="button" class="btn btn-outline-danger">
+      書籍編集
+    </button>
   </div>
 </main>
 

@@ -8,6 +8,9 @@
     <div id="book">
         <p>書籍情報表示</p>
     </div>
+    <div id="text">
+        <p>登録する書籍の内容はこちらでよろしいですか？</p>
+    </div>
     
     <div id="button">
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_add.html'">

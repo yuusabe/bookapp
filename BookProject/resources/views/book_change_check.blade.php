@@ -5,8 +5,11 @@
 @section('header_body')
 
 <main>
-    <div id="text">
+    <div id="book">
         <p>書籍情報表示</p>
+    </div>
+    <div id="text">
+        <p>書籍の情報はこちらでよろしいですか？</p>
     </div>
     
     <div id="button">
