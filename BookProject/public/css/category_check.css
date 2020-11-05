@@ -6,6 +6,11 @@
   text-align: center;
   color: #666;
 }
+#text{
+  text-align: center;
+  color: #666;
+  font-size: x-large;
+}
 /*ヘッダー右寄せ*/
 #header{
   text-align: right;

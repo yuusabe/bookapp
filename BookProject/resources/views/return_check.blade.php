@@ -17,7 +17,7 @@
         </div>
     </div>
     <div id="return">
-        <p>この本を返却します</p>
+        <p>返却書籍の内容はこちらでよろしいですか？</p>
     </div>
     <div id="button">
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='return_book.html'">

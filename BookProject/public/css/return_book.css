@@ -1,7 +1,7 @@
 /*中央揃え*/
 #book{
   text-align: center;
-  color:#666
+  color:#666;
 }
 /*中央揃え*/
 #book_p{
@@ -17,7 +17,8 @@
 }
 #return{
   text-align: center;
-  color:#666
+  color:#666;
+  font-size: x-large;
 }
 /*ヘッダー右寄せ*/
 #header{
