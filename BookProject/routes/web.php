@@ -27,5 +27,6 @@ Route::get('/貸出', 'App\Http\Controllers\AppController@lend_book');
 Route::get('/貸出確認', 'App\Http\Controllers\AppController@lend_check');
 Route::get('/返却', 'App\Http\Controllers\AppController@return_book');
 Route::get('/返却確認', 'App\Http\Controllers\AppController@return_check');
+Route::get('/完了', 'App\Http\Controllers\AppController@completion');
 Route::get('/マイページ', 'App\Http\Controllers\AppController@mypage');
 Route::get('/パスワード変更', 'App\Http\Controllers\AppController@password_change');

@@ -1,7 +1,7 @@
 <?php $title = "DTGBOOK【貸出情報確認】";?>
 <?php $csspath = "css/lend_check.css";?>
 
-extends("common.header"); ?>
+extends("common.header");
 
 
     <main>
