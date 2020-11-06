@@ -11,7 +11,7 @@
     </div>
     <div id="mail">
         <form>
-            <input type="email" name="email" size="10" value="abc@example.com">
+            <input type="email" id="email" name="email" size="50" value="abc@example.com">
         </form>
     </div>
     <div id="button">
