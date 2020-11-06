@@ -1,18 +1,18 @@
 /*中央揃え*/
 #button{
   text-align: center;
+  margin-top: 10px;
 }
 #text{
   text-align: center;
   color: #666;
+  margin-top: 20px;
 }
 #book{
   text-align: center;
+  margin-top: 30px;
 }
 /*ヘッダー右寄せ*/
 #header{
   text-align: right;
-}
-#all{
-  vertical-align: middle;
 }
