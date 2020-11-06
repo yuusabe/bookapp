@@ -7,7 +7,16 @@
   color: #666;
   font-size: x-large;
 }
+#account{
+  text-align: center;
+  color: #666;
+  font-size: x-large;
+}
 /*ヘッダー右寄せ*/
 #header{
   text-align: right;
+}
+/*真ん中*/
+#all{
+  vertical-align: middle;
 }

@@ -1,5 +1,6 @@
 <?php $title = "DTGBOOK【書籍一覧】";?>
 <?php $csspath = "css/list_of_books.css";?>
+<?php $jspath = "js/dropdown.js";?>
 
 @extends("common.header")
 @section('body')
@@ -42,7 +43,7 @@
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   <div id="book_p">
     <div id="book">
-      <img src="book_001.png" id="icon" alt="アイコン" width="135" height="130" />
+      <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="130" />
     </div>
     
     <div id="book">
@@ -62,6 +63,5 @@
   </div>
 </main>
 
-@extends("js.dropdown.js")
 @endsection
 @extends("common.footer")
