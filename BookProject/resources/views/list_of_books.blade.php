@@ -62,10 +62,6 @@
   </div>
 </main>
 
-<<<<<<< HEAD
-@section("common.footer");
 @extends("js.dropdown.js")
-=======
 @endsection
 @extends("common.footer")
->>>>>>> 530971474d602c69d3f32451e023169a8f658e91
