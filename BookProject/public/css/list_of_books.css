@@ -42,6 +42,7 @@
 /*横並び*/
 #book{
   display: inline-block;
+  text-align: center;
 }
 /*ヘッダー右寄せ*/
 #header{
