@@ -8,7 +8,7 @@
     <div id="all">
         <div id="book_p">
             <div id="book">
-                <img src="image/book_001.png" id="icon" alt="アイコン" width="135" height="130" />
+                <img src="image/book_001.png" id="icon" alt="表紙画像" width="135" height="130" />
             </div>
             
             <div id="book">
