@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/test', 'App\Http\Controllers\AppController@test');
+Route::get('/account_change_check', 'App\Http\Controllers\TestController@testdata');
+
+
+
 Route::get('/account_change_check', 'App\Http\Controllers\AppController@account_change_check');
 
 Route::get('/account_change', 'App\Http\Controllers\AppController@account_change');
