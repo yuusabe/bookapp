@@ -5,7 +5,9 @@
 @section('body')
 
 <main>
-    <p>カテゴリ</p>
+    <div id="category">
+        <p>カテゴリ</p>
+    </div>
     <button type="button" class="btn btn-outline-secondary">
         削除
     </button>

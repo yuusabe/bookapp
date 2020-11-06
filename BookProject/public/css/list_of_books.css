@@ -18,6 +18,8 @@
   color:#fff;/*検索ボタンのテキストカラー*/ 
   font-weight:bold;/*検索ボタンのテキスト太字*/ 
   font-size:16px;/*検索ボタンのフォントサイズ*/ 
+  outline: none;
+  border-color: #666;
 }
 /*検索ボタンマウスオーバー時*/
 #sbtn:hover{
