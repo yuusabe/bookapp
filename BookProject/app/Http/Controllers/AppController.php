@@ -6,18 +6,69 @@ use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
-    public function booklist()
+    public function account_change_check()
     {
-        return view('booklist');
+        return view('account_change_check');
     }
-
-    public function login()
+    public function account_change()
     {
-        return view('login');
+        return view('account_change');
     }
-    public function list_of_books()
+    public function account_delete_check()
     {
-        return view('list_of_books');
+        return view('account_delete_check');
+    }
+    public function account_management_check()
+    {
+        return view('account_management_check');
+    }
+    public function account_management()
+    {
+        return view('account_management');
+    }
+    public function book_add_check()
+    {
+        return view('book_add_check');
+    }
+    public function book_add()
+    {
+        return view('book_add');
+    }
+    public function book_change_check()
+    {
+        return view('book_change_check');
+    }
+    public function book_change()
+    {
+        return view('book_change');
+    }
+    public function book_delete_check()
+    {
+        return view('book_delete_check');
+    }
+    public function category_check()
+    {
+        return view('category_check');
+    }
+    public function category()
+    {
+        return view('category');
+    }
+    public function completion_account()
+    {
+        return view('completion_account');
+    }
+    public function completion_book()
+    {
+        return view('completion_book');
+    }
+    public function completion_category()
+    {
+        return view('completion_category');
+    }
+    public function completion()
+    {
+        return view('completion');
     }
     public function information_of_book()
     {
@@ -31,13 +82,13 @@ class AppController extends Controller
     {
         return view('lend_check');
     }
-    public function return_book()
+    public function list_of_books()
     {
-        return view('return_book');
+        return view('list_of_books');
     }
-    public function return_check()
+    public function login()
     {
-        return view('return_check');
+        return view('login');
     }
     public function mypage()
     {
@@ -47,20 +98,12 @@ class AppController extends Controller
     {
         return view('password_change');
     }
-    public function completion()
+    public function return_book()
     {
-        return view('completion');
+        return view('return_book');
     }
-    public function completion_account()
+    public function return_check()
     {
-        return view('completion_account');
-    }
-    public function completion_book()
-    {
-        return view('completion_book');
-    }
-    public function completion_category()
-    {
-        return view('completion_category');
+        return view('return_check');
     }
 }
