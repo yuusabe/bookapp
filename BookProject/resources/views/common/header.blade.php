@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href=<?=$csspath?>>
+    <link rel="stylesheet" href="css/header.css">
     <style>
         body {background-color: rgb(187, 239, 255);}
         header {background-color: #fffef4;}
@@ -17,9 +18,9 @@
 <body>
 <header class="header_button">
         <div>
-            <img src="image/dtg_book_logo.png" id="icon" alt="アイコン" width="135" height="130" />
+            <img src="image/dtg_book_logo.png" id="pine" alt="アイコン" width="135" height="130" />
         </div>
-        <div id="header">
+        <div id="header" id="pine">
             <button type="button" class="btn btn-outline-danger">
                 書籍登録
             </button>
@@ -39,7 +40,7 @@
                 ログアウト
             </button>
         </div>
-    </header>
-    @yield('body')
+</header>
+@yield('body')
 </body>
 
