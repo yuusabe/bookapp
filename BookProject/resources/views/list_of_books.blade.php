@@ -1,5 +1,6 @@
 <?php $title = "DTGBOOK【書籍一覧】";?>
 <?php $csspath = "css/list_of_books.css";?>
+<?php $jspath = "js/dropdown.js";?>
 
 @extends("common.header")
 @section('body')
@@ -62,6 +63,5 @@
   </div>
 </main>
 
-@extends("js.dropdown.js")
 @endsection
 @extends("common.footer")
