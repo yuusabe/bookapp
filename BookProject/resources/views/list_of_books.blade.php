@@ -52,14 +52,17 @@
       <p>貸出状況：貸出可</p>
     </div>
   </div>
-  
-  <div id="button">
-    <button type="button" class="btn btn-outline-secondary" onclick="location.href='information_of_book.php'">
-      詳細表示
-    </button>
-    <button type="button" class="btn btn-outline-danger">
-      書籍編集
-    </button>
+  <div id="button_p">
+    <div id="button">
+      <button type="button" class="btn btn-outline-secondary" onclick="location.href='information_of_book.php'">
+        詳細表示
+      </button>
+    </div>
+    <div id="button">
+      <button type="button" class="btn btn-outline-danger">
+        書籍編集
+      </button>
+    </div>
   </div>
 </main>
 

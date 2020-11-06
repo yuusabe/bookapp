@@ -31,13 +31,17 @@
         <li><button class="dropdown-item" value="著者">一般ユーザ</button></li>
       </ul>
     </div>
-    <div id="button">
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_management.html'">
-        キャンセル
-      </button>
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_change_check.html'">
-        更新
-      </button>
+    <div id="button_p">
+      <div id="button">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_management.html'">
+          キャンセル
+        </button>
+      </div>
+      <div id="button">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_change_check.html'">
+          更新
+        </button>
+      </div>
     </div>
   </form>
 </main>

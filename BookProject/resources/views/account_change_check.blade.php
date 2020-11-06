@@ -11,13 +11,17 @@
     <div id="text">
       <p>アカウント編集の変更内容はこちらでよろしいでしょうか</p>
     </div>
-    <div id="button">
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change'">
-        キャンセル
-      </button>
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/completion.html'">
-        確定
-      </button>
+    <div id="button_p">
+      <div id="button">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change'">
+          キャンセル
+        </button>
+      </div>
+      <div id="button">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/completion.html'">
+          確定
+        </button>
+      </div>
     </div>
   </div>
 </main>

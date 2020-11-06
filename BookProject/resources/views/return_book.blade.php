@@ -19,15 +19,17 @@
     <div id="return">
         <p>この本を返却します</p>
     </div>
-    <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='mypage.html'">
-            キャンセル
-        </button>
-    </div>
-    <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='return_check.html'">
-            確認
-        </button>
+    <div id="button_p">
+        <div id="button">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='mypage.html'">
+                キャンセル
+            </button>
+        </div>
+        <div id="button">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='return_check.html'">
+                確認
+            </button>
+        </div>
     </div>
 </main>
 

@@ -12,14 +12,17 @@
         <div id="text">
             <p>登録する書籍の内容はこちらでよろしいですか？</p>
         </div>
-        
-        <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_add.html'">
-                キャンセル
-            </button>
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion_book.html'">
-                確定
-            </button>
+        <div id="button_p">
+            <div id="button">
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_add.html'">
+                    キャンセル
+                </button>
+            </div>
+            <div id="button">
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion_book.html'">
+                    確定
+                </button>
+            </div>
         </div>
     </div>
 </main>

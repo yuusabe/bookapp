@@ -3,9 +3,12 @@
   text-align: center;
   margin-top: 30px;
 }
-#button{
+#button_p{
   text-align: center;
+}
+#button{
   margin: 10px 20px;
+  display: inline-block;
 }
 /*横並び*/
 #book{
