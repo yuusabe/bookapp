@@ -51,7 +51,7 @@ Route::get('/lend_book', 'App\Http\Controllers\AppController@lend_book');
 
 Route::get('/lend_check', 'App\Http\Controllers\AppController@lend_check');
 
-Route::get('/list_of_books', 'App\Http\Controllers\AppController@list_of_books')
+Route::get('/list_of_books', 'App\Http\Controllers\AppController@list_of_books');
 
 Route::get('/login', 'App\Http\Controllers\AppController@login');
 
