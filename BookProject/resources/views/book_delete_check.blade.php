@@ -5,21 +5,23 @@
 @section('body')
 
 <main>
-    <div id="book">
-        <p>書籍情報<p>
-    </div>
-    <div id="text">
-        <p>削除する本の内容はこちらでよろしいでしょうか。</p>
-    </div>
-    
-    <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_change.html'">
-            キャンセル
-        </button>
+    <div id="all">
+        <div id="book">
+            <p>書籍情報<p>
+        </div>
+        <div id="text">
+            <p>削除する本の内容はこちらでよろしいでしょうか。</p>
+        </div>
         
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion.html'">
-            確定
-        </button>
+        <div id="button">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_change.html'">
+                キャンセル
+            </button>
+            
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion.html'">
+                確定
+            </button>
+        </div>
     </div>
 </main>
 
