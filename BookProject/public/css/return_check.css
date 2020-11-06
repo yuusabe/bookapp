@@ -13,8 +13,10 @@
   display: inline-block;
 }
 /*中央揃え*/
-#button{
+#button_p{
   text-align: center;
+}
+#button{
   margin: 10px 20px;
   display: inline-block;
 }
