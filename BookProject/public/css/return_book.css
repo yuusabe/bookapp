@@ -3,6 +3,10 @@
   text-align: center;
   color:#666;
   display: inline-block;
+  vertical-align: top;
+}
+#icon{
+  margin-top: 50px;
 }
 /*中央揃え*/
 #book_p{
