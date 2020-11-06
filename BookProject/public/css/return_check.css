@@ -6,6 +6,7 @@
 /*中央揃え*/
 #book_p{
   text-align: center;
+  margin: 10px;
 }
 /*横並び*/
 #book{
@@ -23,8 +24,4 @@
 /*ヘッダー右寄せ*/
 #header{
   text-align: right;
-}
-/*真ん中*/
-#all{
-  vertical-align: middle;
 }
