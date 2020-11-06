@@ -11,3 +11,11 @@
 #header{
   text-align: right;
 }
+#account{
+  text-align: center;
+  color: #666;
+  font-size: x-large;
+}
+#all{
+  vertical-align: middle;
+}

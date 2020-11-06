@@ -24,4 +24,7 @@
 #header{
   text-align: right;
 }
-/**/
+/*真ん中*/
+#all{
+  vertical-align: middle;
+}
