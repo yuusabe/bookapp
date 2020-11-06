@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【マイページ】";?>
 <?php $csspath = "css/mypage.css";?>
 
-@extends("common.header");
+@extends("common.header")
+@section('header_body')
 
 <main>
     <div id="account">
@@ -31,4 +32,5 @@
     </div>
 </main>
 
-@section("common.footer");
+@endsection
+@extends("common.footer")

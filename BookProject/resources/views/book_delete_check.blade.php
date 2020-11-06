@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【書籍削除確認画面】";?>
 <?php $csspath = "css/book_delete_check.css";?>
 
-@extends("common.header");
+@extends("common.header")
+@section('header_body')
 
 <main>
     <div id="book">
@@ -22,4 +23,5 @@
     </div>
 </main>
 
-@section("common.footer");
+@endsection
+@extends("common.footer")

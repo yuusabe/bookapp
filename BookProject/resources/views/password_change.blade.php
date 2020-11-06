@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【パスワード変更画面】";?>
 <?php $csspath = "css/password_change.css";?>
 
-@extends("common.header");
+@extends("common.header")
+@section('header_body')
 
 <main>
     <p>Hi!</p>
@@ -16,4 +17,5 @@
     </div>
 </main>
 
-@section("common.footer");
+@endsection
+@extends("common.footer")

@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【書籍一覧】";?>
 <?php $csspath = "css/list_of_books.css";?>
 
-@extends("common.header");
+@extends("common.header")
+@section('header_body')
 
 <main>
   <div id="search"><form>
@@ -61,5 +62,10 @@
   </div>
 </main>
 
+<<<<<<< HEAD
 @section("common.footer");
 @extends("js.dropdown.js")
+=======
+@endsection
+@extends("common.footer")
+>>>>>>> 530971474d602c69d3f32451e023169a8f658e91

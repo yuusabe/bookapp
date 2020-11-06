@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【完了画面】";?>
 <?php $csspath = "css/completion.css";?>
 
-@extends("header_completion.php");
+@extends("common.header")
+@section('header_body')
 
 <main>
     <div id="apple">
@@ -14,4 +15,5 @@
     </div>
 </main>
 
-@extends("common.footer");
+@endsection
+@extends("common.footer")

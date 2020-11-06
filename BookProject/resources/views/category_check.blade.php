@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【書籍一覧】";?>
 <?php $csspath = "css/category_check.css";?>
 
-@extends("common.header");
+@extends("common.header")
+@section('header_body')
 
 <main>
     <div id="category">
@@ -21,4 +22,5 @@
     </div>
 </main>
 
-@section("common.footer");
+@endsection
+@extends("common.footer")

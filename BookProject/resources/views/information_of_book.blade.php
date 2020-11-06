@@ -1,7 +1,8 @@
 <?php $title = "DTGBOOK【書籍詳細画面】";?>
 <?php $csspath = "css/information_of_book.css";?>
 
-@extends("common.header");
+@extends("common.header")
+@section('header_body')
 
 <main>
     <div id="book_p">
@@ -25,4 +26,5 @@
     </div>
  </main>
 
- @section("common.footer");
+ @endsection
+@extends("common.footer")

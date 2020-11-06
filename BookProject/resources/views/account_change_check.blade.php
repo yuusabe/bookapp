@@ -2,7 +2,7 @@
 <?php $csspath = "css/account_change_check.css";?>
 
 @extends("common.header");
-
+@section('header_body')
 <main>
     <div id="text">アカウント編集の変更内容はこちらでよろしいでしょうか</p>
     <div id="button">
@@ -15,4 +15,5 @@
     </div>
 </main>
 
-@section("common.footer");
+@endsection
+@extends("common.footer")
