@@ -47,9 +47,13 @@
     </div>
     
     <div id="book">
-      <p>タイトル：RPAのはじめかた</p>
-      <p>出版社：技術評論社</p>
-      <p>貸出状況：貸出可</p>
+      <div id="text">
+        <p id="category">RPA</p>
+        <p id="title">タイトル：RPAのはじめかた</p>
+        <p>発行年：2001年</p>
+        <p>出版社：技術評論社</p>
+        <p>貸出状況：貸出可</p>
+      </div>
     </div>
   </div>
   <div id="button_p">

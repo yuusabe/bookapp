@@ -5,24 +5,33 @@
 @section('body')
 
 <main>
-    <div id="account">
-        <p>アカウント情報</p>
+    <div id="account_p">
+        <div id="text">
+            <p>アカウント登録情報</p>
+        </div>
+        <div id="account">
+            <p>アカウント名：DTG太郎</p>
+            <p>メールアドレス：tarou@pasona.tech</p>
+            <p>パスワード：・・・・・・・・・・</p>
+        </div>
     </div>
     <div id="button">
         <button type="button" class="btn btn-outline-secondary"  onclick="location.href='password_change.html'">
             パスワード変更
         </button>
     </div>
+    <div id="text">
+        <p>貸出中書籍</p>
+    </div>
     <div id="book_p">
         <div id="book">
             <img src="image/book_001.png" id="icon" alt="アイコン" width="135" height="130" />
         </div>
-        
         <div id="book">
-            <p>貸出中書籍</p>
             <p>タイトル：RPAのはじめかた</p>
-            <p>出版社：技術評論社</p>
-            <p>貸出状況：貸出可</p>
+            <p>発行年：2001年</p>
+            <p>著者：DTG花子</p>
+            <p>返却期限：yyyy/MM/dd</p>
         </div>
     </div>
     <div id="button">

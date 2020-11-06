@@ -10,10 +10,13 @@
             <img src="image/book_001.png" id="icon" alt="表紙画像" width="135" height="130" />
         </div>
         <div id="book">
-            <p>タイトル：RPAのはじめかた</p>
-            <p>出版社：技術評論社</p>
-            <p>貸出状況：貸出可</p>
-            <p>貸出期間：yyyyMMdd ~ yyyyMMdd</p>
+            <div id="text">
+                <p id="title">タイトル：RPAのはじめかた</p>
+                <p>発行年：2001年</p>
+                <p>著者：DTG花子</p>
+                <p>出版社：技術評論社</p>
+                <p>カテゴリ：RPA</p>
+            </div>
         </div>
     </div>
     <div id="return">
