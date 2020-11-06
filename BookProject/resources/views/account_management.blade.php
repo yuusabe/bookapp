@@ -2,7 +2,7 @@
 <?php $csspath = "css/account_management.css";?>
 
 @extends("common.header")
-@section('header_body')
+@section('body')
 
 <main>
   <form class="form-inline">

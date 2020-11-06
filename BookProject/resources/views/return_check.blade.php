@@ -2,7 +2,7 @@
 <?php $csspath = "css/return_check.css";?>
 
 @extends("common.header")
-@section('header_body')
+@section('body')
 
 <main>
     <div id="book_p">

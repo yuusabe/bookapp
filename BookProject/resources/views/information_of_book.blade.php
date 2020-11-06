@@ -2,7 +2,7 @@
 <?php $csspath = "css/information_of_book.css";?>
 
 @extends("common.header")
-@section('header_body')
+@section('body')
 
 <main>
     <div id="book_p">
@@ -16,6 +16,7 @@
             <p>貸出状況：貸出可</p>
         </div>
     </div>
+
     <div id="button">
         <button type="button" class="btn btn-outline-secondary"  onclick="location.href='list_of_books.html'">
             一覧へ
@@ -26,5 +27,5 @@
     </div>
  </main>
 
- @endsection
+@endsection
 @extends("common.footer")

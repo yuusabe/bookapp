@@ -2,7 +2,7 @@
 <?php $csspath = "css/password_change.css";?>
 
 @extends("common.header")
-@section('header_body')
+@section('body')
 
 <main>
     <p>Hi!</p>

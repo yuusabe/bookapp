@@ -2,7 +2,7 @@
 <?php $csspath = "css/list_of_books.css";?>
 
 @extends("common.header")
-@section('header_body')
+@section('body')
 
 <main>
   <div id="search"><form>

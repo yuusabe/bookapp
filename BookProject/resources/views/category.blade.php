@@ -2,7 +2,7 @@
 <?php $csspath = "css/category.css";?>
 
 @extends("common.header")
-@section('header_body')
+@section('body')
 
 <main>
     <p>カテゴリ</p>
