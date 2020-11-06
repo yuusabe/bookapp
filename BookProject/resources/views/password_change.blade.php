@@ -8,30 +8,30 @@
     <div id="oldpass">
         <p>
             <div id="text">
-                現在のパスワード：
+                現在のパスワードを入力してください
             </div>
             <form>
-                <input type="password" name="old_pass" size="20" minlength="8" value="現在のパスワードを入力">
+                <input type="password" name="old_pass" size="20" minlength="8">
             </form>
         </p>
     </div>
     <div id="newpass">
         <p>
             <div id="text">
-                新しいパスワード：
+                新しいパスワードを入力してください
             </div>
             <form>
-                <input type="password" name="new_pass" size="20" minlength="8" value="新しいパスワードを入力">
+                <input type="password" name="new_pass" size="20" minlength="8">
             </form>
         </p>
     </div>
     <div id="newpass">
         <p>
             <div id="text">
-                新しいパスワード：
+                確認のためもう一度入力してください
             </div>
             <form>
-                <input type="password" name="new_pass" size="20" minlength="8" value="確認のためもう一度入力してください」">
+                <input type="password" name="new_pass" size="20" minlength="8">
             </form>
         </p>
     </div>
