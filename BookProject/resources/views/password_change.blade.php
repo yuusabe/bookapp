@@ -11,7 +11,7 @@
                 現在のパスワードを入力してください
             </div>
             <form>
-                <input type="password" name="old_pass" size="20" minlength="8">
+                <input type="password" name="old_pass" size="50" minlength="8">
             </form>
         </p>
     </div>
@@ -21,7 +21,7 @@
                 新しいパスワードを入力してください
             </div>
             <form>
-                <input type="password" name="new_pass" size="20" minlength="8">
+                <input type="password" name="new_pass" size="50" minlength="8">
             </form>
         </p>
     </div>
@@ -31,7 +31,7 @@
                 確認のためもう一度入力してください
             </div>
             <form>
-                <input type="password" name="new_pass" size="20" minlength="8">
+                <input type="password" name="new_pass" size="50" minlength="8">
             </form>
         </p>
     </div>
