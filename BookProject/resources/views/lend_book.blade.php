@@ -33,8 +33,6 @@
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='information_of_book.html'">
             キャンセル
         </button>
-    </div>
-    <div id="button">
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='lend_check.html'">
             確認
         </button>

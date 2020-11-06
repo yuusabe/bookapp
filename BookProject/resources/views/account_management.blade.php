@@ -40,8 +40,6 @@
       <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_change.html'">
         編集
       </button>
-    </div>
-    <div id="button">
       <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_delete_check.html'">
         削除
       </button>

@@ -18,8 +18,6 @@
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_change_check.html'">
             書籍編集
         </button>
-    </div>
-    <div id="button">
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_delete_check.html'">
             削除
         </button>

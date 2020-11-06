@@ -12,8 +12,6 @@
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='list_of_books.html'">
             キャンセル
         </button>
-    </div>
-    <div id="button">
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_add_check.html'">
             書籍登録
         </button>

@@ -17,8 +17,6 @@
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_management.html'">
                 キャンセル
             </button>
-        </div>
-        <div id="button">
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion_account.html'">
                 確定
             </button>

@@ -24,8 +24,6 @@
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='return_book.html'">
                 キャンセル
             </button>
-        </div>
-        <div id="button">
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion.html'">
                 確定
             </button>
