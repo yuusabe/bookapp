@@ -1,9 +1,11 @@
 /*本中央よせ*/
 #book_p{
   text-align: center;
+  margin-top: 30px;
 }
 #button{
   text-align: center;
+  margin: 10px 20px;
 }
 /*横並び*/
 #book{

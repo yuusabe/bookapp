@@ -1,7 +1,7 @@
 /*中央揃え*/
 #button{
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 20px;
 }
 #text{
   text-align: center;
@@ -16,7 +16,4 @@
 /*ヘッダー右寄せ*/
 #header{
   text-align: right;
-}
-#all{
-  vertical-align: middle;
 }

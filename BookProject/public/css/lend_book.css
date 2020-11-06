@@ -1,6 +1,7 @@
 /*中央揃え*/
 #book_p{
   text-align: center;
+  margin-top: 30px;
 }
 /*横並び*/
 #book{
@@ -9,10 +10,12 @@
 /*中央揃え*/
 #button{
   text-align: center;
+  margin: 10px 20px;
 }
 #lend{
   text-align: center;
-  color:#666
+  color:#666;
+  margin-top: 20px;
 }
 /*ヘッダー右寄せ*/
 #header{

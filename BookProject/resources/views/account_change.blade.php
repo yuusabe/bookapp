@@ -35,6 +35,8 @@
       <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_management.html'">
         キャンセル
       </button>
+    </div>
+    <div id="button">
       <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_change_check.html'">
         更新
       </button>

@@ -2,24 +2,23 @@
 #book{
   text-align: center;
   color:#666;
+  display: inline-block;
 }
 /*中央揃え*/
 #book_p{
   text-align: center;
-  margin: 10px;
-}
-/*横並び*/
-#book{
-  display: inline-block;
+  margin: 30px;
 }
 /*中央揃え*/
 #button{
   text-align: center;
+  margin: 10px 20px;
 }
 #return{
   text-align: center;
   color:#666;
   font-size: x-large;
+  margin-top: 20px;
 }
 /*ヘッダー右寄せ*/
 #header{

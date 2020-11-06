@@ -39,6 +39,8 @@
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='mypage.html'">
             キャンセル
         </button>
+    </div>
+    <div id="button">
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion.html'">
             設定
         </button>

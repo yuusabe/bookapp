@@ -22,6 +22,8 @@
             <button type="button" class="btn btn-outline-secondary"  onclick="location.href='list_of_books.html'">
                 一覧へ
             </button>
+        </div>
+        <div id="button">
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='lend_book.html'">
                 貸出手続きへ
             </button>

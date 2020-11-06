@@ -53,10 +53,12 @@
     </div>
   </div>
   
-  <div id="book">
+  <div id="button">
     <button type="button" class="btn btn-outline-secondary" onclick="location.href='information_of_book.php'">
       詳細表示
     </button>
+  </div>
+  <div id="button">
     <button type="button" class="btn btn-outline-danger">
       書籍編集
     </button>

@@ -44,6 +44,10 @@
   display: inline-block;
   text-align: center;
 }
+#button{
+  text-align: center;
+  margin: 10px 20px;
+}
 /*ヘッダー右寄せ*/
 #header{
   text-align: right;
