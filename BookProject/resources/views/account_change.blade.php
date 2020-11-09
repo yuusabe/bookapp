@@ -33,12 +33,12 @@
     </div>
     <div id="button_p">
       <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_management.html'">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management'">
           キャンセル
         </button>
       </div>
       <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_change_check.html'">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change_check'">
           更新
         </button>
       </div>
