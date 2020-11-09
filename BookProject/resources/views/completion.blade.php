@@ -9,7 +9,7 @@
         <div id="text">
             <p>完了しました。</p>
         </div>
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='list_of_books.php'">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/list_of_books'">
             OK
         </button>
     </div>
