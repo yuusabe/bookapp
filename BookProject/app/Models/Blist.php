@@ -20,3 +20,4 @@ class Blist extends Model
   
       return $data;
 }
+}
