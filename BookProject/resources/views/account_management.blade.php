@@ -32,18 +32,18 @@
       </ul>
     </div>
     <div id="button">
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_management_check.html'">
+      <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change_check'">
         アカウント登録
       </button>
     </div>
     <div id="button_p">
       <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_change.html'">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change'">
           編集
         </button>
       </div>
       <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='account_delete_check.html'">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_delete'">
           削除
         </button>
       </div>
