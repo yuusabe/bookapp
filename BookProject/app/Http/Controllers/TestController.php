@@ -9,7 +9,7 @@ class TestController extends Controller
 {
     public function testdata() 
     {
-        $md = new Test();
+        $md = new Blist();
         $data = $md->getData();
 
         return view('test', compact('data'));
