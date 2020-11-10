@@ -17,7 +17,7 @@
         <div id="text">
           <p>メールアドレス</p>
         </div>
-        <input type="email" id="tbox" name="mail_address" placeholder="abc@example.com">
+        <input type="email" id="tbox" name="address" placeholder="abc@example.com">
       </div>
       <div id="password" id="tb">
         <div id="text">
@@ -37,6 +37,9 @@
       <div id="button">
         <button type="submit" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management_check'">
           アカウント登録
+        </button>
+        <button type="submit" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management_check'">
+          アカウント登録（実験用）
         </button>
       </div>
     </div>
