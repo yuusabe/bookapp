@@ -9,19 +9,19 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="/Users/user/Documents/bootstrap/dtg_book_logo.png" id="icon" alt="アイコン" />
+      <img src="image/dtg_book_logo.png" id="icon" alt="アイコン" />
     </div>
 
     <!-- Login Form -->
     <form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="メールアドレス">
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="パスワード">
-      <input type="submit" class="fadeIn fourth" value="ログイン" onclick="location.href='http://localhost:8001/書籍一覧'">
+      <input type="submit" class="fadeIn fourth" value="ログイン" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books'">
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">パスワードを忘れた方はこちら</a>
+      <a class="underlineHover" href="#" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/password_send'">パスワードを忘れた方はこちら</a>
     </div>
 
   </div>
