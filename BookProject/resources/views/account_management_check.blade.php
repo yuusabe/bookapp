@@ -8,17 +8,17 @@
 $account_name = "なし";
 $address = "なし";
 $password = "なし";
-if (!empty($_POST["account_name"]))
+if (!empty($_GET["account_name"]))
 {
-  $account_name = $_POST['account_name'];
+  $account_name = $_GET['account_name'];
 }
-if (!empty($_POST["address"]))
+if (!empty($_GET["address"]))
 {
-  $address = $_POST['address'];   
+  $address = $_GET['address'];   
 }
-if (!empty($_POST["password"]))
+if (!empty($_GET["password"]))
 {
-  $password = $_POST['password'];   
+  $password = $_GET['password'];   
 }
 ?>
 
