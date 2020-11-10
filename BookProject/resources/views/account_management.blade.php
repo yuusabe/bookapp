@@ -41,7 +41,7 @@
     </div>
     <div id="button_p">
       <div id="button">
-        <button type="submit" class="btn btn-outline-secondary">
+        <button type="submit" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management_check'">
           アカウント登録
         </button>
       </div>
