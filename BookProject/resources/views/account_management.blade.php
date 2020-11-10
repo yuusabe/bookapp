@@ -7,17 +7,23 @@
 <main>
   <form>
     <div id=tb_p>
-      <div class="form-group" id="account" id="tb">
-        <label>アカウント名</label>
-        <input type="text" id="tbox" class="form-control" placeholder="アカウント名">
+      <div id="account" id="tb">
+        <div id="text">
+          <p>アカウント名</p>
+        </div>
+        <input type="text" id="tbox" placeholder="DTG太郎">
       </div>
-      <div class="form-group" id="email" id="tb">
-        <label>Email</label>
-        <input type="email" id="tbox" class="form-control" placeholder="abc@example.com">
+      <div id="email" id="tb">
+        <div id="text">
+          <p>メールアドレス</p>
+        </div>
+        <input type="email" id="tbox" placeholder="abc@example.com">
       </div>
-      <div class="form-group" id="password" id="tb">
-        <label>初期パスワード</label>
-        <input type="text" id="tbox" class="form-control" placeholder="password">
+      <div id="password" id="tb">
+        <div id="text">
+          <p>パスワード</p>
+        </div>
+        <input type="text" id="tbox" placeholder="password">
       </div>
       <div class="dropdown">
         <button type="button"  id="dropdown" id="tb"
@@ -33,10 +39,12 @@
         </ul>
       </div>
     </div>
-    <div id="button">
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change_check'">
-        アカウント登録
-      </button>
+    <div id="button_p">
+      <div id="button">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change_check'">
+          アカウント登録
+        </button>
+      </div>
     </div>
     <div id="button_p">
       <div id="button">
