@@ -1,5 +1,5 @@
 <?php $title = "DTGBOOK【アカウント編集画面】";?>
-<?php $csspath = "account_change.css";?>
+<?php $csspath = "css/account_change.css";?>
 
 @extends("common.header")
 @section('body')
