@@ -25,18 +25,12 @@
         </div>
         <input type="text" id="tbox" name="password" placeholder="password">
       </div>
-      <div class="dropdown">
-        <button type="button"  id="dropdown" id="tb"
-          class="btn btn-outline-secondary dropdown-toggle"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-        管理者権限
-        </button>
-        <ul class="dropdown-menu">
-          <li><button class="dropdown-item" value="発行年">管理者</button></li>
-          <li><button class="dropdown-item" value="著者">一般ユーザ</button></li>
-        </ul>
+      <div id="radio">
+        <div id="text">
+          <p>管理者権限</p>
+        </div>
+          <input type="radio" name="accounttype" value="1" required>一般ユーザ
+          <input type="radio" name="accounttype" value="2">管理者ユーザ
       </div>
     </div>
     <div id="button_p">
