@@ -17,7 +17,7 @@
         <div id="text">
           <p>メールアドレス</p>
         </div>
-        <input type="email" id="tbox" name="mail_address" placeholder="abc@example.com">
+        <input type="email" id="tbox" name="address" placeholder="abc@example.com">
       </div>
       <div id="password" id="tb">
         <div id="text">
