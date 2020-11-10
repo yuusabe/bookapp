@@ -5,7 +5,7 @@
 @section('body')
 
 <main>
-<form action="http://www.dtg-shosekikanri2020-test.tk/account_management_check" method="post">
+<form action="http://www.dtg-shosekikanri2020-test.tk/account_management_check" method="get">
     <div id=tb_p>
       <div id="account" id="tb">
         <div id="text">
