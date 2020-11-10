@@ -50,7 +50,7 @@
         </button>
       </div>
       <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_delete'">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_delete_check'">
           削除
         </button>
       </div>
