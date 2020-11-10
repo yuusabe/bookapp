@@ -21,13 +21,13 @@
             <img src="image/dtg_book_logo.png" id="pine" alt="アイコン" width="135" height="130" />
         </div>
         <div id="header" id="pine">
-            <button type="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/book_add>
+            <button type="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/book_add'">
                 書籍登録
             </button>
-            <button type="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/category>
+            <button type="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/category'">
                 カテゴリ管理
             </button>
-            <button type="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management>
+            <button type="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management'">
                 アカウント管理
             </button>
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/list_of_books'">
