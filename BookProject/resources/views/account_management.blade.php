@@ -29,7 +29,7 @@
         <div id="text">
           <p>管理者権限</p>
         </div>
-          <input type="radio" name="accounttype" value="1" required>一般ユーザ
+          <input type="radio" name="accounttype" value="1">一般ユーザ
           <input type="radio" name="accounttype" value="2">管理者ユーザ
       </div>
     </div>
