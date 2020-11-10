@@ -4,10 +4,30 @@
 @extends("common.header")
 @section('body')
 
+<?php
+$account_name = "なし";
+$address = "なし";
+$password = "なし";
+if (!empty($_POST["account_name"]))
+{
+  $account_name = $_POST['account_name'];
+}
+if (!empty($_POST["address"]))
+{
+  $address = $_POST['address'];   
+}
+if (!empty($_POST["password"]))
+{
+  $password = $_POST['password'];   
+}
+?>
+
 <main>
     <div id="all">
         <div id="account">
-            <p>アカウント情報表示</p>
+            <p>アカウント名　：<?php echo $account_name ?></p>
+            <p>メールアドレス：<?php echo $address ?></p>
+            <p>パスワード　　：<?php echo $password ?></p>
         </div>
         <div id="text">
             <p>アカウント登録の内容はこちらでよろしいですか？</p>
