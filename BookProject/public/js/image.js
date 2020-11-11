@@ -1,4 +1,4 @@
-$('#myImage').on('change', function (e) {
+$('#b_image').on('change', function (e) {
     var reader = new FileReader();
     reader.onload = function (e) {
         $("#preview").attr('src', e.target.result);
