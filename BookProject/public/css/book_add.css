@@ -30,9 +30,10 @@
   outline: none;
   color: #666;
   height: 40px;
-  width: 200px;
+  width: 300px;
   border-radius: 10px;
   border: 1px solid #666;
+  background-color: white;
 }
 #tbox{
   text-align: center;
@@ -48,7 +49,9 @@
   outline: none;
   color: #666;
   height: 40px;
-  width: 200px;
+  width: 300px;
   border-radius: 10px;
   border: 1px solid #666;
+  background-color: white;
+  margin-top: 0px;
 }

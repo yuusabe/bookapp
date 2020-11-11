@@ -10,6 +10,50 @@
   text-align: center;
   color: #666;
   margin-top: 30px;
+  font-size: xx-large;
+}
+/*ヘッダー右寄せ*/
+#header{
+  text-align: right;
+}
+#b_image{
+  display: block;
+  margin-left: 300px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#preview{
+  display: block;
+  margin-left: 15px;
+}
+#b_tbox{
+  outline: none;
+  color: #666;
+  height: 40px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid #666;
+  background-color: white;
+}
+#tbox{
+  text-align: center;
+  color: #666;
+  margin-left: 100px;
+  margin-top: 5px;
+}
+#b_info{
+  display: inline-block;
+  vertical-align: top;
+}
+#id_year{
+  outline: none;
+  color: #666;
+  height: 40px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid #666;
+  background-color: white;
+  margin-top: 0px;
 }
 /*ヘッダー右寄せ*/
 #header{
