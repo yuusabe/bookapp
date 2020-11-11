@@ -5,7 +5,7 @@
 @section('body')
 
 <main>
-<form action="http://www.dtg-shosekikanri2020-test.tk/account_management_check" method="post">
+<form action="http://www.dtg-shosekikanri2020-test.tk/account_management_check" method="get">
     <div id=tb_p>
       <div id="account" id="tb">
         <div id="text">
@@ -17,7 +17,7 @@
         <div id="text">
           <p>メールアドレス</p>
         </div>
-        <input type="email" id="tbox" name="mail_address" placeholder="abc@example.com">
+        <input type="email" id="tbox" name="address" placeholder="abc@example.com">
       </div>
       <div id="password" id="tb">
         <div id="text">
@@ -25,26 +25,26 @@
         </div>
         <input type="text" id="tbox" name="password" placeholder="password">
       </div>
-      <div class="dropdown">
-        <button type="button"  id="dropdown" id="tb"
-          class="btn btn-outline-secondary dropdown-toggle"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-        管理者権限
-        </button>
-        <ul class="dropdown-menu">
-          <li><button class="dropdown-item" value="発行年">管理者</button></li>
-          <li><button class="dropdown-item" value="著者">一般ユーザ</button></li>
-        </ul>
+      <div id="radio">
+        <div id="text">
+          <p>管理者権限</p>
+        </div>
+          <input type="radio" name="accounttype" value="1">一般ユーザ
+          <input type="radio" name="accounttype" value="2">管理者ユーザ
       </div>
     </div>
     <div id="button_p">
       <div id="button">
-        <button type="submit" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management_check'">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management_check'">
           アカウント登録
         </button>
+        <button type="submit" class="btn btn-outline-secondary" >
+          アカウント登録（実験用）
+        </button>
       </div>
+    </div>
+    <div id="text">
+      <p>アカウント情報</p>
     </div>
     <div id="button_p">
       <div id="button">
@@ -53,7 +53,7 @@
         </button>
       </div>
       <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_delete'">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_delete_check'">
           削除
         </button>
       </div>

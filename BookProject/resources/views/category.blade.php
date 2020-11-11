@@ -5,20 +5,22 @@
 @section('body')
 
 <main>
-    <div id="category">
-        <p>カテゴリ</p>
+    <div id="category_p">
+        <div id="category">
+            <input type="text" id="textbox" name="category" value="category" placeholder="category">
+            <button type="button" class="btn btn-outline-secondary">
+                削除
+            </button>
+        </div>
     </div>
-    <button type="button" class="btn btn-outline-secondary">
-        削除
-    </button>
     <div id="button_p">
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='list_of_books.html'">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/list_of_books'">
                 キャンセル
             </button>
         </div>
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='category_check.html'">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/category_check'">
                 変更
             </button>
         </div>

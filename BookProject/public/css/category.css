@@ -6,12 +6,24 @@
   margin: 10px 20px;
   display: inline-block;
 }
-#category{
+#category_p{
   text-align: center;
-  color: #666;
   margin-top: 30px;
+}
+#category{
+  color: #666;
+  display: inline-block;
 }
 /*ヘッダー右寄せ*/
 #header{
   text-align: right;
+}
+#textbox{
+  height: 40px;
+  width: 450px;
+  color: #666;
+  border-radius: 10px;
+  border: 1px solid #666;
+  text-align: center;
+  outline: none;
 }

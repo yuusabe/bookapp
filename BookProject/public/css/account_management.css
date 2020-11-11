@@ -3,7 +3,7 @@
   text-align: center;
 }
 #button{
-  margin: 10px 20px;
+  margin: 10px 0px;
   display: inline-block;
 }
 /*ヘッダー右寄せ*/
@@ -35,4 +35,8 @@
 #text{
   color: #666;
   margin-top: 30px;
+  text-align: center;
+}
+#radio{
+  color: #666;
 }

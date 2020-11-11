@@ -35,7 +35,7 @@
         </div>
     </div>
     <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='return_book.html'">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/return_book'">
             返却手続きへ
         </button>
     </div>
