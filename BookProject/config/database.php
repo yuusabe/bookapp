@@ -49,7 +49,7 @@ return [
             'host' => env('DB_HOST', '172.31.20.51'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'bookapp'),
-            'username' => env('DB_USERNAME', 'root'),
+            'username' => env('DB_USERNAME', 'user'),
             'password' => env('DB_PASSWORD', 'Pasona1234*'),
             'unix_socket' => env('DB_SOCKET', '/var/lib/mysql/mysql.sock'),
             'charset' => 'utf8mb4',
