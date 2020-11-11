@@ -1,10 +1,7 @@
-
-#pine{
-  display: inline-block;
-}
 #header{
   margin-left: auto;
-  width: 1100px;
+  width: 1000px;
+  text-align: right;
 }
 #button{
   height: 40px;

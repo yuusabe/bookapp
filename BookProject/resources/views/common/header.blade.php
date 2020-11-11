@@ -19,8 +19,8 @@
 <header class="header_button">
         <div id="pine">
             <img src="image/dtg_book_logo.png" alt="アイコン" width="135" height="130" />
-            <img src="image/user_logo.png" alt="アイコン" width="135" height="130" />
-            <img src="image/administrator_logo.png" alt="アイコン" width="135" height="130" />
+            <img src="image/administrator_logo.png" alt="アイコン" width="150" height="150" />
+            <img src="image/user_logo.png" alt="アイコン" width="150" height="150" />
         </div>
         <div id="pine">
             <div id="header">
