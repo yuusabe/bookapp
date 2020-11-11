@@ -4,6 +4,10 @@
 }
 #header{
   margin-left: auto;
-  width: 1270px;
-  margin: 0px 0px 30px 10px;
+  width: 1000px;
+}
+#button{
+  height: 40px;
+  width: 150px;
+  margin: 0px;
 }

@@ -19,25 +19,26 @@
 <header class="header_button">
         <div id="pine">
             <img src="image/dtg_book_logo.png" alt="アイコン" width="135" height="130" />
+            <img src="image/manauser_logo.png" alt="アイコン" width="135" height="130" />
         </div>
         <div id="pine">
             <div id="header">
-                <button type="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/book_add'">
+                <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/book_add'">
                     書籍登録
                 </button>
-                <button type="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/category'">
+                <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/category'">
                     カテゴリ管理
                 </button>
-                <button type="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management'">
+                <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management'">
                     アカウント管理
                 </button>
-                <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/list_of_books'">
+                <button type="button" id="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/list_of_books'">
                     書籍一覧
                 </button>
-                <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/mypage'">
+                <button type="button" id="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/mypage'">
                     マイページ
                 </button>
-                <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/login'">
+                <button type="button" id="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/login'">
                     ログアウト
                 </button>
             </div>
