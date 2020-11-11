@@ -71,8 +71,6 @@
                 キャンセル
             </button>
         </div>
-    </div>
-    <div id="button_p">
         <div id="button">
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_change_check.html'">
                 書籍編集
