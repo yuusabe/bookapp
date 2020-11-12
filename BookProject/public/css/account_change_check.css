@@ -1,24 +1,29 @@
-/*中央揃え*/
-#button_p{
+/*アカウント情報*/
+#account{
   text-align: center;
+  color: #666;
+  font-size: large;
+  margin-top: 30px;
+  border: 3px solid rgb(221, 156, 71);
+  border-radius: 10px;
+  height: 120px;
+  width: 550px;
+  margin: auto;
+  margin-top: 50px;
 }
-#button{
-  margin: 10px 20px;
-  display: inline-block;
-}
+/*画面下の文字*/
 #text{
   text-align: center;
   color: #666;
   font-size: x-large;
   margin-top: 20px;
 }
-#account{
+/*ボタン中央揃え*/
+#button_p{
   text-align: center;
-  color: #666;
-  font-size: x-large;
-  margin-top: 30px;
+  margin-bottom: 100px;
 }
-/*ヘッダー右寄せ*/
-#header{
-  text-align: right;
+#button{
+  margin: 10px 20px;
+  display: inline-block;
 }
