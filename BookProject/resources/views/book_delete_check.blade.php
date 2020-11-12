@@ -23,13 +23,13 @@
         </div>
         <div id="button_p">
             <div id="button">
-                <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_change.html'">
-                    キャンセル
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion.html'">
+                    確定
                 </button>
             </div>
             <div id="button">
-                <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion.html'">
-                    確定
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_change.html'">
+                    キャンセル
                 </button>
             </div>
         </div>
