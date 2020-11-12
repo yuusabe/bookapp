@@ -6,7 +6,7 @@
 
 <main>
     <div id="text">
-        <p>登録する書籍の内容を入力してください</p>
+        <p>登録する書籍の内容を入力してください。</p>
     </div>
     <div id="b_info">
         <div id="b_image">
