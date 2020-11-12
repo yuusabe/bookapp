@@ -1,5 +1,5 @@
 <?php $title = "DTGBOOK【アカウント登録確認画面】";?>
-<?php $csspath = "css/account_management_check.css";?>
+<?php $csspath = "css/account_check.css";?>
 
 @extends("common.header")
 @section('body')
