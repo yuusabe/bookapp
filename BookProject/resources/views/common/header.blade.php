@@ -15,7 +15,6 @@
     </style>
     <title><?=$title?></title>
 </head>
-<body>
 <header class="header_button">
         <div id="pine">
             <img src="image/dtg_book_logo.png" alt="アイコン" width="135" height="130" />
@@ -23,7 +22,7 @@
             <img src="image/user_logo.png" alt="アイコン" width="150" height="150" />
         </div>
         <div id="pine">
-            <div id="header">
+            <div id="h_button">
                 <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/book_add'">
                     書籍登録
                 </button>
@@ -45,6 +44,9 @@
             </div>
         </div>
 </header>
+<body>
 @yield('body')
 </body>
-
+<footer>
+    @yield('footer')
+</footer>
