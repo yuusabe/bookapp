@@ -34,4 +34,4 @@ $(function() {
     optionLoop(1950, this_year, 'id_year', this_year);
     optionLoop(1, 12, 'id_month', this_month);
     optionLoop(1, 31, 'id_day', this_day);
-  })();
+})();

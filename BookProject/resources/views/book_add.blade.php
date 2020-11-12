@@ -23,11 +23,11 @@
         <form>
             <div id="tbox">
                 　　　　　　タイトル
-                <input type="text" name="title" placeholder="title" id="b_tbox">
+                <input type="text" name="title" placeholder="タイトルを入力してください" id="b_tbox">
             </div>
             <div id="tbox">
-                タイトル（ふりがな）
-                <input type="text" name="title_h" placeholder="title" id="b_tbox">
+                タイトル（フリガナ）
+                <input type="text" name="title_h" placeholder="タイトルのフリガナを入力してください" id="b_tbox">
             </div>
             <div id="tbox">
                 <label>
@@ -40,21 +40,26 @@
             </div>
             <div id="tbox">
                 　　　　　　　　著者
-                <input type="text" name="author" placeholder="title" id="b_tbox">
+                <input type="text" name="author" placeholder="著者を入力してください" id="b_tbox">
             </div>
             <div id="tbox">
-                　　著者（ふりがな）
-                <input type="text" name="author_h" placeholder="title" id="b_tbox">
+                　　著者（フリガナ）
+                <input type="text" name="author_h" placeholder="著者のフリガナを入力してください" id="b_tbox">
             </div>
             <div id="tbox">
                 　　　　　　　出版社
-                <input type="text" name="publisher" placeholder="title" id="b_tbox">
+                <input type="text" name="publisher" placeholder="出版社を入力してください" id="b_tbox">
             </div>
             <div id="tbox">
                 <label>
                     <span class="btn btn-outline-ssecondary">
                         　　　　　　カテゴリ
-                        <input type="text" name="category" placeholder="category" id="b_tbox">
+                        <select name="category" id="b_tbox">
+                            <option value="">選択してください
+                            <option value="0">RPA
+                            <option value="1">統計学
+                            <option value="2">AI
+                        </select>
                     </span>
                 </label>
             </div>
