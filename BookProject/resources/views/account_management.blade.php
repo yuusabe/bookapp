@@ -38,13 +38,8 @@
     </div>
     <div id="button_p">
       <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management_check'">
-          アカウント登録
-        </button>
-      </div>
-      <div id="button">
         <button type="submit" class="btn btn-outline-secondary" >
-          アカウント登録（実験用）
+          アカウント登録
         </button>
       </div>
     </div>
