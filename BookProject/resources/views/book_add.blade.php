@@ -1,5 +1,5 @@
 <?php $title = "DTGBOOK【書籍登録画面】";?>
-<?php $csspath = "css/book_add.css";?>
+<?php $csspath = "css/book.css";?>
 
 @extends("common.header")
 @section('body')

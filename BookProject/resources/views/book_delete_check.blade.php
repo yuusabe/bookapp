@@ -1,11 +1,10 @@
 <?php $title = "DTGBOOK【書籍削除確認画面】";?>
-<?php $csspath = "css/book_delete_check.css";?>
+<?php $csspath = "css/book_check.css";?>
 
 @extends("common.header")
 @section('body')
 
 <main>
-    <div id="all">
     <div id="book_p">
         <div id="book">
             <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="130" />

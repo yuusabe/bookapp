@@ -1,12 +1,12 @@
 <?php $title = "DTGBOOK【書籍編集画面】";?>
-<?php $csspath = "css/book_change.css";?>
+<?php $csspath = "css/book.css";?>
 
 @extends("common.header")
 @section('body')
 
 <main>
     <div id="text">
-        <p>編集する書籍の内容を入力してください</p>
+        <p>編集する書籍の内容を入力してください。</p>
     </div>
     <div id="b_info">
         <div id="b_image">
