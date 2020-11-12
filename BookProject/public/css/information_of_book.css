@@ -1,14 +1,7 @@
-/*本中央よせ*/
+/*本中央寄せ*/
 #book_p{
   text-align: center;
   margin-top: 30px;
-}
-#button_p{
-  text-align: center;
-}
-#button{
-  margin: 10px 20px;
-  display: inline-block;
 }
 /*横並び*/
 #book{
@@ -17,20 +10,30 @@
   display: inline-block;
   vertical-align: top;
 }
-#icon{
+/*表紙画像設定*/
+#image{
   margin-top: 50px;
 }
-/*ヘッダー右寄せ*/
-#header{
-  text-align: right;
-}
+/*タイトル大きく表示*/
 #title{
   font-size: x-large;
   font-weight: bolder;
 }
+/*本情報テキスト設定*/
 #text{
   text-align: left;
   margin-left: 50px;
   color: #666;
   margin-top: 30px;
+}
+/*ボタン中央揃え*/
+#button_p{
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+/*ボタン横並び*/
+#button{
+  margin: 10px 20px;
+  display: inline-block;
 }
