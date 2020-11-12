@@ -1,19 +1,27 @@
-/*中央揃え*/
-#button_p{
+/*画面下文字*/
+#text{
   text-align: center;
+  color: #666;
+  font-size: x-large;
+  margin-top: 20px;
 }
-#button{
-  margin: 10px 0px;
-  display: inline-block;
+/*テキストボックスを中央寄せ・囲み線*/
+#tb_p{
+  text-align: center;
+  border: 3px solid rgb(221, 156, 71);
+  border-radius: 10px;
+  height: 500px;
+  width: 550px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-/*ヘッダー右寄せ*/
-#header{
-  text-align: right;
-}
+/*テキストボックス上の文字*/
 #tb{
   color: #666;
-  text-align: center;
+  margin-top: 30px;
 }
+/*テキストボックスの設定*/
 #tbox{
   text-align: center;
   outline:0;/*クリック時の青い枠線消す*/
@@ -24,19 +32,18 @@
   margin: 0px 10px 10px;
   border: 1px solid #666;
 }
-#tb_p{
-  text-align: center;
-  border: 3px solid rgb(221, 156, 71);
-  border-radius: 10px;
-  height: 500px;
-  width: 550px;
-  margin: auto;
-}
-#text{
-  color: #666;
-  margin-top: 30px;
-  text-align: center;
-}
+/*ラジオボタンの設定*/
 #radio{
   color: #666;
+  margin-bottom: 40px;
+}
+/*ボタン中央揃え*/
+#button_p{
+  text-align: center;
+  margin-bottom: 50px;
+}
+/*ボタン横並び*/
+#button{
+  margin: 10px 20px;
+  display: inline-block;
 }
