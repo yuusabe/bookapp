@@ -21,8 +21,9 @@
 /*ボタン中央揃え*/
 #button_p{
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
+/*ボタン横並び*/
 #button{
   margin: 10px 20px;
   display: inline-block;
