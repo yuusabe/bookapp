@@ -24,7 +24,7 @@
                 変更
             </button>
         </div>
-    </div>
+     </div>
 </main>
 
 @endsection
