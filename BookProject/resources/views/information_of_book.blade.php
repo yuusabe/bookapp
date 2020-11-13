@@ -19,9 +19,6 @@
                 <p>貸出状況：貸出可</p>
             </div>
         </div>
-<<<<<<< HEAD
-     </div>
-=======
     </div>
     <div id="button_p">
         <div id="button">
@@ -35,7 +32,6 @@
             </button>
         </div>
     </div>
->>>>>>> 0c3d58588d727060dc74c170a67cd4701612f1c9
  </main>
 
 @endsection
