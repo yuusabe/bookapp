@@ -43,16 +43,26 @@
         </button>
       </div>
     </div>
-    <div id="button_p">
-      <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change'">
-          編集
-        </button>
+    <div id="text">
+      <p>アカウント一覧</p>
+    </div>
+    <div id="account_p">
+      <div id="account">
+        <nobr id="a_text">DTG太郎：一般ユーザ</nobr>
       </div>
-      <div id="button">
-        <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_delete_check'">
-          削除
-        </button>
+      <div id="account">
+        <div id="button_p">
+          <div id="button">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change'">
+              編集
+            </button>
+          </div>
+          <div id="button">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_delete_check'">
+              削除
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </form>

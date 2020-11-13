@@ -8,7 +8,7 @@
 /*テキストボックスを中央寄せ・囲み線*/
 #tb_p{
   text-align: center;
-  border: 3px solid rgb(221, 156, 71);
+  border: 3px solid #38b6ff;
   border-radius: 10px;
   height: 500px;
   width: 550px;
@@ -36,6 +36,18 @@
 #radio{
   color: #666;
   margin-bottom: 40px;
+}
+/*アカウント一覧中央寄せ*/
+#account_p{
+  text-align: center;
+}
+/*アカウント横並び*/
+#account{
+  display: inline-block;
+}
+/*アカウント一覧テキスト*/
+#a_text{
+  color: #666;
 }
 /*ボタン中央揃え*/
 #button_p{
