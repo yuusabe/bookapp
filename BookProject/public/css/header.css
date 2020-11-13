@@ -1,8 +1,11 @@
-
-#pine{
-  display: inline-block;
-}
-#header{
+#h_button{
+  margin-left: auto;
+  width: 1000px;
   text-align: right;
-  margin: 20px 10px;
+}
+#button{
+  height: 40px;
+  width: 130px;
+  margin: 0px;
+  text-align: center;
 }

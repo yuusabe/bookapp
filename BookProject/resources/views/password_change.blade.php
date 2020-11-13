@@ -26,14 +26,12 @@
         </p>
     </div>
     <div id="newpass">
-        <p>
             <div id="text">
                 確認のためもう一度入力してください
             </div>
             <form>
                 <input type="password" id="password" name="new_pass" size="50" minlength="8">
             </form>
-        </p>
     </div>
     <div id="button_p">
         <div id="button">

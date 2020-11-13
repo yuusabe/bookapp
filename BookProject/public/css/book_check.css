@@ -1,15 +1,26 @@
-/*カテゴリ情報*/
-#category{
+/*本情報中央寄せ*/
+#book_p{
   text-align: center;
-  color: #666;
+}
+/*本情報横並び*/
+#book{
+  text-align: center;
+  color:#666;
+  display: inline-block;
+  vertical-align: top;
   margin-top: 30px;
+  margin-left: 50px;
+}
+/*表紙画像設定*/
+#image{
+  margin-top: 50px;
 }
 /*画面下の文字*/
 #text{
   text-align: center;
   color: #666;
-  font-size: x-large;
   margin-top: 20px;
+  font-size: x-large;
 }
 /*ボタン中央揃え*/
 #button_p{

@@ -1,5 +1,5 @@
 <?php $title = "DTGBOOK【書籍返却画面】";?>
-<?php $csspath = "css/return_book.css";?>
+<?php $csspath = "css/return.css";?>
 
 @extends("common.header")
 @section('body')
@@ -7,7 +7,7 @@
 <main>
     <div id="book_p">
         <div id="book">
-            <img src="image/book_001.png" id="icon" alt="表紙画像" width="135" height="130" />
+            <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="130" />
         </div>
         <div id="book">
             <div id="text">

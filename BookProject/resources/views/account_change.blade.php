@@ -1,38 +1,35 @@
 <?php $title = "DTGBOOK【アカウント編集画面】";?>
-<?php $csspath = "css/account_change.css";?>
+<?php $csspath = "css/account.css";?>
 
 @extends("common.header")
 @section('body')
 
 <main>
   <form>
+    <div id="text">
+      <p>編集する内容を入力してください。</p>
+    </div>
     <div id=tb_p>
-      <div id="account" id="tb">
-        <div id="text">
+        <div id="tb">
           <p>アカウント名</p>
         </div>
         <input type="text" id="tbox" placeholder="DTG太郎">
-      </div>
-      <div id="email" id="tb">
-        <div id="text">
+        <div id="tb">
           <p>メールアドレス</p>
         </div>
         <input type="email" id="tbox" placeholder="abc@example.com">
-      </div>
-      <div id="password" id="tb">
-        <div id="text">
+        <div id="tb">
           <p>パスワード</p>
         </div>
         <input type="text" id="tbox" placeholder="password">
-      </div>
-      <div id="radio">
-        <div id="text">
-          <p>管理者権限</p>
+        <div id="radio">
+          <div id="tb">
+            <p>管理者権限</p>
+          </div>
+            <input type="radio" name="accounttype" value="1">一般ユーザ
+            <input type="radio" name="accounttype" value="2">管理者ユーザ
         </div>
-          <input type="radio" name="accounttype" value="1">一般ユーザ
-          <input type="radio" name="accounttype" value="2">管理者ユーザ
       </div>
-    </div>
     <div id="button_p">
       <div id="button">
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_management'">

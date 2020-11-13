@@ -31,53 +31,59 @@
   width: 500px;
   height:50px;
   font-weight:bold;
-  border-radius:10px 10px 10px 10px;
+  border-radius: 10px;
   margin: 0px 10px 10px;
 }
 /*検索ボックス達の位置*/
 #search{
   text-align: center;
 }
-/*本中央よせ*/
+/*本中央寄せ*/
 #book_p{
   text-align: center;
 }
-/*横並び*/
+/*本横並び*/
 #book{
   text-align: center;
   color:#666;
   display: inline-block;
   vertical-align: top;
 }
-#icon{
+/*本表紙画像設定*/
+#image{
   margin-top: 50px;
 }
-#button_p{
-  text-align: center;
-}
-#button{
-  margin: 10px 20px;
-  display: inline-block;
-}
-/*ヘッダー右寄せ*/
-#header{
-  text-align: right;
-}
+/*カテゴリ下線*/
 #category{
   text-decoration: underline;
   text-decoration-color: #666;
 }
+/*タイトル大きく表示*/
 #title{
   font-size: x-large;
   font-weight: bolder;
 }
+/*本情報テキスト設定*/
 #text{
   text-align: left;
   margin-left: 50px;
   color: #666;
   margin-top: 30px;
 }
+/*ボタン中央揃え*/
+#button_p{
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+/*ボタン横並び*/
+#button{
+  margin: 10px 20px;
+  display: inline-block;
+}
+/*ページ下遷移ボタン*/
 #next{
   width:100px; 
   height:50px;
+  margin-bottom: 50px;
 }
