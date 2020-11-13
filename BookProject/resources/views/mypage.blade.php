@@ -15,8 +15,8 @@
             <p>パスワード：・・・・・・・・・・</p>
         </div>
     </div>
-    <div id="button">
-        <button type="button" class="btn btn-outline-secondary"  onclick="location.href='password_change.html'">
+    <div id="boo">
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/return_book'">
             パスワード変更
         </button>
     </div>
@@ -34,7 +34,7 @@
             <p>返却期限：yyyy/MM/dd</p>
         </div>
     </div>
-    <div id="button">
+    <div id="boo">
         <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/return_book'">
             返却手続きへ
         </button>
