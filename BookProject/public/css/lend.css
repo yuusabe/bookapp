@@ -37,6 +37,8 @@
 /*日付ボックス中央寄せ*/
 #date{
   text-align: center;
+  width: 550px;
+  margin: auto;
 }
 /*ボタン中央揃え*/
 #button_p{

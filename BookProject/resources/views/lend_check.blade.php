@@ -21,7 +21,7 @@
         </div>
     </div>
     <div id="lend">
-        <p>貸出書籍の内容はこれでよろしいでしょうか</p>
+        <p>貸出書籍の内容はこれでよろしいでしょうか。</p>
     </div>
     <div id="button_p">
         <div id="button">
