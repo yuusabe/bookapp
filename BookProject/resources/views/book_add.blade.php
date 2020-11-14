@@ -5,78 +5,98 @@
 @section('body')
 
 <main>
-    <div id="text">
-        <p>登録する書籍の内容を入力してください。</p>
-    </div>
-    <div id="b_info">
-        <div id="b_image">
-            <label>
-                <span class="btn btn-outline-secondary">
-                    ファイルを選択してください
-                    <input type="file" id="b_image" accept="image/*" style="display:none">
-                </span>
-            </label>
-            <img id="preview" width="200" height="200">
+    <form method="post" action="/BookProject/public/insertInfo" enctype="multipart/form-data">
+    {{ csrf_field() }}
+        <div id="text">
+            <p>登録する書籍の内容を入力してください。</p>
         </div>
-    </div>
-    <div id="b_info">
-        <form>
-            <div id="tbox">
-                　　　　　　タイトル
-                <input type="text" name="title" placeholder="タイトルを入力してください" id="b_tbox">
-            </div>
-            <div id="tbox">
-                タイトル（フリガナ）
-                <input type="text" name="title_h" placeholder="タイトルのフリガナを入力してください" id="b_tbox">
-            </div>
-            <div id="tbox">
+        <div id="b_info">
+            <div id="b_image">
+                
                 <label>
-                    <span class="btn btn-outline-ssecondary">
-                        　　　　　　　発行年
-                        <select name="year" id="id_year">
-                        </select>
+                    <span class="btn btn-outline-secondary">
+                        ファイルを選択してください
+                        <input type="file" name="img_file" id="b_image" accept="image/*" style="display:none" onchange="previewImage(this);">
                     </span>
                 </label>
+            
+                <p>
+                プレビュー:<br>
+                <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:220px;">
+                </p>
+                <script>
+                // fileAPIでの画像プレビュー
+                function previewImage(obj)
+                {
+                    var fileReader = new FileReader();
+                    fileReader.onload = (function() {
+                        document.getElementById('preview').src = fileReader.result;
+                    });
+                    fileReader.readAsDataURL(obj.files[0]);
+                }
+                </script>
+                
             </div>
-            <div id="tbox">
-                　　　　　　　　著者
-                <input type="text" name="author" placeholder="著者を入力してください" id="b_tbox">
-            </div>
-            <div id="tbox">
-                　　著者（フリガナ）
-                <input type="text" name="author_h" placeholder="著者のフリガナを入力してください" id="b_tbox">
-            </div>
-            <div id="tbox">
-                　　　　　　　出版社
-                <input type="text" name="publisher" placeholder="出版社を入力してください" id="b_tbox">
-            </div>
-            <div id="tbox">
-                <label>
-                    <span class="btn btn-outline-ssecondary">
-                        　　　　　　カテゴリ
-                        <select name="category" id="b_tbox">
-                            <option value="">選択してください
-                            <option value="0">RPA
-                            <option value="1">統計学
-                            <option value="2">AI
-                        </select>
-                    </span>
-                </label>
-            </div>
-        </form>
-    </div>
-    <div id="button_p">
-        <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='list_of_books.html'">
-                キャンセル
-            </button>
         </div>
-        <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_add_check.html'">
-                書籍登録
-            </button>
+        <div id="b_info">
+            <form>
+                <div id="tbox">
+                    　　　　　　タイトル
+                    <input type="text" name="title" placeholder="タイトルを入力してください" id="b_tbox">
+                </div>
+                <div id="tbox">
+                    タイトル（フリガナ）
+                    <input type="text" name="title_h" placeholder="タイトルのフリガナを入力してください" id="b_tbox">
+                </div>
+                <div id="tbox">
+                    <label>
+                        <span class="btn btn-outline-ssecondary">
+                            　　　　　　　発行年
+                            <select name="year" id="id_year">
+                            </select>
+                        </span>
+                    </label>
+                </div>
+                <div id="tbox">
+                    　　　　　　　　著者
+                    <input type="text" name="author" placeholder="著者を入力してください" id="b_tbox">
+                </div>
+                <div id="tbox">
+                    　　著者（フリガナ）
+                    <input type="text" name="author_h" placeholder="著者のフリガナを入力してください" id="b_tbox">
+                </div>
+                <div id="tbox">
+                    　　　　　　　出版社
+                    <input type="text" name="publisher" placeholder="出版社を入力してください" id="b_tbox">
+                </div>
+                <div id="tbox">
+                    <label>
+                        <span class="btn btn-outline-ssecondary">
+                            　　　　　　カテゴリ
+                            <select name="category" id="b_tbox">
+                                <option value="">選択してください
+                                <option value="0">RPA
+                                <option value="1">統計学
+                                <option value="2">AI
+                            </select>
+                        </span>
+                    </label>
+                </div>
+            </form>
         </div>
-    </div>
+        <div id="button_p">
+            <div id="button">
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='list_of_books.html'">
+                    キャンセル
+                </button>
+            </div>
+            <div id="button">
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_add_check.html'">
+                    書籍登録
+                </button>
+            </div>
+        </div>
+    </form>
 </main>
 
 <script src="{{ asset('/js/image.js') }}"></script>
