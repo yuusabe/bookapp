@@ -3,10 +3,12 @@
 
 @extends("common.header")
 @section('body')
+@section('content')
 
 <main>
-    <form method="post" action="/BookProject/public/insertInfo" enctype="multipart/form-data">
-    {{ csrf_field() }}
+    <!-- トリガー -->
+    <form method="POST" action="/book_add" enctype="multipart/form-data">
+        @csrf
         <div id="text">
             <p>登録する書籍の内容を入力してください。</p>
         </div>
@@ -35,6 +37,9 @@
                     fileReader.readAsDataURL(obj.files[0]);
                 }
                 </script>
+                <p>
+                    <input type="submit" value="アップロード">
+                </p>
                 
             </div>
         </div>

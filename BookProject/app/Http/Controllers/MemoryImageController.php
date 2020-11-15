@@ -3,14 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Storage;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class MemoryImageController extends Controller
 {
-  // 登録画面の入力値をＤＢに登録する
-  public function insertInfo(Request $request)
+  public function upload(Request $request)
   {
-     $b_image = $request->file('b_image');
+      // 追加
+      if ($request->hasFile('img_file'))
+      {
+          $this->validate($request,[
+            'file' => [
+              'required',
+              'file',
+              'image',
+              'mimes:jpeg,png',
+            ]
+          ]);
+
+          if ($request->file('img_file')->isValid([])) {
+
+            Storage::disk('s3')->putFile('/test', $request->file('img_file'), 'public');
+            return redirect('/');
+          }else{
+            return redirect('/book_add');
+          }
+        }
+          
     /*
      $title = $request->input('title');
      $title_h = $request->input('title_h');
@@ -20,8 +40,6 @@ class MemoryImageController extends Controller
      $publisher = $request->input('publisher');
      $category = $request->input('category');
     */
-
-     $path = Storage::disk('s3')->putFile('/Temporary_picture', $b_image, 'public');
 
   }
 }

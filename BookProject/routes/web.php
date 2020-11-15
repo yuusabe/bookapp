@@ -32,6 +32,9 @@ Route::get('/account_management', 'App\Http\Controllers\AppController@account_ma
 Route::get('/book_add_check', 'App\Http\Controllers\AppController@book_add_check');
 
 Route::get('/book_add', 'App\Http\Controllers\AppController@book_add');
+//追記：画像ファイルをアップロードする処理のルーティング
+Route::post('/book_add', 'App\Http\Controllers\MemoryImageController@upload');
+//
 
 Route::get('/book_change_check', 'App\Http\Controllers\AppController@book_change_check');
 
