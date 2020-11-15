@@ -14,7 +14,7 @@ class MemoryImageController extends Controller
       if ($request->hasFile('img_file'))
       {
           $this->validate($request,[
-            'file' => [
+            'img_file' => [
               'required',
               'file',
               'image',
