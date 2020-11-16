@@ -70,6 +70,7 @@
       </button>
     </div>
   </div>
+  @endforeach
 
   <div id="button_p">
     <div id="button" id="next">
