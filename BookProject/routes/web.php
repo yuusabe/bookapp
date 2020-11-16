@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/test', 'App\Http\Controllers\AppController@test');
-Route::get('/test', 'App\Http\Controllers\TestController@testdata');
+Route::get('/test', 'App\Http\Controllers\GetbookController@getbook');
 
 
 
