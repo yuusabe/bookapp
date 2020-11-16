@@ -5,7 +5,7 @@
 @section('body')
 
 <main>
-  <form action="http://www.dtg-shosekikanri2020-test.tk/account_management_check" method="get">
+  <form action="https://www.dtg-shosekikanri2020-test.tk/account_management_check" method="get">
     <div id="text">
       <p>登録する内容を入力してください。</p>
     </div>
@@ -53,12 +53,12 @@
       <div id="account">
         <div id="button_p">
           <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_change'">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www.dtg-shosekikanri2020-test.tk/account_change'">
               編集
             </button>
           </div>
           <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/account_delete_check'">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www.dtg-shosekikanri2020-test.tk/account_delete_check'">
               削除
             </button>
           </div>
