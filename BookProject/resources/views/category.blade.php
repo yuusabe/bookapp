@@ -5,9 +5,12 @@
 @section('body')
 
 <main>
+    <div id="text">
+        <p>カテゴリを編集してください。</p>
+    </div>
     <div id="category_p">
         <div id="category">
-            <input type="text" id="textbox" name="category" value="category" placeholder="category">
+            <input type="text" id="textbox" name="category" value="category" placeholder="入力してください">
             <button type="button" class="btn btn-outline-secondary">
                 削除
             </button>
@@ -24,7 +27,7 @@
                 変更
             </button>
         </div>
-    </div>
+     </div>
 </main>
 
 @endsection

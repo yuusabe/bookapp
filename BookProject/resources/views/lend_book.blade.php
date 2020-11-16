@@ -1,5 +1,5 @@
 <?php $title = "DTGBOOK【貸出画面】";?>
-<?php $csspath = "css/lend_book.css";?>
+<?php $csspath = "css/lend.css";?>
 
 @extends("common.header")
 @section('body')
@@ -7,7 +7,7 @@
 <main>
     <div id="book_p">
         <div id="book">
-            <img src="image/book_001.png" id="icon" alt="表紙画像" width="135" height="130" />
+            <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="130" />
         </div>
         <div id="book">
             <div id="text">
@@ -23,13 +23,14 @@
     <div id="lend">
         <p>貸出期間選択</p>
     </div>
-    
-    <div class="form-group" id="datepicker-daterange">
-        <div class="col-sm-9 form-inline" id="lend">
-            <div class="input-daterange input-group" id="datepicker">
-                <input type="date" class="input-sm form-control" name="start" id="dbox"/>
-                <span class="input-group-addon" id="dbox">　〜　</span>
-                <input type="date" class="input-sm form-control" name="end" id="dbox"/>
+    <div id="date">
+        <div class="form-group" id="datepicker-daterange">
+            <div class="col-sm-9 form-inline" id="lend">
+                <div class="input-daterange input-group" id="datepicker">
+                    <input type="date" class="input-sm form-control" name="start" id="dbox"/>
+                    <span class="input-group-addon" id="dbox">　〜　</span>
+                    <input type="date" class="input-sm form-control" name="end" id="dbox"/>
+                </div>
             </div>
         </div>
     </div>

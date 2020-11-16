@@ -1,22 +1,45 @@
 <?php $title = "DTGBOOK【書籍登録画面】";?>
-<?php $csspath = "css/book_add.css";?>
+<?php $csspath = "css/book.css";?>
 
 @extends("common.header")
 @section('body')
 
 <main>
     <div id="text">
-        <p>登録する書籍の内容を入力してください</p>
+        <p>登録する書籍の内容を入力してください。</p>
     </div>
     <div id="b_info">
         <div id="b_image">
-            <label>
-                <span class="btn btn-outline-secondary">
-                    ファイルを選択してください
-                    <input type="file" id="b_image" accept="image/*" style="display:none">
-                </span>
-            </label>
-            <img id="preview" width="200" height="200">
+            <!-- トリガー -->
+            <form method="POST" action="/book_add" enctype="multipart/form-data">
+                {{ csrf_field() }}
+
+                <label>
+                    <span class="btn btn-outline-secondary">
+                        ファイルを選択してください
+                        <input type="file" name="img_file" id="b_image" accept="image/*" style="display:none" onchange="previewImage(this);">
+                    </span>
+                </label>
+            
+                <p>
+                プレビュー:<br>
+                <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:220px;">
+                </p>
+                <script>
+                // fileAPIでの画像プレビュー
+                function previewImage(obj)
+                {
+                    var fileReader = new FileReader();
+                    fileReader.onload = (function() {
+                        document.getElementById('preview').src = fileReader.result;
+                    });
+                    fileReader.readAsDataURL(obj.files[0]);
+                }
+                </script>
+                <p>
+                    <input type="submit" value="アップロード">
+                </p>
+            </form>
         </div>
     </div>
     <div id="b_info">

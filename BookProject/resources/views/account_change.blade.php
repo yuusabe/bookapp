@@ -1,5 +1,5 @@
 <?php $title = "DTGBOOK【アカウント編集画面】";?>
-<?php $csspath = "css/account_change.css";?>
+<?php $csspath = "css/account.css";?>
 
 @extends("common.header")
 @section('body')
@@ -13,11 +13,11 @@
         <div id="tb">
           <p>アカウント名</p>
         </div>
-        <input type="text" id="tbox" placeholder="DTG太郎">
+        <input type="text" id="tbox" name="account_name" placeholder="DTG太郎">
         <div id="tb">
           <p>メールアドレス</p>
         </div>
-        <input type="email" id="tbox" placeholder="abc@example.com">
+        <input type="email" id="tbox" name="address" placeholder="abc@example.com">
         <div id="tb">
           <p>パスワード</p>
         </div>

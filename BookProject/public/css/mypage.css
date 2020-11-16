@@ -1,12 +1,4 @@
-/*中央揃え*/
-#book_p{
-  text-align: center;
-}
-#account_p{
-  text-align: center;
-  color: #666;
-  margin: 20px 10px ;
-}
+/*文字設定*/
 #text{
   font-weight: bolder;
   font-size: x-large;
@@ -14,6 +6,13 @@
   color: #666;
   margin-top: 30px;
 }
+/*アカウント情報中央寄せ*/
+#account_p{
+  text-align: center;
+  color: #666;
+  margin: 20px 10px ;
+}
+/*囲み枠線設定*/
 #account{
   border: 3px solid rgb(221, 156, 71);
   border-radius: 10px;
@@ -21,28 +20,35 @@
   width: 370px;
   margin: auto;
 }
+/*囲み枠線設定・中央寄せ*/
 #book_p{
+  text-align: center;
   border: 3px solid rgb(221, 156, 71);
   border-radius: 10px;
   height: 180px;
   width: 470px;
   margin: auto;
 }
-/*横並び*/
+/*横並び・中央寄せ*/
 #book{
   text-align: center;
   color:#666;
   display: inline-block;
   vertical-align: top;
 }
-#icon{
+/*本表紙画像設定*/
+#image{
   margin-top: 30px;
 }
+/*ボタン中央寄せ*/
 #button{
   text-align: center;
   margin-top: 30px;
+  margin-bottom: 100px;
 }
-/*ヘッダー右寄せ*/
-#header{
-  text-align: right;
+/*ボタン中央寄せ*/
+#boo{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
 }

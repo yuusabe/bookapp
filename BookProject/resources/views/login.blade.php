@@ -1,6 +1,6 @@
 <link href="css/login.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="wrapper fadeInDown">
@@ -14,8 +14,8 @@
 
     <!-- Login Form -->
     <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="メールアドレス">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="パスワード">
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
       <input type="submit" class="fadeIn fourth" value="ログイン" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books'">
     </form>
 
