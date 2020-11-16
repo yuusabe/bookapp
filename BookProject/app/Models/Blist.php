@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 class Blist extends Model
 {
-    protected $table = 'booklist';
+    protected $table = 'books';
 
-    protected $guarded = array('account_number');
+    protected $guarded = array('book_number');
   
     public $timestamps = false;
   

@@ -94,6 +94,10 @@ class AppController extends Controller
     {
         return view('login');
     }
+    public function login_check()
+    {
+        return view('login_check');
+    }
     public function mypage()
     {
         return view('mypage');
