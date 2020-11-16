@@ -23,7 +23,7 @@ if (!empty($_POST["password"]))
     <!-- Tabs Titles -->
 
 <?php
-if ($email_in == "email" && $password_in == "password")
+if ($email_in == "email@email" && $password_in == "password")
 {
     $comment = "ログインに成功しました";
     $address = "list_of_books";
