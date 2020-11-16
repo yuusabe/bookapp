@@ -6,6 +6,8 @@
 $email_in = "なし";
 $password_in = "なし";
 
+echo $email_in.$password_in;
+
 $email_in = filter_input(INPUT_GET, 'email');
 $password_in = filter_input(INPUT_GET, 'password');
 
