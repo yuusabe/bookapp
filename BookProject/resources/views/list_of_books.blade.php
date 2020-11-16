@@ -63,7 +63,7 @@
 
     <form action="https://54.248.141.223/information_of_book" method="get">
     <input type = "hidden" name='number' value={{$d->book_number}}>
-      <button type="button" class="btn btn-outline-secondary">
+      <button type="submit" class="btn btn-outline-secondary">
         詳細表示
       </button>
     </div>
