@@ -6,10 +6,6 @@ use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
-    public function test()
-    {
-        return view('test');
-    }
     public function account_change_check()
     {
         return view('account_change_check');

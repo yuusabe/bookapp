@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/test', 'App\Http\Controllers\AppController@test');
-Route::get('/test', 'App\Http\Controllers\GetbookController@getbook');
-
 
 Route::get('/account_change_check', 'App\Http\Controllers\AppController@account_change_check');
 
@@ -59,8 +56,10 @@ Route::get('/lend_book', 'App\Http\Controllers\AppController@lend_book');
 Route::get('/lend_check', 'App\Http\Controllers\AppController@lend_check');
 
 Route::get('/list_of_books', 'App\Http\Controllers\AppController@list_of_books');
+Route::get('/list_of_books', 'App\Http\Controllers\GetbookController@getbook');
 
 Route::get('/login', 'App\Http\Controllers\AppController@login');
+
 Route::get('/login_check', 'App\Http\Controllers\AppController@login_check');
 
 Route::get('/mypage', 'App\Http\Controllers\AppController@mypage');
@@ -70,5 +69,3 @@ Route::get('/password_change', 'App\Http\Controllers\AppController@password_chan
 Route::get('/return_book', 'App\Http\Controllers\AppController@return_book');
 
 Route::get('/return_check', 'App\Http\Controllers\AppController@return_check');
-
-
