@@ -68,12 +68,7 @@
       </button>
     </div>
   </div>
-  <div id="book_p">
-    <div id="book">
-      <img src="image/book_001.png" id="icon" alt="表紙画像" width="135" height="130" />
-    </div>
 
-  </div>
   <div id="button_p">
     <div id="button" id="next">
       <button type="button" class="btn btn-outline-success" onclick="location.href='information_of_book.php'">
