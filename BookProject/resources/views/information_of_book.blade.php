@@ -4,8 +4,7 @@
 @extends("common.header")
 @section('body')
 
-$int = $_GET['number']
-{{$int}}
+{{$number}}
 
 
 <main>
