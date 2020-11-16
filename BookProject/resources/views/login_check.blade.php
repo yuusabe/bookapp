@@ -16,6 +16,9 @@ if (!empty($_GET["password"]))
 {
     $password_in = $_GET['password'];     
 }
+
+echo $email_in.$password_in;
+
 ?>
 
 <div class="wrapper fadeInDown">
@@ -23,7 +26,7 @@ if (!empty($_GET["password"]))
     <!-- Tabs Titles -->
 
 <?php
-if ($email_in == "email@email" && $password_in == "password")
+if ($email_in == "email@email" || $password_in == "password")
 {
     $comment = "ログインに成功しました";
     $address = "list_of_books";
