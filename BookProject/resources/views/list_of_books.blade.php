@@ -60,6 +60,9 @@
   </div>
   <div id="button_p">
     <div id="button">
+
+    <form action="http://54.248.141.223/information_of_book" method="get">
+    <input type = "hidden" name='number' value={{$d->book_number}}>
       <button type="button" class="btn btn-outline-secondary" onclick="location.href='information_of_book.php'">
         詳細表示
       </button>

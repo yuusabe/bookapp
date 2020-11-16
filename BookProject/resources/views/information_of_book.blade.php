@@ -4,6 +4,10 @@
 @extends("common.header")
 @section('body')
 
+$int = $_GET['number']
+{{$int}}
+
+
 <main>
     <div id="book_p">
         <div id="book">
