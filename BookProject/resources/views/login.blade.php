@@ -16,7 +16,7 @@
     <form>
       <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
       <input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
-      <input type="submit" class="fadeIn fourth" value="ログイン" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books'">
+      <input type="submit" class="fadeIn fourth" value="ログイン" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/login_check'">
     </form>
 
     <!-- Remind Passowrd -->
