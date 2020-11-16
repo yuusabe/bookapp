@@ -7,14 +7,14 @@ $email_in = "なし";
 $password_in = "なし";
 
 
-if (!empty($_POST["email"]))
+if (!empty($_GET["email"]))
 {
-    $email_in = $_POST['email'];
+    $email_in = $_GET['email'];
 }
 
-if (!empty($_POST["password"]))
+if (!empty($_GET["password"]))
 {
-    $password_in = $_POST['password'];     
+    $password_in = $_GET['password'];     
 }
 ?>
 
@@ -37,7 +37,7 @@ else
 
 
     <!-- Login Form -->
-    <form action="<?php echo $address ?>" method="post">
+    <form action="<?php echo $address ?>" method="get">
       <input type="submit" value="<?php echo $comment ?>" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php echo $address ?>'">
     </form>
 
