@@ -42,7 +42,7 @@
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
 
-  @foreach($data as $d)
+  @foreach($data as $index => $d)
   <div id="book_p">
     <div id="book">
       <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="130" />
@@ -62,7 +62,7 @@
     <div id="button">
 
     <form action="https://54.248.141.223/information_of_book" method="get">
-    <input type = "hidden" name='number' value={{$d->book_number}}>
+    <input type = "hidden" name='number{{$index}}' value={{$d->book_number}}>
       <button type="submit" class="btn btn-outline-secondary">
         詳細表示
       </button>
