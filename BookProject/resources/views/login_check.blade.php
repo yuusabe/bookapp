@@ -14,7 +14,7 @@ $password_in = $_COOKIE["password"];
 
 if ($email_in == "email@email" || $password_in == "password")
 {
-    $comment = "ログインに成功しました";
+    $comment = "ログインに成功しました!";
     $address = "list_of_books";
 }
 else
