@@ -91,6 +91,5 @@
   </div>
 </main>
 
-<script src="{{ asset('/js/dropdown.js') }}"></script>
 @endsection
 @extends("common.footer")
