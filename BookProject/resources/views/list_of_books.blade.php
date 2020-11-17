@@ -62,7 +62,8 @@
     <div id="button">
 
     <form action="https://54.248.141.223/information_of_book" method="post">
-    <input type = "hidden" name='number{{$loop->iteration}}' value={{$d->book_number}}>
+    @csrf
+    <input type = "hidden" name="number" value="{{$d->book_number}}">
       <button type="submit" class="btn btn-outline-secondary">
         詳細表示
       </button>

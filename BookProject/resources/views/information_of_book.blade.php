@@ -4,8 +4,7 @@
 @extends("common.header")
 @section('body')
 
-{{$number}}
-
+{{$number['number']}}
 
 <main>
     <div id="book_p">
