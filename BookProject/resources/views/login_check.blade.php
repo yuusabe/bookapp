@@ -8,7 +8,6 @@
     <!-- Tabs Titles -->
 
 <?php
-
 $email_in = $_COOKIE["email"];
 $password_in = $_COOKIE["password"];
 

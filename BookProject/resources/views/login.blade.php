@@ -19,7 +19,7 @@
       <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie()" >
     </form>
 
-    <button onclick="readCookie()">読み込み</button><br>
+    <button onclick="readCookie()">読み込み(反映チェック)</button><br>
 
     <script type="text/javascript">
       // cookieの値を読み書きする要素
