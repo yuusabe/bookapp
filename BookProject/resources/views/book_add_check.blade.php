@@ -24,12 +24,12 @@
     </div>
     <div id="button_p">
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='book_add.html'">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_add'">
                 キャンセル
             </button>
         </div>
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='completion_book.html'">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/completion'">
                 確定
             </button>
         </div>

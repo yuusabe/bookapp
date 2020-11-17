@@ -45,7 +45,7 @@
   @foreach($data as $d)
   <div id="book_p">
     <div id="book">
-      <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="130" />
+      <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="135" />
     </div>
     
     <div id="book">
@@ -79,7 +79,7 @@
 
   <div id="button_p">
     <div id="button" id="next">
-      <button type="button" class="btn btn-outline-success" onclick="location.href='information_of_book.php'">
+      <button type="button" class="btn btn-outline-success" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/information_of_book'">
         前
       </button>
     </div>
@@ -91,6 +91,5 @@
   </div>
 </main>
 
-<script src="{{ asset('/js/dropdown.js') }}"></script>
 @endsection
 @extends("common.footer")
