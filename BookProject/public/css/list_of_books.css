@@ -40,8 +40,7 @@
 }
 /*本中央寄せ*/
 #book_p{
-  width: 1000px;
-  margin: auto;
+  text-align: center;
 }
 /*本横並び*/
 #book{
