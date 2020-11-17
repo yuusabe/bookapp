@@ -26,7 +26,7 @@ else
 
 
     <!-- Login Form -->
-    <form action="<?php echo $address ?>" method="get">
+    <form>
       <input type="submit" value="<?php echo $comment ?>" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php echo $address ?>'">
     </form>
 
