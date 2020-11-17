@@ -38,6 +38,8 @@
 
     <button onclick="readCookie()">読み込み</button><br>
 
+    <p>おはよう</p>
+    
     <script type="text/javascript">
       // cookieの値を読み書きする要素
       var login = document.getElementById("login");
