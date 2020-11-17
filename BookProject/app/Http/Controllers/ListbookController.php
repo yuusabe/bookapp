@@ -12,7 +12,7 @@ class ListbookController extends Controller
     function listbook(Request $request){
         $number =  $request::all();
 
-        $info = Blist::where('account_number',$number['number']) -> get();
+        $info = Blist::where('book_number',$number['number']) -> get();
 
         return view('information_of_book',compact('info'));
     }
