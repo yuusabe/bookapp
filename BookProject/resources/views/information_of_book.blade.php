@@ -32,11 +32,7 @@
     @csrf
     <input type = "hidden" name="number" value="{{$info}}">
         <div id="button">
-<<<<<<< HEAD
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/lend_book'">
-=======
             <button type="submit" class="btn btn-outline-secondary" >
->>>>>>> ded5a61b17aff4fdfe7c848c2c4ca6379cba6ffb
                 貸出手続きへ
             </button>
             </form>

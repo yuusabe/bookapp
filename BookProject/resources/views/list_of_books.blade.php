@@ -61,16 +61,10 @@
   <div id="button_p">
     <div id="button">
 
-<<<<<<< HEAD
-    <form action="http://54.248.141.223/information_of_book" method="get">
-    <input type = "hidden" name='number' value={{$d->book_number}}>
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/information_of_book'">
-=======
     <form action="http://54.248.141.223/information_of_book" method="post">
     @csrf
     <input type = "hidden" name="number" value="{{$d->book_number}}">
       <button type="submit" class="btn btn-outline-secondary">
->>>>>>> ded5a61b17aff4fdfe7c848c2c4ca6379cba6ffb
         詳細表示
       </button>
       </form>
