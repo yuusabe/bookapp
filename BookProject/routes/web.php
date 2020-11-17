@@ -50,8 +50,10 @@ Route::get('/completion_category', 'App\Http\Controllers\AppController@completio
 Route::get('/completion', 'App\Http\Controllers\AppController@completion');
 
 Route::get('/information_of_book', 'App\Http\Controllers\AppController@information_of_book');
+Route::post('/information_of_book', 'App\Http\Controllers\ListbookController@listbook');
 
 Route::get('/lend_book', 'App\Http\Controllers\AppController@lend_book');
+Route::post('/lend_book', 'App\Http\Controllers\LendbookController@lendbook');
 
 Route::get('/lend_check', 'App\Http\Controllers\AppController@lend_check');
 

@@ -4,10 +4,6 @@
 @extends("common.header")
 @section('body')
 
-$int = $_GET['number']
-{{$int}}
-
-
 <main>
     <div id="book_p">
         <div id="book">
@@ -15,12 +11,12 @@ $int = $_GET['number']
         </div>
         <div id="book">
             <div id="text">
-                <p id="title">タイトル：RPAのはじめかた</p>
-                <p>発行年：2001年</p>
-                <p>著者：DTG花子</p>
-                <p>出版社：技術評論社</p>
+                <p id="title">タイトル：{{$info->title}}</p>
+                <p>発行年：{{$info->year_of_issue}}</p>
+                <p>著者：{{$info->Author}}</p>
+                <p>出版社：{{$info->publisher}}</p>
                 <p>カテゴリ：RPA</p>
-                <p>貸出状況：貸出可</p>
+                <p>貸出状況：貸出中</p>
                 <p>返却予定日：2020年11月30日</p>
                 <p>貸出者：真島</p>
             </div>
@@ -32,10 +28,19 @@ $int = $_GET['number']
                 一覧へ
             </button>
         </div>
+        <form action="http://54.248.141.223/lend_book" method="post">
+    @csrf
+    <input type = "hidden" name="number" value="{{$info}}">
         <div id="button">
+<<<<<<< HEAD
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/lend_book'">
+=======
+            <button type="submit" class="btn btn-outline-secondary" >
+>>>>>>> ded5a61b17aff4fdfe7c848c2c4ca6379cba6ffb
                 貸出手続きへ
             </button>
+            </form>
+
         </div>
     </div>
  </main>
