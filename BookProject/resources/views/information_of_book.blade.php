@@ -28,12 +28,12 @@ $int = $_GET['number']
     </div>
     <div id="button_p">
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary"  onclick="location.href='list_of_books.html'">
+            <button type="button" class="btn btn-outline-secondary"  onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/list_of_books'">
                 一覧へ
             </button>
         </div>
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='lend_book.html'">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/lend_book'">
                 貸出手続きへ
             </button>
         </div>

@@ -63,7 +63,7 @@
 
     <form action="http://54.248.141.223/information_of_book" method="get">
     <input type = "hidden" name='number' value={{$d->book_number}}>
-      <button type="button" class="btn btn-outline-secondary" onclick="location.href='information_of_book.php'">
+      <button type="button" class="btn btn-outline-secondary" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/information_of_book'">
         詳細表示
       </button>
     </div>
@@ -77,7 +77,7 @@
 
   <div id="button_p">
     <div id="button" id="next">
-      <button type="button" class="btn btn-outline-success" onclick="location.href='information_of_book.php'">
+      <button type="button" class="btn btn-outline-success" onclick="location.href='http://www.dtg-shosekikanri2020-test.tk/information_of_book'">
         前
       </button>
     </div>
