@@ -13,10 +13,10 @@
             <div id="text">
                 <p id="title">タイトル：{{$info->title}}</p>
                 <p>発行年：{{$info->year_of_issue}}</p>
-                <p>著者：DTG花子</p>
-                <p>出版社：技術評論社</p>
+                <p>著者：{{$info->Author}}</p>
+                <p>出版社：{{$info->publisher}}</p>
                 <p>カテゴリ：RPA</p>
-                <p>貸出状況：貸出可</p>
+                <p>貸出状況：貸出中</p>
                 <p>返却予定日：2020年11月30日</p>
                 <p>貸出者：真島</p>
             </div>
