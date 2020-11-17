@@ -16,4 +16,10 @@ class ListbookController extends Controller
 
         return view('information_of_book',compact('info'));
     }
+
+    function lendbook(Request $request){
+        $lend =  $request::all();
+
+        return view('information_of_book',compact('lend'));
+    }
 }
