@@ -40,7 +40,7 @@
 }
 /*本中央寄せ*/
 #book_p{
-  width: 800px;
+  width: 700px;
   margin: auto;
 
 }
@@ -64,7 +64,7 @@
 #title{
   font-size: x-large;
   font-weight: bolder;
-  width: 500px;
+  width: 400px;
 }
 /*本情報テキスト設定*/
 #text{
