@@ -13,6 +13,8 @@
     </div>
 
     <?php
+    function checkLogin()
+    {
       $email_in = $_COOKIE["email"];
       $password_in = $_COOKIE["password"];
       $address = "login";
@@ -27,14 +29,15 @@
           $comment = "ログインに失敗しました";
           $address = "login";
       }
+      echo $address;
+    }
     ?>
 
     <!-- Login Form -->
-    <form action="https://www-cf.dtg-shosekikanri2020-test.tk/<?php echo $address ?>" >
-      <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
-      <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie()" >
-    </form>
+    <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
+    <input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
+    <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie();location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php checkLogin() ?>'">
+    
 
     <button onclick="readCookie()">読み込み</button><br>
 
