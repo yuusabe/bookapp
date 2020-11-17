@@ -39,7 +39,7 @@
     <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie();location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php checkLogin() ?>'">
     
 
-    <button onclick="readCookie()">読み込み</button><br>
+    <button onclick="readCookie()">読み込みaa</button><br>
 
     <script type="text/javascript">
       // cookieの値を読み書きする要素
