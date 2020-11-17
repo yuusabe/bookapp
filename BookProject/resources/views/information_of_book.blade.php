@@ -28,10 +28,15 @@
                 一覧へ
             </button>
         </div>
+        <form action="http://54.248.141.223/lend_book" method="post">
+    @csrf
+    <input type = "hidden" name="number" value="{{$info}}">
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='lend_book.html'">
+            <button type="submit" class="btn btn-outline-secondary" >
                 貸出手続きへ
             </button>
+            </form>
+
         </div>
     </div>
  </main>

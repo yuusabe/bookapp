@@ -11,10 +11,10 @@
         </div>
         <div id="book">
             <div id="text">
-                <p id="title">タイトル：RPAのはじめかた</p>
-                <p>発行年：2001年</p>
-                <p>著者：DTG花子</p>
-                <p>出版社：技術評論社</p>
+                <p id="title">タイトル：{{$lend->title}}</p>
+                <p>発行年：{{$lend->year_of_issue}}</p>
+                <p>著者：{{$lend->Author}}</p>
+                <p>出版社：{{$lend->publisher}}</p>
                 <p>カテゴリ：RPA</p>
             </div>
         </div>

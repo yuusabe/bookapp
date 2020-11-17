@@ -53,6 +53,7 @@ Route::get('/information_of_book', 'App\Http\Controllers\AppController@informati
 Route::post('/information_of_book', 'App\Http\Controllers\ListbookController@listbook');
 
 Route::get('/lend_book', 'App\Http\Controllers\AppController@lend_book');
+Route::post('/lend_book', 'App\Http\Controllers\LendbookController@lendbook');
 
 Route::get('/lend_check', 'App\Http\Controllers\AppController@lend_check');
 
