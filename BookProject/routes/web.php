@@ -71,3 +71,5 @@ Route::get('/password_change', 'App\Http\Controllers\AppController@password_chan
 Route::get('/return_book', 'App\Http\Controllers\AppController@return_book');
 
 Route::get('/return_check', 'App\Http\Controllers\AppController@return_check');
+
+Route::get('/RPA', 'App\Http\Controllers\AppController@RPA');

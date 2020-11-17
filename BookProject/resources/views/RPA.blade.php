@@ -1,4 +1,4 @@
-<?php $title = "DTGBOOK【完了画面】";?>
+<?php $title = "DTGBOOK【貸出情報画面】";?>
 <?php $csspath = "css/completion.css";?>
 
 @extends("common.header")
