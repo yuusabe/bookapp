@@ -110,4 +110,8 @@ class AppController extends Controller
     {
         return view('return_check');
     }
+    public function RPA()
+    {
+        return view('RPA');
+    }
 }
