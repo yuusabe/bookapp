@@ -13,12 +13,13 @@
     </div>
 
     <!-- Login Form -->
-    <form action="https://www-cf.dtg-shosekikanri2020-test.tk/login_check" method="get">
+    <form action="https://www-cf.dtg-shosekikanri2020-test.tk/login_check" >
       <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
       <input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
       <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie()" >
-      <button onclick="readCookie()">読み込み</button><br>
     </form>
+
+    <button onclick="readCookie()">読み込み</button><br>
 
     <script type="text/javascript">
       // cookieの値を読み書きする要素
