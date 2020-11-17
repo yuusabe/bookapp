@@ -27,10 +27,22 @@ Route::get('/account_management', 'App\Http\Controllers\AppController@account_ma
 
 Route::get('/book_add_check', 'App\Http\Controllers\AppController@book_add_check');
 
-Route::get('/book_add', 'App\Http\Controllers\AppController@book_add');
-//追記：画像ファイルをアップロードする処理のルーティング
-Route::post('/book_add', 'App\Http\Controllers\MemoryImageController@upload');
+/* Route::get('/book_add', 'App\Http\Controllers\AppController@book_add'); */
+
+//追記20201117：書籍登録画面のフォームを表示、および遷移先のルーティング
+Route::get('/book_add', 'App\Http\Controllers\BookaddFormController@show')->name("book_add.show");
+Route::post('/book_add', 'App\Http\Controllers\BookaddFormController@post')->name("book_add.post");
+
+//追記20201117：書籍登録確認画面のフォームを表示、および遷移先のルーティング
+Route::get('/book_add_check', 'App\Http\Controllers\BookaddFormController@confirm')->name("book_add.confirm");
+Route::post('/book_add_check', 'App\Http\Controllers\BookaddFormController@send')->name("book_add.send");
 //
+//追記20201117：完了画面のルーティング
+Route::get('/completion', 'App\Http\Controllers\BookaddFormController@complete')->name("book_add.complete");
+
+//追記20201116：画像ファイルをアップロードする処理のルーティング
+/* Route::post('/book_add', 'App\Http\Controllers\MemoryImageController@upload');
+// */
 
 Route::get('/book_change_check', 'App\Http\Controllers\AppController@book_change_check');
 
