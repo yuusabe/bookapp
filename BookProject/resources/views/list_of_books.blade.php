@@ -61,7 +61,7 @@
   <div id="button_p">
     <div id="button">
 
-    <form action="https://54.248.141.223/information_of_book" method="post">
+    <form action="http://54.248.141.223/information_of_book" method="post">
     @csrf
     <input type = "hidden" name="number" value="{{$d->book_number}}">
       <button type="submit" class="btn btn-outline-secondary">
