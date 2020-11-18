@@ -1,5 +1,5 @@
 <?php $title = "DTGBOOK【貸出情報画面】";?>
-<?php $csspath = "css/completion.css";?>
+<?php $csspath = "css/RPA.css";?>
 
 @extends("common.header")
 @section('body')
