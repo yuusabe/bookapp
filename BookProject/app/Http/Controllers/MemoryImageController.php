@@ -21,25 +21,28 @@ class MemoryImageController extends Controller
               'mimes:jpeg,png',
             ]
           ]);
-
+          
+          $title = $request->input('title');
+          $title_h = $request->input('title_h');
+          $year = $request->input('year');
+          $author = $request->input('author');
+          $author_h = $request->input('author_h');
+          $publisher = $request->input('publisher');
+          $category = $request->input('category');
+       
+        
           if ($request->file('img_file')->isValid([])) {
-
-            Storage::disk('s3')->putFile('/test', $request->file('img_file'), 'public');
-            return redirect('/');
+          
+            $path = Storage::disk('s3')->putFile('/temporaryimage', $request->file('img_file'), 'public');
+            return redirect('/book_add');
+            
           }else{
             return redirect('/book_add');
           }
+           //インスタンス化
         }
           
-    /*
-     $title = $request->input('title');
-     $title_h = $request->input('title_h');
-     $year = $request->input('year');
-     $author = $request->input('author');
-     $author_h = $request->input('author_h');
-     $publisher = $request->input('publisher');
-     $category = $request->input('category');
-    */
+   
 
   }
 }
