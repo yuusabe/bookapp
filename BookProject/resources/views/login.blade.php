@@ -15,20 +15,20 @@
     <?php
     function checkLogin()
     {
-      $email_in = $_COOKIE["email"];
-      $password_in = $_COOKIE["password"];
+      //$email_in = $_COOKIE["email"];
+      //$password_in = $_COOKIE["password"];
       $address = "login";
 
-      if ($email_in == "email@email" || $password_in == "password")
-      {
-          $comment = "ログインに成功しました!";
-          $address = "list_of_books";
-      }
-      else
-      {
-          $comment = "ログインに失敗しました";
-          $address = "login";
-      }
+      // if ($email_in == "email@email" || $password_in == "password")
+      // {
+      //     $comment = "ログインに成功しました!";
+      //     $address = "list_of_books";
+      // }
+      // else
+      // {
+      //     $comment = "ログインに失敗しました";
+      //     $address = "login";
+      // }
       echo $address;
     }
     ?>
