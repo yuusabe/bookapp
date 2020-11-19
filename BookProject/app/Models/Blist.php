@@ -17,7 +17,6 @@ class Blist extends Model
     public function getData()
     {
       $data = DB::table($this->table)->get();
-  
       return $data;
 }
 }

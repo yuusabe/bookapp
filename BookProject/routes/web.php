@@ -35,7 +35,11 @@ Route::post('/book_add', 'App\Http\Controllers\BookaddFormController@post')->nam
 
 //追記20201117：書籍登録確認画面のフォームを表示、および遷移先のルーティング
 Route::get('/book_add_check', 'App\Http\Controllers\BookaddFormController@confirm')->name("book_add.confirm");
-Route::post('/book_add_check', 'App\Http\Controllers\BookaddFormController@send')->name("book_add.send");
+
+// Route::post('/book_add_check', 'App\Http\Controllers\BookaddFormController@send')->name("book_add.send");
+
+Route::post('/book_add_check', 'App\Http\Controllers\B_addController@insertbook');
+
 //
 //追記20201117：完了画面のルーティング
 Route::get('/completion', 'App\Http\Controllers\BookaddFormController@complete')->name("book_add.complete");

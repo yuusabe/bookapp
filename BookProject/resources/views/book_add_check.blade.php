@@ -28,11 +28,14 @@
                 キャンセル
             </button>
         </div>
+        <form action='https://www-cf.dtg-shosekikanri2020-test.tk/completion' method="POST">
+        @csrf
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/completion'">
+            <button type="submit" class="btn btn-outline-secondary" >
                 確定
             </button>
         </div>
+        </form>
     </div>
 </main>
 
