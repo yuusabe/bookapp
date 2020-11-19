@@ -63,7 +63,8 @@ $password_in = "無し";
 </script>
 
 <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
-    <input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
+<input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
+<button onclick="readCookie()">読み込み</button><br>
 
     <!-- Login Form -->
     <form>
