@@ -27,44 +27,45 @@ class B_addController extends Controller
         $count_category=Category::get()->count();
         $count_lend_book=Lend_book::get()->count();
 
-        // 挿入データID
-        $count_account++;
-        $count_book++;
-        $count_book_category++;
-        $count_category++;
-        $count_lend_book++;
+                // 挿入データID
+                $count_account++;
+                $count_book++;
+                $count_book_category++;
+                $count_category++;
+                $count_lend_book++;
 
         // 該当データのID検索
         $category='フロントエンド';
         $category_number=Category::where('category_name', $category)->select('category_number')->first();
 
-        // 挿入データ配列
-        $data=[
-            $title='test',
-            $title_furigana='テスト',
-            $year_of_issue='2020年11月11日',
-            $Author='テスト太郎',
-            $Author_furigana='テストタロウ',
-            $publisher='テスト社',
-            $category_number
-        ];
+        // 挿入データ用意
+            $title='test';
+            $title_furigana='テスト';
+            $year_of_issue='2020年11月11日';
+            $Author='テスト太郎';
+            $Author_furigana='テストタロウ';
+            $publisher='テスト社';
+
+            Log::debug($title);
+            Log::debug($category_number);
+            Log::debug($count_category);
 
         // データ挿入
         $book->create([
-            'book_number' => $data[$count_book],
-            'title' => $data[$title],
-            'title_furigana' => $data[$title_furigana],
+            'book_number' => $count_book,
+            'title' => $title,
+            'title_furigana' => $title_furigana,
             'cover_pic' => 'testpass',
-            'publisher' => $data[$publisher],
-            'Author' => $data[$Author],
-            'Author_furigana' => $data[$Author_furigana],
-            'year_of_issue' => $data[$year_of_issue],
+            'publisher' => $publisher,
+            'Author' => $Author,
+            'Author_furigana' => $Author_furigana,
+            'year_of_issue' => $year_of_issue,
             'logic_flag' => 'TRUE'
         ]);
         $book_category->create([
-            'category_kanrinum' => $data[$count_book_category],
-            'book_number' => $data[$count_book],
-            'category_number' => $data[$category_number],
+            'category_kanrinum' => $count_book_category,
+            'book_number' => $count_book,
+            'category_number' => $category_number,
             'logic_flag' => 'TRUE',
         ]);
 
