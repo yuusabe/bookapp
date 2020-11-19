@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Log;
 
 class B_addController extends Controller
 {
-    Public function insertbook(){
+    Public function insertbook(Request $request){
         // モデルクラスのインスタンス化
         $account_table=new Account();
         $book_table=new Book();
