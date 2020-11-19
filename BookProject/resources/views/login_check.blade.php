@@ -32,6 +32,10 @@ $password_in = "無し";
       $comment = "ログインに失敗しました";
       $address = "login";
   }
+
+  echo $email_in.$password_in;
+  echo $comment.$address;
+
 ?>
 
 
