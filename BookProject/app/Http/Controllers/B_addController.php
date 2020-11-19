@@ -51,20 +51,20 @@ class B_addController extends Controller
 
         // データ挿入
         $book->create([
-            'book_number' => $count_book,
-            'title' => $title,
-            'title_furigana' => $title_furigana,
+            'book_number' => $data[$count_book],
+            'title' => $data[$title],
+            'title_furigana' => $data[$title_furigana],
             'cover_pic' => 'testpass',
-            'publisher' => $publisher,
-            'Author' => $Author,
-            'Author_furigana' => $Author_furigana,
-            'year_of_issue' => $year_of_issue,
+            'publisher' => $data[$publisher],
+            'Author' => $data[$Author],
+            'Author_furigana' => $data[$Author_furigana],
+            'year_of_issue' => $data[$year_of_issue],
             'logic_flag' => 'TRUE'
         ]);
         $book_category->create([
-            'category_kanrinum' => $count_book_category,
-            'book_number' => $count_book,
-            'category_number' => $category_number,
+            'category_kanrinum' => $data[$count_book_category],
+            'book_number' => $data[$count_book],
+            'category_number' => $data[$category_number],
             'logic_flag' => 'TRUE',
         ]);
 
