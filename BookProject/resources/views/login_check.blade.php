@@ -8,6 +8,10 @@
     <!-- Tabs Titles -->
 
 <?php
+
+$email_in = "無し";
+$password_in = "無し";
+
   if (!empty($_COOKIE["email"]))
   {
     $email_in = $_COOKIE["email"];
