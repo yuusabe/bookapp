@@ -12,37 +12,12 @@
       <img src="image/dtg_book_logo.png" id="icon" alt="アイコン" />
     </div>
 
-    <?php
-    function checkLogin()
-    {
-      if (!empty($_COOKIE["email"]))
-      {
-        $email_in = $_COOKIE["email"];
-      }
-      if (!empty($_COOKIE["password"]))
-      {
-        $password_in = $_COOKIE["password"];
-      }
-      $address = "login";
-
-      if ($email_in == "email@email" || $password_in == "password")
-      {
-          $comment = "ログインに成功しました!";
-          $address = "list_of_books";
-      }
-      else
-      {
-          $comment = "ログインに失敗しました";
-          $address = "login";
-      }
-      echo $address;
-    }
-    ?>
+    
 
     <!-- Login Form -->
     <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
     <input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
-    <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie();location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php checkLogin() ?>'">
+    <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie();location.href='https://www-cf.dtg-shosekikanri2020-test.tk/login_check'">
     
 
     <button onclick="readCookie()">読み込み</button><br>

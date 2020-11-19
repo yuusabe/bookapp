@@ -8,8 +8,15 @@
     <!-- Tabs Titles -->
 
 <?php
-  $email_in = $_COOKIE["email"];
-  $password_in = $_COOKIE["password"];
+  if (!empty($_COOKIE["email"]))
+  {
+    $email_in = $_COOKIE["email"];
+  }
+  if (!empty($_COOKIE["password"]))
+  {
+    $password_in = $_COOKIE["password"];
+  }
+  $address = "login";
 
   if ($email_in == "email@email" || $password_in == "password")
   {
