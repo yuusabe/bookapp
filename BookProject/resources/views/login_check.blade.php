@@ -20,7 +20,6 @@ $pass_in = "無し";
   {
     $pass_in = $_COOKIE["pass"];
   }
-  $address = "login";
 
   if ($email_in == "email@email" || $pass_in == "password")
   {
@@ -30,7 +29,7 @@ $pass_in = "無し";
   else
   {
       $comment = "ログインに失敗しました";
-      $address = "list_of_books";
+      $address = "login";
   }
 
   echo $email_in.$pass_in;
