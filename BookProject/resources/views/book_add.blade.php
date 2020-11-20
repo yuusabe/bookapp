@@ -1,19 +1,21 @@
 <?php $title = "DTGBOOK【書籍登録画面】";?>
 <?php $csspath = "css/book.css";?>
+<?php $jspath = "js/date.js";?>
 
 @extends("common.header")
 @section('body')
 
 <main>
+    
+         
     <div id="text">
         <p>登録する書籍の内容を入力してください。</p>
     </div>
-    <div id="b_info">
-        <div id="b_image">
-            <!-- トリガー -->
-            <form method="POST" action="/book_add" enctype="multipart/form-data">
-                {{ csrf_field() }}
-
+    <form method="POST" action="{{ route('book_add.post') }}" enctype="multipart/form-data">
+        @csrf    
+        <div id="b_info">
+            <div id="b_image">
+                <!-- トリガー -->
                 <label>
                     <span class="btn btn-outline-secondary">
                         ファイルを選択してください
@@ -36,18 +38,22 @@
                     fileReader.readAsDataURL(obj.files[0]);
                 }
                 </script>
-                <p>
+                <!-- <p>
                     <input type="submit" value="アップロード">
-                </p>
-            </form>
+                </p> -->
+                
+            </div>
         </div>
-    </div>
-    <div id="b_info">
-        <form>
+        <div id="b_info">
+            <!-- <form> -->
+                <!-- {{ csrf_field() }} -->
             <div id="tbox">
+            
                 　　　　　　タイトル
                 <input type="text" name="title" placeholder="タイトルを入力してください" id="b_tbox">
+                <!-- <input type="submit" value="テストアップロ-ド"> -->
             </div>
+            
             <div id="tbox">
                 タイトル（フリガナ）
                 <input type="text" name="title_h" placeholder="タイトルのフリガナを入力してください" id="b_tbox">
@@ -86,23 +92,22 @@
                     </span>
                 </label>
             </div>
-        </form>
-    </div>
-    <div id="button_p">
-        <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books'">
-                キャンセル
-            </button>
+            <!-- </form> -->
         </div>
-        <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_add_check'">
-                書籍登録
-            </button>
+        <div id="button_p">
+            <div id="button">
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books'">
+                    キャンセル
+                </button>
+            </div>
+            <div id="button">
+                <button type="submit" class="btn btn-outline-secondary">
+                <!-- <button type="submit" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_add_check'"> -->
+                    書籍登録
+                </button>
+            </div>
         </div>
-    </div>
+    </form>
 </main>
 
-<script src="{{ asset('/js/image.js') }}"></script>
-<script src="{{ asset('/js/date.js') }}"></script>
 @endsection
-@extends("common.footer")

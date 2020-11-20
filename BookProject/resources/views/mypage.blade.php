@@ -41,5 +41,4 @@
     </div>
 </main>
 
-@endsection
-@extends("common.footer")
+@endsections
