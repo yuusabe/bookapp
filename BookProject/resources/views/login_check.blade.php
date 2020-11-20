@@ -30,7 +30,7 @@ $pass_in = "無し";
   else
   {
       $comment = "ログインに失敗しました";
-      $address = "login";
+      $address = "list_of_books";
   }
 
   echo $email_in.$pass_in;
