@@ -12,34 +12,16 @@
       <img src="image/dtg_book_logo.png" id="icon" alt="アイコン" />
     </div>
 
-    <?php
-    function checkLogin()
-    {
-      $email_in = $_COOKIE["email"];
-      $password_in = $_COOKIE["password"];
-      $address = "login";
 
-      if ($email_in == "email@email" || $password_in == "password")
-      {
-          $comment = "ログインに成功しました!";
-          $address = "list_of_books";
-      }
-      else
-      {
-          $comment = "ログインに失敗しました";
-          $address = "login";
-      }
-      echo $address;
-    }
-    ?>
 
     <!-- Login Form -->
     <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
     <input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
-    <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie();location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php checkLogin() ?>'">
+    <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie();location.href='https://www-cf.dtg-shosekikanri2020-test.tk/login_check'">
     
 
     <button onclick="readCookie()">読み込み</button><br>
+    <button onclick="deleteCookie()">削除</button><br>
 
     <script type="text/javascript">
       // cookieの値を読み書きする要素
@@ -61,6 +43,11 @@
         var password_v = document.cookie.replace(/(?:(?:^|.*;\s*)password\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         login.value = login_v;
         password.value = password_v;
+        console.log(document.cookie);
+      }
+
+      function deleteCookie() {
+        document.cookie = "email=; password=";
         console.log(document.cookie);
       }
 

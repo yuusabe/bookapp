@@ -35,7 +35,13 @@ Route::post('/book_add', 'App\Http\Controllers\BookaddFormController@post')->nam
 
 //追記20201117：書籍登録確認画面のフォームを表示、および遷移先のルーティング
 Route::get('/book_add_check', 'App\Http\Controllers\BookaddFormController@confirm')->name("book_add.confirm");
-Route::post('/book_add_check', 'App\Http\Controllers\BookaddFormController@send')->name("book_add.send");
+
+// 20201119：書籍追加機能確認のためコメントアウト
+// Route::post('/book_add_check', 'App\Http\Controllers\BookaddFormController@send')->name("book_add.send");
+
+// 201119：書籍追加機能
+Route::post('/book_add_check', 'App\Http\Controllers\B_addController@insertbook');
+
 //
 //追記20201117：完了画面のルーティング
 Route::get('/completion', 'App\Http\Controllers\BookaddFormController@complete')->name("book_add.complete");
@@ -61,11 +67,12 @@ Route::get('/completion_category', 'App\Http\Controllers\AppController@completio
 
 Route::get('/completion', 'App\Http\Controllers\AppController@completion');
 
-Route::get('/information_of_book', 'App\Http\Controllers\AppController@information_of_book');
+Route::get('/information_of_book', 
+'App\Http\Controllers\AppController@information_of_book');
 Route::post('/information_of_book', 'App\Http\Controllers\ListbookController@listbook');
 
 Route::get('/lend_book', 'App\Http\Controllers\AppController@lend_book');
-Route::post('/lend_book', 'App\Http\Controllers\LendbookController@lendbook');
+Route::post('/lend_book', 'App\Http\Controllers\ListbookController@lendbook');
 
 Route::get('/lend_check', 'App\Http\Controllers\AppController@lend_check');
 
