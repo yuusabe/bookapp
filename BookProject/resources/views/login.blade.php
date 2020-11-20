@@ -15,7 +15,7 @@
 
 
     <!-- Login Form -->
-    <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
+    <input type="text" id="email" class="fadeIn second" name="email" placeholder="メールアドレス">
     <input type="text" id="pass" class="fadeIn third" name="pass" placeholder="パスワード">
     <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie();location.href='https://www-cf.dtg-shosekikanri2020-test.tk/login_check'">
     
