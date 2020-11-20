@@ -16,32 +16,38 @@
 
     <!-- Login Form -->
     <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
-    <input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
+    <input type="text" id="pass" class="fadeIn third" name="pass" placeholder="パスワード">
     <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie();location.href='https://www-cf.dtg-shosekikanri2020-test.tk/login_check'">
     
 
     <button onclick="readCookie()">読み込み</button><br>
+    <button onclick="deleteCookie()">削除</button><br>
 
     <script type="text/javascript">
       // cookieの値を読み書きする要素
-      var login = document.getElementById("login");
-      var password = document.getElementById("password");
+      var email = document.getElementById("email");
+      var pass = document.getElementById("pass");
 
       // 書き込み
       function writeCookie() {
-        var login_v = login.value;
-        var password_v = password.value;
-        document.cookie = "email=" + login_v + "; domain=www-cf.dtg-shosekikanri2020-test.tk; path=/";
-        document.cookie = "password=" + password_v + "; domain=www-cf.dtg-shosekikanri2020-test.tk; path=/";
+        var email_v = email.value;
+        var pass_v = pass.value;
+        document.cookie = "email=" + email_v;
+        document.cookie = "pass=" + pass_v;
         console.log(document.cookie);
       }
 
       function readCookie() {
         var tmp = document.cookie;
-        var login_v = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        var password_v = document.cookie.replace(/(?:(?:^|.*;\s*)password\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        login.value = login_v;
-        password.value = password_v;
+        var email_v = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        var pass_v = document.cookie.replace(/(?:(?:^|.*;\s*)pass\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        email.value = email_v;
+        pass.value = pass_v;
+        console.log(document.cookie);
+      }
+
+      function deleteCookie() {
+        document.cookie = "email=; pass=";
         console.log(document.cookie);
       }
 

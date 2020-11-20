@@ -10,19 +10,19 @@
 <?php
 
 $email_in = "無し";
-$password_in = "無し";
+$pass_in = "無し";
 
   if (!empty($_COOKIE["email"]))
   {
     $email_in = $_COOKIE["email"];
   }
-  if (!empty($_COOKIE["password"]))
+  if (!empty($_COOKIE["pass"]))
   {
-    $password_in = $_COOKIE["password"];
+    $pass_in = $_COOKIE["pass"];
   }
   $address = "login";
 
-  if ($email_in == "email@email" || $password_in == "password")
+  if ($email_in == "email@email" || $pass_in == "password")
   {
       $comment = "ログインに成功しました!";
       $address = "list_of_books";
@@ -33,35 +33,35 @@ $password_in = "無し";
       $address = "login";
   }
 
-  echo $email_in.$password_in;
+  echo $email_in.$pass_in;
   echo $comment.$address;
 
 ?>
 
-<input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
-<input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
+<input type="text" id="email" class="fadeIn second" name="email" placeholder="メールアドレス">
+<input type="text" id="pass" class="fadeIn third" name="pass" placeholder="パスワード">
 <button onclick="readCookie()">読み込み</button><br>
 
 <script type="text/javascript">
       // cookieの値を読み書きする要素
-      var login = document.getElementById("login");
-      var password = document.getElementById("password");
+      var email = document.getElementById("email");
+      var pass = document.getElementById("pass");
 
       // 書き込み
       function writeCookie() {
-        var login_v = login.value;
-        var password_v = password.value;
-        document.cookie = "email=" + login_v + "; domain=www-cf.dtg-shosekikanri2020-test.tk; path=/";
-        document.cookie = "password=" + password_v + "; domain=www-cf.dtg-shosekikanri2020-test.tk; path=/";
+        var email_v = email.value;
+        var pass_v = pass.value;
+        document.cookie = "email=" + email_v + "; domain=www-cf.dtg-shosekikanri2020-test.tk; path=/";
+        document.cookie = "pass=" + pass_v + "; domain=www-cf.dtg-shosekikanri2020-test.tk; path=/";
         console.log(document.cookie);
       }
 
       function readCookie() {
         var tmp = document.cookie;
-        var login_v = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        var password_v = document.cookie.replace(/(?:(?:^|.*;\s*)password\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        login.value = login_v;
-        password.value = password_v;
+        var email_v = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        var pass_v = document.cookie.replace(/(?:(?:^|.*;\s*)pass\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        email.value = email_v;
+        pass.value = pass_v;
         console.log(document.cookie);
       }
 </script>
