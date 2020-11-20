@@ -49,4 +49,3 @@
 </main>
 
 @endsection
-@extends("common.footer")

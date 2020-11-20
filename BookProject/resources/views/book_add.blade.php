@@ -1,5 +1,6 @@
 <?php $title = "DTGBOOK【書籍登録画面】";?>
 <?php $csspath = "css/book.css";?>
+<?php $jspath = "js/date.js";?>
 
 @extends("common.header")
 @section('body')
@@ -102,7 +103,4 @@
     </div>
 </main>
 
-<script src="{{ asset('/js/image.js') }}"></script>
-<script src="{{ asset('/js/date.js') }}"></script>
 @endsection
-@extends("common.footer")
