@@ -21,6 +21,7 @@
     
 
     <button onclick="readCookie()">読み込み</button><br>
+    <button onclick="deleteCookie()">削除</button><br>
 
     <script type="text/javascript">
       // cookieの値を読み書きする要素
@@ -42,6 +43,11 @@
         var password_v = document.cookie.replace(/(?:(?:^|.*;\s*)password\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         login.value = login_v;
         password.value = password_v;
+        console.log(document.cookie);
+      }
+
+      function deleteCookie() {
+        document.cookie = "email=; password=";
         console.log(document.cookie);
       }
 
