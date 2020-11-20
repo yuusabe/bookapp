@@ -12,7 +12,7 @@
       <img src="image/dtg_book_logo.png" id="icon" alt="アイコン" />
     </div>
 
-    
+
 
     <!-- Login Form -->
     <input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
@@ -31,8 +31,8 @@
       function writeCookie() {
         var login_v = login.value;
         var password_v = password.value;
-        document.cookie = "email=" + login_v + "; domain=www-cf.dtg-shosekikanri2020-test.tk; path=/";
-        document.cookie = "password=" + password_v + "; domain=www-cf.dtg-shosekikanri2020-test.tk; path=/";
+        document.cookie = "email=" + login_v;
+        document.cookie = "password=" + password_v;
         console.log(document.cookie);
       }
 
