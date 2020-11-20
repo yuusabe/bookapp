@@ -47,7 +47,7 @@
       }
 
       function deleteCookie() {
-        document.cookie = "email=; pass=;";
+        document.cookie = "email=; pass=";
         console.log(document.cookie);
       }
 
