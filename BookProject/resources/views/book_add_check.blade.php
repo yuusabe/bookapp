@@ -5,18 +5,26 @@
 @section('body')
 
 <main>
-    <div id="book_p">
-        <div id="book">
-            <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="130" />
-        </div>
-        <div id="book">
-            <p>タイトル：RPAのはじめかた</p>
-            <p>タイトル（フリガナ）：RPAのはじめかた</p>
-            <p>発行年：2001年</p>
-            <p>著者：技術評論社</p>
-            <p>著者（フリガナ）：技術評論社</p>
-            <p>出版社：技術評論社</p>
-            <p>カテゴリ：RPA</p>
+    <form method="post" action="{{ route('book_add.send') }}">
+        @csrf
+        <div id="book_p">
+            <div id="book">
+                <img src="{{ $input['read_temp_path'] }}"  id="image" alt="表紙画像" width="135" height="130" />
+            </div>
+            
+            <div id="book">
+                
+                    <div>
+                    <p>タイトル：{{ $input["title"] }}</p>
+                    <!-- <input type="submit" value="送信"> -->
+                    <p>タイトル（フリガナ）：{{ $input["title_h"] }}</p>
+                    <p>発行年：{{ $input["year"] }}</p>
+                    <p>著者：{{ $input["author"] }}</p>
+                    <p>著者（フリガナ）：{{ $input["author_h"] }}</p>
+                    <p>出版社：{{ $input["publisher"] }}</p>
+                    <p>カテゴリ：{{ $input["category"] }}</p>
+                    </div>
+        </form>
         </div>
     </div>
     <div id="text">
