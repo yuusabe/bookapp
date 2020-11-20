@@ -38,6 +38,10 @@ $password_in = "無し";
 
 ?>
 
+<input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
+<input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
+<button onclick="readCookie()">読み込み</button><br>
+
 <script type="text/javascript">
       // cookieの値を読み書きする要素
       var login = document.getElementById("login");
@@ -61,10 +65,6 @@ $password_in = "無し";
         console.log(document.cookie);
       }
 </script>
-
-<input type="text" id="login" class="fadeIn second" name="email" placeholder="メールアドレス">
-<input type="text" id="password" class="fadeIn third" name="password" placeholder="パスワード">
-<button onclick="readCookie()">読み込み</button><br>
 
     <!-- Login Form -->
     <form>
