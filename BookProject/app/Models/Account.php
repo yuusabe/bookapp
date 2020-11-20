@@ -10,17 +10,20 @@ class Account extends Model
 {
     protected $table = 'accounts';
 
-    protected $guarded = [
-        'account_number'
-    ];
-
     protected $fillable = [
+        'account_number',
         'account_name',
         'mail_address',
         'password',
         'manager_flag',
         'logic_flag'
     ];
+
+    protected $casts = [
+      'account_number' => 'integer',
+      'manager_flag' => 'boolean',
+      'logic_flag' => 'boolean'
+  ];
 
   public $timestamps = false;
 }

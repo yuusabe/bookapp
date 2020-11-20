@@ -10,15 +10,19 @@ class Book_category extends Model
 {
     protected $table = 'book_categories';
 
-    protected $guarded = [
-        'category_kanrinum'
-    ];
-
     protected $fillable = [
+        'category_kanrinum',
         'book_number',
         'category_number',
         'logic_flag'
     ];
+
+    protected $casts = [
+      'category_kanrinum' => 'integer',
+      'book_number' => 'integer',
+      'category_number' => 'integer',
+      'logic_flag' => 'boolean'
+  ];
 
   public $timestamps = false;
 }

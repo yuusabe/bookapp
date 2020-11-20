@@ -27,7 +27,7 @@ class B_addController extends Controller
         $count_category=Category::get()->count();
         $count_lend_book=Lend_book::get()->count();
 
-                // 挿入データID
+                // 挿入データID用意
                 $count_account++;
                 $count_book++;
                 $count_book_category++;
@@ -35,8 +35,8 @@ class B_addController extends Controller
                 $count_lend_book++;
 
         // 該当データのID検索
-        $category='フロントエンド';
-        $category_number=Category::where('category_name', $category)->select('category_number')->first();
+        $category='バックエンド';
+        $category_array=Category::where('category_name', $category)->first();
 
         // 挿入データ用意
             $title='test';
@@ -46,12 +46,14 @@ class B_addController extends Controller
             $Author_furigana='テストタロウ';
             $publisher='テスト社';
 
-            Log::debug($title);
-            Log::debug($category_number);
-            Log::debug($count_category);
+            $category_number=(integer)$category_array['category_number'];
+
+            // Log::debug($title);
+            // Log::debug($category_number);
+            // Log::debug($count_book);
 
         // データ挿入
-        $book->create([
+        $book_table->create([
             'book_number' => $count_book,
             'title' => $title,
             'title_furigana' => $title_furigana,
@@ -60,15 +62,13 @@ class B_addController extends Controller
             'Author' => $Author,
             'Author_furigana' => $Author_furigana,
             'year_of_issue' => $year_of_issue,
-            'logic_flag' => 'TRUE'
+            'logic_flag' => true
         ]);
-        $book_category->create([
+        $book_category_table->create([
             'category_kanrinum' => $count_book_category,
             'book_number' => $count_book,
             'category_number' => $category_number,
-            'logic_flag' => 'TRUE',
+            'logic_flag' => true
         ]);
-
-
     }
 }

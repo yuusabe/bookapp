@@ -10,14 +10,16 @@ class Category extends Model
 {
     protected $table = 'categories';
 
-    protected $guarded = [
-        'category_number'
-    ];
-
     protected $fillable = [
+        'category_number',
         'category_name',
         'logic_flag'
     ];
+
+    protected $casts = [
+      'category_number' => 'integer',
+      'logic_flag' => 'boolean'
+  ];
 
   public $timestamps = false;
 }

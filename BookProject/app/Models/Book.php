@@ -10,18 +10,21 @@ class Book extends Model
 {
     protected $table = 'books';
 
-    protected $guarded = [
-        'book_number'
-    ];
-
     protected $fillable = [
+        'book_number',
         'title',
         'title_furigana',
+        'cover_pic',
         'publisher',
         'Author',
         'Author_furigana',
         'year_of_issue',
         'logic_flag'
+    ];
+
+    protected $casts = [
+        'book_number' => 'integer',
+        'logic_flag' => 'boolean'
     ];
 
   public $timestamps = false;
