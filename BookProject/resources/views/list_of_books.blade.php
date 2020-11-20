@@ -6,7 +6,7 @@
 @section('body')
 
 <main>
-<form action="http://54.248.141.223/list_of_books" method="GET">
+<!-- <form action="http://54.248.141.223/list_of_books" method="GET">
   <div id="search">
     <input id="sbox" name="s" type="text" value={{$keyword}} placeholder="キーワードを入力" />
   
@@ -41,7 +41,7 @@
   </div>
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
-  </form>
+  </form> -->
 
   @foreach($data as $d)
   <div id="book_p">
