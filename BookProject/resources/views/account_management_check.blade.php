@@ -52,4 +52,3 @@ if (!empty($_GET["accounttype"]))
 </main>
 
 @endsection
-@extends("common.footer")
