@@ -101,8 +101,8 @@
                 </button>
             </div>
             <div id="button">
-                <button type="submit" class="btn btn-outline-secondary">
-                <!-- <button type="submit" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_add_check'"> -->
+                <!-- <button type="submit" class="btn btn-outline-secondary"> -->
+                <button type="submit" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_add_check'">
                     書籍登録
                 </button>
             </div>
