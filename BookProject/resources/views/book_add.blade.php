@@ -11,8 +11,9 @@
     <div id="text">
         <p>登録する書籍の内容を入力してください。</p>
     </div>
-    <form method="POST" action="{{ route('book_add.post') }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('book_add.post') }}" enctype="multipart/form-data">
         @csrf    
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <div id="b_info">
             <div id="b_image">
                 <!-- トリガー -->
@@ -45,8 +46,6 @@
             </div>
         </div>
         <div id="b_info">
-            <!-- <form> -->
-                <!-- {{ csrf_field() }} -->
             <div id="tbox">
             
                 　　　　　　タイトル
@@ -92,7 +91,6 @@
                     </span>
                 </label>
             </div>
-            <!-- </form> -->
         </div>
         <div id="button_p">
             <div id="button">

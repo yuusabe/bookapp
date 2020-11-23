@@ -5,7 +5,7 @@
 @section('body')
 
 <main>
-    <form method="post" action="{{ route('book_add.send') }}">
+    <form method="post" action="{{ route('book_add.send') }}" enctype="multipart/form-data">
         @csrf
         <div id="book_p">
             <div id="book">
