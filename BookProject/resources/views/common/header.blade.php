@@ -29,7 +29,7 @@
                 {
                     $atype_in = "なし";
                 }
-                if ($atype_in = "管理者ユーザ")
+                if ($atype_in == "管理者ユーザ")
                 {
                     echo '<img src="image/administrator_logo.png" alt="アイコン" width="150" height="150" />';
                 }
