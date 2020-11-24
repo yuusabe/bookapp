@@ -19,8 +19,26 @@
     <header class="header_button">
             <div id="pine">
                 <img src="image/dtg_book_logo.png" alt="アイコン" width="135" height="130" />
-                <img src="image/administrator_logo.png" alt="アイコン" width="150" height="150" />
-                <img src="image/user_logo.png" alt="アイコン" width="150" height="150" />
+
+                <?php
+                if (!empty($_COOKIE["atype"]))
+                {
+                  $atype_in = $_COOKIE["atype"];
+                }
+                else
+                {
+                    $atype_in = "なし";
+                }
+                if ($atype_in = "管理者ユーザ")
+                {
+                    echo '<img src="image/administrator_logo.png" alt="アイコン" width="150" height="150" />';
+                }
+                else
+                {
+                    echo '<img src="image/user_logo.png" alt="アイコン" width="150" height="150" />';
+                }
+                ?>
+
             </div>
             <div id="pine">
                 <div id="h_button">

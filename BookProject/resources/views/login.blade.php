@@ -17,6 +17,16 @@
     <!-- Login Form -->
     <input type="text" id="email" class="fadeIn second" name="email" placeholder="メールアドレス">
     <input type="password" id="pass" class="fadeIn third" name="pass" placeholder="パスワード">
+
+    <div id="radio">
+        <div id="tb">
+          <p>管理者権限</p>
+        </div>
+          <input type="radio" id="accounttype" name="accounttype" value="一般ユーザ">一般ユーザ
+          <input type="radio" id="accounttype" name="accounttype" value="管理者ユーザ">管理者ユーザ
+      </div>
+    </div>
+
     <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie();location.href='https://www-cf.dtg-shosekikanri2020-test.tk/login_check'">
     
 
@@ -27,13 +37,16 @@
       // cookieの値を読み書きする要素
       var email = document.getElementById("email");
       var pass = document.getElementById("pass");
+      var accounttype = document.getElementById("accounttype");
 
       // 書き込み
       function writeCookie() {
         var email_v = email.value;
         var pass_v = pass.value;
+        var atype_v = accounttype.value;
         document.cookie = "email=" + email_v;
         document.cookie = "pass=" + pass_v;
+        document.cookie = "atype=" + atype_v;
         console.log(document.cookie);
       }
 
