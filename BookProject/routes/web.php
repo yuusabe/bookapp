@@ -37,7 +37,7 @@ Route::post('/book_add', 'App\Http\Controllers\BookaddFormController@post')->nam
 Route::get('/book_add_check', 'App\Http\Controllers\BookaddFormController@confirm')->name("book_add.confirm");
 
 // 20201119：書籍追加機能確認のためコメントアウト
-Route::match(['get', 'post'], '/book_add_check', 'App\Http\Controllers\BookaddFormController@send')->name("book_add.send");
+Route::post('/book_add_check', 'App\Http\Controllers\BookaddFormController@send')->name("book_add.send");
 
 // 201119：書籍追加機能
 // Route::post('/book_add_check', 'App\Http\Controllers\B_addController@insertbook');
