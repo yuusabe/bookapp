@@ -23,6 +23,9 @@
   display: block;
   margin-left: 15px;
 }
+#image{
+  color: #666;
+}
 /*テキストボックス設定*/
 #b_tbox{
   outline: none;

@@ -25,7 +25,7 @@
                 </label>
             
                 <p>
-                プレビュー:<br>
+                <div id="image">プレビュー:</div><br>
                 <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:220px;">
                 </p>
                 <script>
