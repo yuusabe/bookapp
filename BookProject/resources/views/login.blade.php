@@ -37,7 +37,7 @@
       // cookieの値を読み書きする要素
       var email = document.getElementById("email");
       var pass = document.getElementById("pass");
-      var accounttype = document.getElementById("accounttype");
+      var atype = document.getElementById("accounttype");
 
       // 書き込み
       function writeCookie() {
@@ -54,14 +54,17 @@
         var tmp = document.cookie;
         var email_v = document.cookie.replace(/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         var pass_v = document.cookie.replace(/(?:(?:^|.*;\s*)pass\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        var atype_v = document.cookie.replace(/(?:(?:^|.*;\s*)atype\s*\=\s*([^;]*).*$)|^.*$/, "$1");
         email.value = email_v;
         pass.value = pass_v;
+        atype.value = atype_v;
         console.log(document.cookie);
       }
 
       function deleteCookie() {
         document.cookie = "email=";
         document.cookie = "pass=";
+        document.cookie = "atype=";
         console.log(document.cookie);
       }
 
