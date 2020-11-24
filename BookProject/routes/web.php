@@ -93,4 +93,5 @@ Route::get('/return_check', 'App\Http\Controllers\AppController@return_check');
 
 Route::get('/RPA', 'App\Http\Controllers\AppController@RPA');
 
+Route::get('/testpage', 'App\Http\Controllers\AppController@testpage');
 Route::get('/testpage', 'App\Http\Controllers\TestController@test');

@@ -114,4 +114,8 @@ class AppController extends Controller
     {
         return view('RPA');
     }
+    public function testpage()
+    {
+        return view('testpage');
+    }
 }
