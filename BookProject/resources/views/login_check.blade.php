@@ -67,7 +67,7 @@ $pass_in = "無し";
 
     <!-- Login Form -->
     <form>
-      <input type="submit" value="<?php echo $comment ?>" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php echo $address ?>'">
+      <input type="button" value="<?php echo $comment ?>" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php echo $address ?>'">
     </form>
 
 
