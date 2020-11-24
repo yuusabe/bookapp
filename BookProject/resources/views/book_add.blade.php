@@ -83,9 +83,9 @@
                         　　　　　　カテゴリ
                         <select name="category" id="b_tbox">
                             <option value="">選択してください
-                            <option value="0">RPA
-                            <option value="1">統計学
-                            <option value="2">AI
+                            <option value="RPA">RPA
+                            <option value="統計学">統計学
+                            <option value="AI">AI
                         </select>
                     </span>
                 </label>
