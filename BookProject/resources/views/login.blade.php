@@ -43,7 +43,7 @@
       function writeCookie() {
         var email_v = email.value;
         var pass_v = pass.value;
-        var atype_v = accounttype.value;
+        var atype_v = atype.value;
         document.cookie = "email=" + email_v;
         document.cookie = "pass=" + pass_v;
         document.cookie = "atype=" + atype_v;
