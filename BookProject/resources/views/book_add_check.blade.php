@@ -24,27 +24,29 @@
                     <p>出版社：{{ $input["publisher"] }}</p>
                     <p>カテゴリ：{{ $input["category"] }}</p>
                     </div>
-        </form>
+        
+            </div>
         </div>
-    </div>
-    <div id="text">
-        <p>登録する書籍の内容はこちらでよろしいですか。</p>
-    </div>
-    <div id="button_p">
-        <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_add'">
-                キャンセル
-            </button>
+        <div id="text">
+            <p>登録する書籍の内容はこちらでよろしいですか。</p>
         </div>
-        <form action='https://www-cf.dtg-shosekikanri2020-test.tk/completion' method="POST">
-        @csrf
-        <div id="button">
-            <button type="submit" class="btn btn-outline-secondary" >
-                確定
-            </button>
+        <div id="button_p">
+            <div id="button">
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_add'">
+                    キャンセル
+                </button>
+            </div>
+            <!-- <form action='https://www-cf.dtg-shosekikanri2020-test.tk/completion' method="POST">
+            @csrf -->
+            <div id="button">
+                <button type="submit" class="btn btn-outline-secondary" >
+                    確定
+                </button>
+            </div>
         </div>
-        </form>
-    </div>
+    </form>
+        <!-- </form> -->
+    
 </main>
 
 @endsection

@@ -13,7 +13,6 @@
     </div>
     <form method="post" action="{{ route('book_add.post') }}" enctype="multipart/form-data">
         @csrf    
-        <meta name="csrf-token" content="{{ csrf_token() }}">
         <div id="b_info">
             <div id="b_image">
                 <!-- トリガー -->
