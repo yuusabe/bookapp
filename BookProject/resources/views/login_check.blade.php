@@ -11,6 +11,7 @@
 
 $email_in = "無し";
 $pass_in = "無し";
+$atype_in = "無し";
 
   if (!empty($_COOKIE["email"]))
   {
@@ -19,6 +20,10 @@ $pass_in = "無し";
   if (!empty($_COOKIE["pass"]))
   {
     $pass_in = $_COOKIE["pass"];
+  }
+  if (!empty($_COOKIE["atype"]))
+  {
+    $atype_in = $_COOKIE["atype"];
   }
 
   if ($email_in == "email@email" || $pass_in == "password")
@@ -32,7 +37,7 @@ $pass_in = "無し";
       $address = "login";
   }
 
-  echo $email_in.$pass_in;
+  echo $email_in.$pass_in.$atype_in;
   echo $comment.$address;
 
 ?>
