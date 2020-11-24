@@ -30,7 +30,7 @@
         </div>
         <div id="button">
             <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/return_check'">
-                確認
+                返却
             </button>
         </div>
     </div>
