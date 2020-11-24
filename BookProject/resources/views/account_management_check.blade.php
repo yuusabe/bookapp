@@ -5,13 +5,17 @@
 @section('body')
 
 <?php
-$account_name = "なし";
-$address = "なし";
-$password = "なし";
-$accounttype = "なし";
+$account_name = "NULL";
+$address = "NULL";
+$password = "NULL";
+$accounttype = "NULL";
 if (!empty($_GET["account_name"]))
 {
   $account_name = $_GET['account_name'];
+}
+else if (empty($_GET["account_name"]))
+{
+  $account_name = "なし";
 }
 if (!empty($_GET["address"]))
 {
