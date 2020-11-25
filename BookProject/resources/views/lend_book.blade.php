@@ -29,7 +29,7 @@
                 <div class="input-daterange input-group" id="datepicker">
                     <input type="date" class="input-sm form-control" pattern=”[0-9]{4}-[0-9]{2}-[0-9]{2}” name="start" id="dbox" value="<?php echo date('Y-m-d');?>"/>
                     <span class="input-group-addon" id="dbox">　〜　</span>
-                    <input type="date" class="input-sm form-control" pattern=”[0-9]{4}-[0-9]{2}-[0-9]{2}”　name="end" id="dbox"/>
+                    <input type="date" class="input-sm form-control" pattern=”[0-9]{4}-[0-9]{2}-[0-9]{2}”　name="last" id="dbox" value="<?php echo date('Y-m-d');?>"/>
                 </div>
             </div>
         </div>
