@@ -18,7 +18,7 @@
         <td>佐藤美緑</td>
         <td>minosatou@pasona.tech</td>
         <td>みのりの本</td>
-        <td>2020年11月25日</td>
+        <td>2020年11月26日</td>
       </tr>
       <tr>
         <td>阿部雄介</td>
