@@ -35,6 +35,11 @@
             <button type="submit" class="btn btn-outline-secondary" >
                 貸出手続きへ
             </button>
+
+            <button type="submit" class="btn btn-outline-secondary" disabled>
+                貸出手続きへ
+            </button>
+
             </form>
 
         </div>
