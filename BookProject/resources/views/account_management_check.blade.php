@@ -32,7 +32,7 @@ if (!empty($_GET["accounttype"]))
 ?>
 
 <main>
-    <form method="post" action="{{ route('book_add.send') }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('book_add.send') }}">
       @csrf
       <div id="account">
           <p>アカウント名　　：{{ $input["account_name"] }}</p>
