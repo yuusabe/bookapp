@@ -64,6 +64,8 @@ class BookaddFormController extends Controller
         if(!$input){
             return redirect()->action('App\Http\Controllers\BookaddFormController@show');
         }
+
+        $path = Storage::disk('s3')->putFile('/picture', $input['read_temp_path'], 'public');
         //モデルクラスのインスタンス化
         $book_table = new Book();
         $book_category_table = new Book_category();
@@ -98,7 +100,6 @@ class BookaddFormController extends Controller
         ]);
         //セッションを空にする
         $request->session()->forget("form_input");
-        $path = Storage::disk('s3')->putFile('/picture', $input['read_temp_path'], 'public');
         Log::debug($path);
         return view("completion");
         //return redirect()->action("App\Http\Controllers\BookaddFormController@complete");
