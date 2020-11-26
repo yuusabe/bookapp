@@ -43,7 +43,6 @@
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
-  <img src="picture/fMbIUKn9dFPe5xqzbusLHggUkPbbQ6Hx7dA30wrl.png" id="image" alt="表紙画像" width="135" height="135" />
 
   @foreach($data as $d)
   <div id="book_p">

@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Book_category;
 use Storage;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class GetbookController extends Controller
 {
@@ -23,5 +24,6 @@ class GetbookController extends Controller
         $d['path'] = $path;
         }
         return view('list_of_books', compact('data'));
+        Log::debug($data);
     }
 }
