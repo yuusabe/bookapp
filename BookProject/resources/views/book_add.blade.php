@@ -81,7 +81,7 @@
                 <label>
                     <span class="btn btn-outline-ssecondary">
                         　　　　　　カテゴリ
-                        <select name="category" id="b_tbox">
+                        <select name="category" id="b_tbox" multiple>
                             <option value="">選択してください
                             <option value="RPA">RPA
                             <option value="統計学">統計学

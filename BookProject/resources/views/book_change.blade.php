@@ -1,6 +1,7 @@
 <?php $title = "DTGBOOK【書籍編集画面】";?>
 <?php $csspath = "css/book.css";?>
 <?php $jspath = "js/date.js";?>
+<?php $jspath = "js/image.js";?>
 
 @extends("common.header")
 @section('body')
@@ -55,7 +56,7 @@
                 <label>
                     <span class="btn btn-outline-ssecondary">
                         　　　　　　カテゴリ
-                        <select name="category" id="b_tbox">
+                        <select name="category" id="b_tbox" multiple>
                             <option value="">選択してください
                             <option value="0">RPA
                             <option value="1">統計学
