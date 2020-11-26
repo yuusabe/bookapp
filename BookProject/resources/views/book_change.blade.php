@@ -1,7 +1,6 @@
 <?php $title = "DTGBOOK【書籍編集画面】";?>
 <?php $csspath = "css/book.css";?>
 <?php $jspath = "js/date.js";?>
-<?php $jspath = "js/image.js";?>
 
 @extends("common.header")
 @section('body')
