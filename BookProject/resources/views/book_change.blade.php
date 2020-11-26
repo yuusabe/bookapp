@@ -17,7 +17,24 @@
                     <input type="file" id="b_image" accept="image/*" style="display:none">
                 </span>
             </label>
-            <img id="preview" width="200" height="200">
+            <p>
+                <div id="image">プレビュー:</div><br>
+                <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:220px;">
+                </p>
+                <script>
+                // fileAPIでの画像プレビュー
+                function previewImage(obj)
+                {
+                    var fileReader = new FileReader();
+                    fileReader.onload = (function() {
+                        document.getElementById('preview').src = fileReader.result;
+                    });
+                    fileReader.readAsDataURL(obj.files[0]);
+                }
+                </script>
+                <!-- <p>
+                    <input type="submit" value="アップロード">
+                </p> -->
         </div>
     </div>
     <div id="b_info">
@@ -55,7 +72,7 @@
                 <label>
                     <span class="btn btn-outline-ssecondary">
                         　　　　　　カテゴリ
-                        <select name="category" id="b_tbox" multiple>
+                        <select name="category" id="b_cbox" multiple>
                             <option value="">選択してください
                             <option value="0">RPA
                             <option value="1">統計学
