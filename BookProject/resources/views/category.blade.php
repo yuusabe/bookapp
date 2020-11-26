@@ -12,10 +12,10 @@
     <div id="category_p">
         <div id="category">
             <div id="input_pluralBox">
-                <div id="input_plural">
+                <div id="input_plural" style="display:inline-flex">
                   <input type="text" id="textbox" name="category" value="category" class="form-control" placeholder="入力して下さい">
-                  <input type="button" value="＋" class="add pluralBtn">
-                  <input type="button" value="－" class="del pluralBtn">
+                  <input type="button" value="＋" class="add pluralBtn btn btn-outline-secondary">
+                  <input type="button" value="－" class="del pluralBtn btn btn-outline-secondary">
                 </div>
             </div>
         </div>
