@@ -14,7 +14,7 @@ class GetbookController extends Controller
         $data = Book::select()
         ->leftjoin('book_categories','books.book_number','book_categories.book_number')
         ->leftjoin('categories','book_categories.category_number','categories.category_number')
-        ->leftjoin('lend_books','lend_books.book_number','books.booknumber')
+        ->leftjoin('lend_books','lend_books.book_number','books.book_number')
         ->get();
 
         return view('list_of_books', compact('data'));
