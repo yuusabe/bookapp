@@ -7,11 +7,17 @@ use App\Models\Account;
 
 class LoginController extends BaseController
 {
-    public function checklogin() 
-    {
-        $md = new Account();
-        $data = $md->getData();
+    public function checklogin(){
+        
+        $email_in = "無し";
 
-        return view('login_check', compact('data'));
+        if (!empty($_COOKIE["email"]))
+        {
+            $email_in = $_COOKIE["email"];
+        }
+
+        $dara = Account::where('mail_address', $email_in)->first();
+        
+        return view('login_check',compact('data'));
     }
 }
