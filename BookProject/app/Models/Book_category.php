@@ -12,16 +12,16 @@ class Book_category extends Model
 
     protected $fillable = [
         'category_kanrinum',
-        'book_number',
-        'category_number',
-        'logic_flag'
+        'bc_book_number',
+        'bc_category_number',
+        'bc_logic_flag'
     ];
 
     protected $casts = [
       'category_kanrinum' => 'integer',
-      'book_number' => 'integer',
-      'category_number' => 'integer',
-      'logic_flag' => 'boolean'
+      'bc_book_number' => 'integer',
+      'bc_category_number' => 'integer',
+      'bc_logic_flag' => 'boolean'
   ];
 
   public $timestamps = false;

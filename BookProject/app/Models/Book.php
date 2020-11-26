@@ -19,12 +19,12 @@ class Book extends Model
         'Author',
         'Author_furigana',
         'year_of_issue',
-        'logic_flag'
+        'b_logic_flag'
     ];
 
     protected $casts = [
         'book_number' => 'integer',
-        'logic_flag' => 'boolean'
+        'b_logic_flag' => 'boolean'
     ];
 
   public $timestamps = false;

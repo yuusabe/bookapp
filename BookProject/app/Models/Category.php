@@ -13,12 +13,12 @@ class Category extends Model
     protected $fillable = [
         'category_number',
         'category_name',
-        'logic_flag'
+        'c_logic_flag'
     ];
 
     protected $casts = [
       'category_number' => 'integer',
-      'logic_flag' => 'boolean'
+      'c_logic_flag' => 'boolean'
   ];
 
   public $timestamps = false;
