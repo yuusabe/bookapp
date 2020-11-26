@@ -19,7 +19,7 @@ class GetbookController extends Controller
         ->leftjoin('categories','categories.category_number', 'book_categories.bc_category_number')
         ->leftjoin('lend_books','lend_books.l_book_number', 'books.book_number')
         ->where('b_logic_flag', TRUE)
-        ->orderBy('bc_book_number', 'asc')
+        ->orderBy('book_number', 'asc')
         // ->where('bc_logic_flag', TRUE)
         ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','lend_number')
         ->get();
