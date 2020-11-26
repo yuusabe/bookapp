@@ -19,7 +19,7 @@ class GetbookController extends Controller
         ->get();
         foreach($data as $d){
         $path = Storage::disk('s3')->url($d['cover_pic']);
-        $d = array_merge($d, $path);
+        $d = $d + $path;
         }
         
 
