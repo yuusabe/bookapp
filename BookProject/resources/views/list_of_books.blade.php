@@ -81,7 +81,7 @@
       </button>
     </div>
   </div>
-  {{$d->return_flag}}
+  {{$d->multi}}
   @endforeach
 
   <div id="button_p">
