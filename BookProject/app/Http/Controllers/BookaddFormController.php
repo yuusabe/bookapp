@@ -12,7 +12,7 @@ class BookaddFormController extends Controller
 {
     private $formItems = ["img_file", "title", "title_h","year", "author", "author_h","publisher","category"];
     private $validator = [
-        "img_file" => "required",
+        //"img_file" => "required",
         "title" => "required",
         "title_h" => "required",
         "year" => "required",
@@ -25,22 +25,19 @@ class BookaddFormController extends Controller
         return view('book_add');
     }
     function post(Request $request){
-        //$input = $request->all();
         $input = $request->except('img_file');
         $img_file = $request->file('img_file');
-        //Log::debug($input1);
-        Log::debug($img_file);
-        
+
+        if (!$img_file) {
+            return redirect()->action('App\Http\Controllers\BookaddFormController@show');
+        }
         $temp_path = $img_file->store('public/temp');
         
-       /*  if (!$temp_path) {
-            return redirect()->action('App\Http\Controllers\BookaddFormController@show');
-        } */
+        
 
         //$temp_path = array($temp_path);
         $read_temp_path = str_replace('public/', 'storage/', $temp_path);
         //$read_temp_path = array($read_temp_path);
-        Log::debug($temp_path);
         $input = array_merge(
             $input, array('temp_path' => $temp_path),array('read_temp_path' => $read_temp_path)
         );
@@ -66,7 +63,6 @@ class BookaddFormController extends Controller
     function send(Request $request){
         //セッションから値を取り出す
         $input = $request->session()->get("form_input");
-        Log::debug($input);
         //セッションに値が無い時はフォームに戻る
         if(!$input){
             return redirect()->action('App\Http\Controllers\BookaddFormController@show');
@@ -107,7 +103,6 @@ class BookaddFormController extends Controller
         ]);
         //セッションを空にする
         $request->session()->forget("form_input");
-        Log::debug($path);
         return view("completion");
         //return redirect()->action("App\Http\Controllers\BookaddFormController@complete");
     }
