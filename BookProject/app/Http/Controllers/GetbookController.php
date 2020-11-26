@@ -20,7 +20,7 @@ class GetbookController extends Controller
         ->leftjoin('lend_books','lend_books.l_book_number', 'books.book_number')
         ->where('b_logic_flag', TRUE)
         ->where('bc_logic_flag', TRUE)
-        ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','lend_number')
+        // ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','lend_number')
         ->get();
         foreach($data as $d){
         $path = Storage::disk('s3')->url($d->cover_pic);
