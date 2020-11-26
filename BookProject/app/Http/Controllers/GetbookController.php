@@ -20,10 +20,8 @@ class GetbookController extends Controller
         ->get();
         foreach($data as $d){
         $path = Storage::disk('s3')->url($d['cover_pic']);
-        $d = $d + $path;
+        $d['path'] = $path;
         }
-        
-
         return view('list_of_books', compact('data'));
     }
 }
