@@ -21,7 +21,7 @@ Route::get('/account_change', 'App\Http\Controllers\AppController@account_change
 
 Route::get('/account_delete_check', 'App\Http\Controllers\AppController@account_delete_check');
 
-Route::get('/account_management_check', 'App\Http\Controllers\AppController@account_management_check');
+/* Route::get('/account_management_check', 'App\Http\Controllers\AppController@account_management_check'); */
 
 //Route::get('/account_management', 'App\Http\Controllers\AppController@account_management');
 
@@ -29,9 +29,9 @@ Route::get('/account_management_check', 'App\Http\Controllers\AppController@acco
 Route::get('/account_management', 'App\Http\Controllers\AccountController@show')->name("account_manage.show");
 Route::post('/account_management', 'App\Http\Controllers\AccountController@post')->name("account_manage.post");
 
-Route::get('/book_add_check', 'App\Http\Controllers\AccountController@confirm')->name("account_manage.confirm");
+Route::get('/account_management_check', 'App\Http\Controllers\AccountController@confirm')->name("account_manage.confirm");
 
-Route::post('/book_add_check', 'App\Http\Controllers\AccountController@send')->name("account_manage.send");
+Route::post('/account_management_check', 'App\Http\Controllers\AccountController@send')->name("account_manage.send");
 
 
 /* Route::get('/book_add', 'App\Http\Controllers\AppController@book_add'); */

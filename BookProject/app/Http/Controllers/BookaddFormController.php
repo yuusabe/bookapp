@@ -12,7 +12,7 @@ class BookaddFormController extends Controller
 {
     private $formItems = ["img_file", "title", "title_h","year", "author", "author_h","publisher","category"];
     private $validator = [
-        //"img_file" => "required",
+        "img_file" => "required",
         "title" => "required",
         "title_h" => "required",
         "year" => "required",
