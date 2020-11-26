@@ -1,4 +1,4 @@
-<?php $title = "DTGBOOK【書籍一覧】";?>
+<?php $title = "DTGBOOK【カテゴリ確認画面】";?>
 <?php $csspath = "css/category_check.css";?>
 
 @extends("common.header")
@@ -7,6 +7,11 @@
 <main>
     <div id="category">
         <p>カテゴリ情報表示</p>
+        <div id="c_text"> 
+            <p>UiPath</p>
+            <p>機械学習</p>
+            <p>AWS</p>
+       </div>
     </div>
     <div id="text">
         <p>カテゴリ変更の内容はこちらでよろしいですか？</p>
