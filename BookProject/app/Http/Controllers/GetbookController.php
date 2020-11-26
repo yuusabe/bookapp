@@ -36,7 +36,7 @@ class GetbookController extends Controller
             $path = Storage::disk('s3')->url($d->cover_pic);
             $d->path = $path;
 
-            if($d->book_number = $before){
+            if($d->book_number == $before){
                 $d->multi = 'ON' ;
             }else{
                 $d->multi = 'OFF' ;
