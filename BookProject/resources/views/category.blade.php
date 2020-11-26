@@ -11,16 +11,12 @@
     </div>
     <div id="category_p">
         <div id="category">
-            <input type="text" id="textbox" name="category" value="category" placeholder="入力してください">
-            <button type="button" class="btn btn-outline-secondary">
-                削除
-            </button>
-        </div>
-        <div id="input_pluralBox">
-            <div id="input_plural">
-                <input type="text" class="form-control" placeholder="入力して下さい">
-                <input type="button" value="＋" class="add pluralBtn">
-                <input type="button" value="－" class="del pluralBtn">
+            <div id="input_pluralBox">
+                <div id="input_plural">
+                  <input type="text" id="textbox" name="category" value="category" class="form-control" placeholder="入力して下さい">
+                  <input type="button" value="＋" class="add pluralBtn">
+                  <input type="button" value="－" class="del pluralBtn">
+                </div>
             </div>
         </div>
     </div>
