@@ -24,7 +24,7 @@ class GetbookController extends Controller
         ->select('title','year_of_issue','publisher','cover_pic','category_name','lend_number')
         ->get();
         foreach($data as $d){
-        $path = Storage::disk('s3')->url($d['cover_pic']);
+        $path = Storage::disk('s3')->url($d->cover_pic);
         $d['path'] = $path;
         }
         return view('list_of_books', compact('data'));
