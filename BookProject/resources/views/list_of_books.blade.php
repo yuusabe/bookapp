@@ -81,6 +81,7 @@
       </button>
     </div>
   </div>
+  {{$d->return_flag}}
   @endforeach
 
   <div id="button_p">
