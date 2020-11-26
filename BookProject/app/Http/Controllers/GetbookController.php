@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\Category;
 use App\Models\Book_category;
+use Storage;
 
 class GetbookController extends Controller
 {
@@ -16,6 +17,11 @@ class GetbookController extends Controller
         ->leftjoin('categories','book_categories.category_number','categories.category_number')
         ->leftjoin('lend_books','lend_books.book_number','books.book_number')
         ->get();
+        foreach($data as $d){
+        $path = Storage::disk('s3')->url($d['cover_pic']);
+        $d = array_merge($d, $path);
+        }
+        
 
         return view('list_of_books', compact('data'));
     }
