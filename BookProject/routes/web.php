@@ -19,7 +19,7 @@ Route::get('/account_change_check', 'App\Http\Controllers\AppController@account_
 
 Route::get('/account_change', 'App\Http\Controllers\AppController@account_change');
 
-Route::get('/account__delete_check', 'App\Http\Controllers\AppController@account_delete_check');
+Route::get('/account_delete_check', 'App\Http\Controllers\AppController@account_delete_check');
 
 Route::get('/account_management_check', 'App\Http\Controllers\AppController@account_management_check');
 
