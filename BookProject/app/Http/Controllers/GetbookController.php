@@ -15,7 +15,7 @@ class GetbookController extends Controller
     public function getbook() 
     {
         // 書籍一覧情報取得
-        $obj_data = DB::table('books')
+        $data = DB::table('books')
         ->leftjoin('book_categories','book_categories.bc_book_number', 'books.book_number')
         ->leftjoin('categories','categories.category_number', 'book_categories.bc_category_number')
         ->leftjoin('lend_books','lend_books.l_book_number', 'books.book_number')
@@ -25,7 +25,7 @@ class GetbookController extends Controller
         ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','lend_number')
         ->get();
 
-        $data = (array)$obj_data;
+        // $data = (array)$obj_data;
 
         Log::debug($data);
 
