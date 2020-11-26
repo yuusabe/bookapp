@@ -29,6 +29,11 @@ class BookaddFormController extends Controller
         $input = $request->except('img_file');
         $img_file = $request->file('img_file');
         //Log::debug($input1);
+
+        if (!$img_file) {
+            return view('book_add');
+        }
+
         $temp_path = $img_file->store('public/temp');
         //$temp_path = array($temp_path);
         $read_temp_path = str_replace('public/', 'storage/', $temp_path);
