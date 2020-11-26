@@ -8,7 +8,52 @@ use App\Models\Lend_book;
 
 class AccountController extends Controller
 {
-    public function add(){
+    //アカウント登録時のコントローラー
+    private $formItems = ["account_name", "address", "password","accounttype"];
+
+    private $validator = [
+        "account_name" => "required",
+        "address" => "required",
+        "password" => "required",
+        "accounttype" => "required"
+    ];
+
+    function show(){
+        return view('account_management');
+    }
+    function post(Request $request){
+        $input = $request->only($this->formItems);
+        
+        $validator = Validator::make($input, $this->validator);
+		if($validator->fails()){
+			return redirect()->action('App\Http\Controllers\AccountController@show')
+				->withInput()
+				->withErrors($validator);
+        }
+        
+        //セッションに書き込む
+        $request->session()->put("account_input", $input);
+        return redirect()->action('App\Http\Controllers\AccountController@confirm');
+    }
+
+    function confirm(Request $request){
+        //セッションから値を取り出す
+        $input = $request->session()->get("account_input");
+        //セッションに値が無い時はフォームに戻る
+        if(!$input){
+            return redirect()->action('App\Http\Controllers\AccountController@show');
+        }
+        return view("account_management_check",["input" => $input]);
+    }
+
+    function send(Request $request){
+        //セッションから値を取り出す
+        $input = $request->session()->get("account_input");
+        //セッションに値が無い時はフォームに戻る
+        if(!$input){
+            return redirect()->action('App\Http\Controllers\AccountController@show');
+        }
+
         //モデルクラスのインスタンス化
         $account_table = new Account();
         //テーブルのカウント
@@ -23,20 +68,7 @@ class AccountController extends Controller
             'password' => $input["password"],
             'manager_flag' => $input["m_flag"],
             'logic_flag' => true
-        ]);
-    }
-    public function change(){
-        // 該当ユーザ検索・更新
-        Account::where('account_number', $number)->update([
-            'account_name' => $input['account_name'],
-            'mail_address' => $input['mail_address'],
-            'password' => $input['password'],
-            'manager_flag' => $input['manager_flag']
-            ]);
+        ]);      
     }
 
-    public function delete(){
-                // 該当ユーザ検索・削除
-                Account::where('account_number', $number)->update(['logic_flag' => false]);
-    }
 }
