@@ -30,7 +30,7 @@ class BookaddFormController extends Controller
         $img_file = $request->file('img_file');
         //Log::debug($input1);
 
-        if ($request->file('img_file')->isValid()) {
+        if (!$img_file) {
             return view('book_add');
         }
 
