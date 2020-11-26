@@ -16,7 +16,7 @@ class GetbookController extends Controller
     {
         $data = DB::table('books')
         ->leftjoin('book_categories','book_categories.bc_book_number', 'books.book_number')
-        ->leftjoin('categories','categories.category_number', 'books.bc_category_number')
+        ->leftjoin('categories','categories.category_number', 'book_categories.bc_category_number')
         ->leftjoin('lend_books','lend_books.l_book_number', 'books.book_number')
         ->where('b_logic_flag', TRUE)
         ->where('bc_logic_flag', TRUE)
