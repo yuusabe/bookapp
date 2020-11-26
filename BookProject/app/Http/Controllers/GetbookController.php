@@ -31,12 +31,12 @@ class GetbookController extends Controller
         $num = 0;
         foreach($data as $index => $d){
             $path = Storage::disk('s3')->url($d->cover_pic);
-            $d['path'] = $path;
+            $d->path = $path;
 
-            if($d['book_number'] = $data[$num]['book_number']){
-                $d['multi'] = 'ON' ;
+            if($d->book_number = $data->$num->book_number]){
+                $d->multi = 'ON' ;
             }else{
-                $d['multi'] = 'OFF' ;
+                $d->multi = 'OFF' ;
             }
             if($index!=0){
                 $num++;
