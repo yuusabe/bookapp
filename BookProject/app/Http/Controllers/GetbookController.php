@@ -22,7 +22,7 @@ class GetbookController extends Controller
         ->where('b_logic_flag', TRUE)
         ->orderBy('book_number', 'asc')
         // ->where('bc_logic_flag', TRUE)
-        // ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','lend_number')
+        ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','lend_number')
         ->get();
 
         $data = (array)$obj_data;
@@ -30,7 +30,7 @@ class GetbookController extends Controller
         // S3の画像パス取得
         $num = 0;
         foreach($data as $index => $d){
-            $path = Storage::disk('s3')->url($d['cover_pic']);
+            $path = Storage::disk('s3')->url($d->cover_pic);
             $d['path'] = $path;
 
             if($d['book_number'] = $data[$num]['book_number']){
