@@ -43,6 +43,7 @@
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
+  <img src="picture/fMbIUKn9dFPe5xqzbusLHggUkPbbQ6Hx7dA30wrl.png" id="image" alt="表紙画像" width="135" height="135" />
 
   @foreach($data as $d)
   <div id="book_p">
@@ -56,7 +57,11 @@
         <p id="title">タイトル：{{$d->title}}</p>
         <p>発行年：{{$d -> year_of_issue}}</p>
         <p>出版社：{{$d -> publisher}}</p>
-        <p>貸出状況：{{$d -> lend_number}}</p>
+        @if(!empty($d['lend_number']))
+        <p>貸出状況：貸出中</p>
+        ＠else
+        <p>貸出状況：貸出可</p>
+        @endif
       </div>
     </div>
   </div>
