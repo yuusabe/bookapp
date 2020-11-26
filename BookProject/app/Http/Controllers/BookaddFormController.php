@@ -29,9 +29,10 @@ class BookaddFormController extends Controller
         $input = $request->except('img_file');
         $img_file = $request->file('img_file');
         //Log::debug($input1);
-
+        Log::debug($img_file);
+        
         $temp_path = $img_file->store('public/temp');
-        Log::debug($temp_path);
+        
        /*  if (!$temp_path) {
             return redirect()->action('App\Http\Controllers\BookaddFormController@show');
         } */
