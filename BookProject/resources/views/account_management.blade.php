@@ -9,33 +9,37 @@
     <div id="text">
       <p>登録する内容を入力してください。</p>
     </div>
-    <div id=tb_p>
-      <div>
-        <div id="tb">
-          <p>アカウント名</p>
+    <form method="post" action="{{ route('account_manage.post') }}">
+      @csrf
+      <div id=tb_p>
+        <div>
+          <div id="tb">
+            <p>アカウント名</p>
+          </div>
+          <input type="text" id="tbox" name="account_name" placeholder="DTG太郎">
         </div>
-        <input type="text" id="tbox" name="account_name" placeholder="DTG太郎">
-      </div>
-      <div>
-        <div id="tb">
-          <p>メールアドレス</p>
+        <div>
+          <div id="tb">
+            <p>メールアドレス</p>
+          </div>
+          <input type="email" id="tbox" name="address" placeholder="abc@example.com">
         </div>
-        <input type="email" id="tbox" name="address" placeholder="abc@example.com">
-      </div>
-      <div>
-        <div id="tb">
-          <p>パスワード</p>
+        <div>
+          <div id="tb">
+            <p>パスワード</p>
+          </div>
+          <input type="text" id="tbox" name="password" placeholder="password">
         </div>
-        <input type="text" id="tbox" name="password" placeholder="password">
-      </div>
-      <div id="radio">
-        <div id="tb">
-          <p>管理者権限</p>
+        <div id="radio">
+          <div id="tb">
+            <p>管理者権限</p>
+          </div>
+            <input type="radio" name="accounttype" value="一般ユーザ">一般ユーザ
+            <input type="radio" name="accounttype" value="管理者ユーザ">管理者ユーザ
         </div>
-          <input type="radio" name="accounttype" value="一般ユーザ">一般ユーザ
-          <input type="radio" name="accounttype" value="管理者ユーザ">管理者ユーザ
       </div>
-    </div>
+    </form>
+    
     <div id="button_p">
       <div id="button">
         <button type="submit" class="btn btn-outline-secondary" >

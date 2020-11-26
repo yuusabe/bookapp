@@ -23,9 +23,16 @@ Route::get('/account_delete_check', 'App\Http\Controllers\AppController@account_
 
 Route::get('/account_management_check', 'App\Http\Controllers\AppController@account_management_check');
 
-Route::get('/account_management', 'App\Http\Controllers\AppController@account_management');
+//Route::get('/account_management', 'App\Http\Controllers\AppController@account_management');
 
-Route::get('/book_add_check', 'App\Http\Controllers\AppController@book_add_check');
+//追記20201126：アカウント管理画面のフォームを表示、および遷移先のルーティング
+Route::get('/account_management', 'App\Http\Controllers\AccountController@show')->name("account_manage.show");
+Route::post('/account_management', 'App\Http\Controllers\AccountController@post')->name("account_manage.post");
+
+Route::get('/book_add_check', 'App\Http\Controllers\AccountController@confirm')->name("account_manage.confirm");
+
+Route::post('/book_add_check', 'App\Http\Controllers\AccountController@send')->name("account_manage.send");
+
 
 /* Route::get('/book_add', 'App\Http\Controllers\AppController@book_add'); */
 
