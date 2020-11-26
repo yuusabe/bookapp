@@ -28,15 +28,18 @@ class GetbookController extends Controller
         $data = (array) $obj_data;
 
         // S3の画像パス取得
+        $num = 0;
         foreach($data as $index => $d){
             $path = Storage::disk('s3')->url($d['cover_pic']);
             $d['path'] = $path;
 
-            $num = $index - 1;
             if($d['book_number'] = $data[$num]['book_number']){
                 $d['multi'] = 'ON' ;
             }else{
                 $d['multi'] = 'OFF' ;
+            }
+            if($index!=0){
+                $num++;
             }
         }
         return view('list_of_books', compact('data'));
