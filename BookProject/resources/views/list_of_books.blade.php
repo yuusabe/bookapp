@@ -47,16 +47,16 @@
   @foreach($data as $d)
   <div id="book_p">
     <div id="book">
-      <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="135" />
+      <img src="{{$d->cover_pic}}" id="image" alt="表紙画像" width="135" height="135" />
     </div>
     
     <div id="book">
       <div id="text">
-        <p id="category">RPA</p>
+        <p id="category">{{$d -> category_name}}</p>
         <p id="title">タイトル：{{$d->title}}</p>
         <p>発行年：{{$d -> year_of_issue}}</p>
         <p>出版社：{{$d -> publisher}}</p>
-        <p>貸出状況：貸出可</p>
+        <p>貸出状況：{{$d -> lend_number}}</p>
       </div>
     </div>
   </div>
