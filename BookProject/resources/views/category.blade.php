@@ -14,8 +14,8 @@
             <div id="input_pluralBox">
                 <div id="input_plural" style="display:inline-flex">
                   <input type="text" id="textbox" name="category" value="category" class="form-control" placeholder="入力して下さい">
-                  <input type="button" value="＋" class="add pluralBtn btn btn-outline-secondary">
-                  <input type="button" value="－" class="del pluralBtn btn btn-outline-secondary">
+                  <input type="button" value="追加" class="add pluralBtn btn btn-outline-secondary">
+                  <input type="button" id="add_del" value="削除" class="del pluralBtn btn btn-outline-secondary">
                 </div>
             </div>
         </div>
