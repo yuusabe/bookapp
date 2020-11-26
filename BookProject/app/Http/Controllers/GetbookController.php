@@ -27,27 +27,22 @@ class GetbookController extends Controller
 
         // $data = (array)$obj_data;
 
-        Log::debug($data);
-
         // S3の画像パス取得
-        $num = 0;
+        $before = 255;
         foreach($data as $index => $d){
+            $path = Storage::disk('s3')->url($d->cover_pic);
+            $d->path = $path;
 
-            if($d->book_number = $data[$num]['book_number']){
+            if($d->book_number = $before){
                 $d->multi = 'ON' ;
             }else{
                 $d->multi = 'OFF' ;
             }
-
-            $path = Storage::disk('s3')->url($d->cover_pic);
-            $d->path = $path;
-
-            
-            if($index!=0){
-                $num++;
-            }
+            $before = $d->book_number;
         }
+
         return view('list_of_books', compact('data'));
 
+        Log::debug($data);
     }
 }
