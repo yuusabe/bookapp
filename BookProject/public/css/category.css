@@ -28,6 +28,11 @@
   outline: none;
   margin: 10px;
 }
+/*追加_削除ボタンの大きさ*/
+#add_del{
+  height: 40px;
+  margin: 10px;
+}
 /*ボタン中央揃え*/
 #button_p{
   text-align: center;
