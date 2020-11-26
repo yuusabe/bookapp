@@ -48,7 +48,7 @@
   @foreach($data as $d)
   <div id="book_p">
     <div id="book">
-      <img src="{{$d->cover_pic}}" id="image" alt="表紙画像" width="135" height="135" />
+      <img src="{{$d->path}}" id="image" alt="表紙画像" width="135" height="135" />
     </div>
     
     <div id="book">
