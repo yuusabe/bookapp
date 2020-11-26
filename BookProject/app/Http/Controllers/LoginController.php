@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Models\Account;
 
-class LoginController extends BaseController
+class LoginController extends Controller
 {
     function check(Request $request){
         
