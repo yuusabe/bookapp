@@ -20,12 +20,13 @@
 /*テキストボックス*/
 #textbox{
   height: 40px;
-  width: 450px;
+  width: 700px;
   color: #666;
   border-radius: 10px;
   border: 1px solid #666;
   text-align: center;
   outline: none;
+  margin: 10px;
 }
 /*ボタン中央揃え*/
 #button_p{
