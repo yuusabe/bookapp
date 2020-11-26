@@ -29,7 +29,7 @@ class GetbookController extends Controller
 
         // S3の画像パス取得
         $num = 0;
-        foreach($data as $index => $d){
+        foreach($data as $d){
             $path = Storage::disk('s3')->url($d['cover_pic']);
             $d['path'] = $path;
 
@@ -38,7 +38,7 @@ class GetbookController extends Controller
             }else{
                 $d['multi'] = 'OFF' ;
             }
-            if($index!=0){
+            if($num!=0){
                 $num++;
             }
         }
