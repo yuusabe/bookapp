@@ -5,35 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Models\Account;
 
-class LoginController extends BaseController
+class LoginController extends Controller
 {
-    public function checklogin(){
+    function check(Request $request){
         
         $account = new Account;
 
-        $email_in = "無し";
-        $pass_in = "無し";
+        $email_in = $request["email"];
+        $pass_in = $request["pass"];
 
-        if (!empty($_COOKIE["email"]))
+        $data = $account::where('mail_address', $email)->first();
+        $pass = $data["password"];
+
+        if($pass_in == $pass)
         {
-            $email_in = $_COOKIE["email"];
-        }
-        if (!empty($_COOKIE["pass"]))
-        {
-            $pass_in = $_COOKIE["pass"];
+            return view('list_of_books',compact('$data'));
         }
 
-        $data = $account::where('mail_address', $email_in)->first();
-
-        if ($pass_in == $data["password"])
-        {
-            $check = 1;
-        }
-        else
-        {
-            $check = 0;
-        }
-        
-        return view('login_check',compact('check'));
+        return view('login');
     }
 }
