@@ -75,6 +75,8 @@ $atype_in = "無し";
       <input type="button" value="<?php echo $comment ?>" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php echo $address ?>'">
     </form>
 
+    <p> {{ $check }} </p>
+
 
   </div>
 </div>
