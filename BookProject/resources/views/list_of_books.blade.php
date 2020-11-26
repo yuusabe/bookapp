@@ -6,9 +6,10 @@
 @section('body')
 
 <main>
+<!-- バリューはkeywordの変数 -->
 <!-- <form action="http://54.248.141.223/list_of_books" method="GET">
   <div id="search">
-    <input id="sbox" name="s" type="text" value={{$keyword}} placeholder="キーワードを入力" />
+    <input id="sbox" name="s" type="text" value=keyword placeholder="キーワードを入力" />
   
   <div class="dropdown">
     <button type="button" id="dropdown" id="search"
