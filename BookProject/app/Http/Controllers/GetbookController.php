@@ -7,6 +7,7 @@ use App\Models\Book;
 use App\Models\Category;
 use App\Models\Book_category;
 use Storage;
+use Illuminate\Support\Facades\DB;
 
 class GetbookController extends Controller
 {
