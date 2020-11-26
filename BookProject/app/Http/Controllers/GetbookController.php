@@ -25,7 +25,7 @@ class GetbookController extends Controller
         ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','lend_number')
         ->get();
 
-        $data = (array)$obj_data;
+        // $data = (array)$obj_data;
 
         // S3の画像パス取得
         $num = 0;
