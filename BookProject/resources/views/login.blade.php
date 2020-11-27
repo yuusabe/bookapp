@@ -19,7 +19,7 @@
     @csrf
       <input type="text" id="email" class="fadeIn second" name="email" placeholder="メールアドレス">
       <input type="password" id="pass" class="fadeIn third" name="pass" placeholder="パスワード">
-
+<!-- 
       <div id="radio">
           <div id="tb">
             <p>管理者権限</p>
@@ -27,13 +27,13 @@
             <input type="radio" id="accounttype" name="accounttype" value="一般ユーザ">一般ユーザ
             <input type="radio" id="accounttype" name="accounttype" value="管理者ユーザ">管理者ユーザ
         </div>
-      </div>
+      </div> -->
 
       <input type="submit" class="fadeIn fourth" value="ログイン" onclick="writeCookie()">
       
 
-      <button onclick="readCookie()">読み込み</button><br>
-      <button onclick="deleteCookie()">削除</button><br>
+      <!-- <button onclick="readCookie()">読み込み</button><br>
+      <button onclick="deleteCookie()">削除</button><br> -->
 
       <script type="text/javascript">
         // cookieの値を読み書きする要素
