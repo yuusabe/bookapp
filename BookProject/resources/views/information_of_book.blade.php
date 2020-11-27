@@ -29,7 +29,7 @@
                 一覧へ
             </button>
         </div>
-        <form action="http://54.248.141.223/lend_book" method="post">
+        <form action="{{ route('book.l_post') }}" method="post">
     @csrf
     <input type = "hidden" name="number" value="{{$num}}">
         <div id="button">
