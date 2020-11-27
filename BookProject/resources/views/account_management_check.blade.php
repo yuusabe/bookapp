@@ -6,7 +6,7 @@
 
 
 <main>
-    <form method="post" action="{{ route('book_add.send') }}">
+    <form method="post" action="{{ route('account_manage.send') }}">
       @csrf
       <div id="account">
           <p>アカウント名　　：{{ $input["account_name"] }}</p>
