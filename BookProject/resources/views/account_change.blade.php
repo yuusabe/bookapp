@@ -5,6 +5,7 @@
 @section('body')
 
 <main>
+{{$num}}
   <form>
     <div id="text">
       <p>編集する内容を入力してください。</p>
