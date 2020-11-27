@@ -48,4 +48,11 @@ class GetbookController extends Controller
 
         Log::debug($data);
     }
+
+    public function bookinfo(){
+        $b_info=Book::where('book_number', $input('number'))
+        ->leftjoin();
+    } 
+
+    
 }

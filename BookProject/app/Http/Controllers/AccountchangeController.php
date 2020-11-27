@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Account;
 use App\Models\Lend_book;
 use Validator;
+use Illuminate\Support\Facades\Log;
 
-class AccountController extends Controller
+class AccountchangeController extends Controller
 {
     //アカウント登録時のコントローラー
     private $formItems = ["account_name", "address", "password","accounttype"];
@@ -18,6 +19,12 @@ class AccountController extends Controller
         "password" => "required",
         "accounttype" => "required"
     ];
+
+    function change(Request $request){
+        $num = $request['number'];
+        Log::debug($num);
+        return view('account_change', compact('num'));
+    }
 
     function show(){
         return view('account_management');
