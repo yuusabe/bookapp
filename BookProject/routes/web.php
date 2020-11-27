@@ -78,17 +78,18 @@ Route::get('/category', 'App\Http\Controllers\AppController@category');
 
 // Route::get('/completion', 'App\Http\Controllers\AppController@completion');
 
-Route::get('/information_of_book', 
-'App\Http\Controllers\AppController@information_of_book');
-Route::post('/information_of_book', 'App\Http\Controllers\ListbookController@listbook');
+// Route::get('/information_of_book', 
+// 'App\Http\Controllers\AppController@information_of_book');
+// Route::post('/information_of_book', 'App\Http\Controllers\ListbookController@listbook');
 
 Route::get('/lend_book', 'App\Http\Controllers\AppController@lend_book');
 Route::post('/lend_book', 'App\Http\Controllers\ListbookController@lendbook');
 
 Route::get('/lend_check', 'App\Http\Controllers\AppController@lend_check');
 
-Route::get('/list_of_books', 'App\Http\Controllers\AppController@list_of_books');
+// Route::get('/list_of_books', 'App\Http\Controllers\AppController@list_of_books');
 Route::get('/list_of_books', 'App\Http\Controllers\GetbookController@getbook');
+Route::get('/list_of_books', 'App\Http\Controllers\GetbookController@info')->name("book.info");
 
 Route::get('/login', 'App\Http\Controllers\AppController@login');
 

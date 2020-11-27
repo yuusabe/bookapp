@@ -67,7 +67,7 @@
   <div id="button_p">
     <div id="button">
 
-    <form action="http://54.248.141.223/information_of_book" method="post">
+    <form action="{{ route('account_manage_change.change') }}" method="get" value="{{book_number}}" name="number">
     @csrf
     <input type = "hidden" name="number" value="{{$d->book_number}}">
       <button type="submit" class="btn btn-outline-secondary">
