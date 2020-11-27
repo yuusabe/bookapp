@@ -16,6 +16,7 @@
 
     <!-- Login Form -->
     <form method="post" action="{{ route('login.check') }}" enctype="multipart/form-data">
+    @csrf
       <input type="text" id="email" class="fadeIn second" name="email" placeholder="メールアドレス">
       <input type="password" id="pass" class="fadeIn third" name="pass" placeholder="パスワード">
 
