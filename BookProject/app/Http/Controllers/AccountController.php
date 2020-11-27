@@ -71,7 +71,7 @@ class AccountController extends Controller
                 'mail_address' => $input["address"],
                 'password' => $input["password"],
                 'manager_flag' => FALSE,
-                'logic_flag' => true
+                'a_logic_flag' => true
             ]);
         }else{
             $account_table->create([
@@ -80,7 +80,7 @@ class AccountController extends Controller
                 'mail_address' => $input["address"],
                 'password' => $input["password"],
                 'manager_flag' => TRUE,
-                'logic_flag' => TRUE
+                'a_logic_flag' => TRUE
             ]);
         }
         //セッションを空にする
