@@ -81,6 +81,9 @@ class AccountController extends Controller
             'logic_flag' => TRUE
         ]);
     }
+    //セッションを空にする
+    $request->session()->forget("account_input");
+    return view("completion");
     }
 
 

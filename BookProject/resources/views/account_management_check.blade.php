@@ -50,7 +50,8 @@ if (!empty($_GET["accounttype"]))
               </button>
           </div>
           <div id="button">
-              <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/completion'">
+          <button type="submit" class="btn btn-outline-secondary">
+              <!-- <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/completion'"> -->
                   確定
               </button>
           </div>
