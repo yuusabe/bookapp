@@ -52,6 +52,7 @@ class GetbookController extends Controller
     function i_post(Request $request){
         $input = $request;
         $request->session()->put("info_input", $input);
+        return redirect()->action('App\Http\Controllers\GetbookFormController@i_show');
     } 
 
     function i_show(Request $request){
