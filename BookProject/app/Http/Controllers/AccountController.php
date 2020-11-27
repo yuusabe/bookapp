@@ -55,6 +55,8 @@ class AccountController extends Controller
             return redirect()->action('App\Http\Controllers\AccountController@show');
         }
 
+
+
         //モデルクラスのインスタンス化
         $account_table = new Account();
         //テーブルのカウント
@@ -71,7 +73,7 @@ class AccountController extends Controller
             'manager_flag' => FALSE,
             'logic_flag' => true
         ]);
-    }else{
+        }else{
         $account_table->create([
             'account_number' => $count_account,
             'account_name' => $input["account_name"],
