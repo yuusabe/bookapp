@@ -21,7 +21,7 @@ class LoginController extends Controller
 
         if($pass_in == $pass)
         {
-            return view('list_of_books');
+            return view('login_check');
         }
 
         return view('login');
