@@ -19,7 +19,7 @@ Route::get('/account_change_check', 'App\Http\Controllers\AppController@account_
 
 // Route::get('/account_change', 'App\Http\Controllers\AppController@account_change');
 
-Route::get('/account_change', 'App\Http\Controllers\AccountchangeController@change')->name("account_manage_name.change");
+Route::get('/account_change', 'App\Http\Controllers\AccountchangeController@change')->name("account_manage_change.change");
 
 Route::get('/account_delete_check', 'App\Http\Controllers\AppController@account_delete_check');
 
