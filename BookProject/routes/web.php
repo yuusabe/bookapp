@@ -69,12 +69,12 @@ Route::get('/category_check', 'App\Http\Controllers\AppController@category_check
 
 Route::get('/category', 'App\Http\Controllers\AppController@category');
 
-Route::get('/completion_account', 'App\Http\Controllers\AppController@completion_account');
+// Route::get('/completion_account', 'App\Http\Controllers\AppController@completion_account');
 
-Route::get('/completion_book', 'App\Http\Controllers\AppController@completion_book');
-Route::get('/completion_category', 'App\Http\Controllers\AppController@completion_category');
+// Route::get('/completion_book', 'App\Http\Controllers\AppController@completion_book');
+// Route::get('/completion_category', 'App\Http\Controllers\AppController@completion_category');
 
-Route::get('/completion', 'App\Http\Controllers\AppController@completion');
+// Route::get('/completion', 'App\Http\Controllers\AppController@completion');
 
 Route::get('/information_of_book', 
 'App\Http\Controllers\AppController@information_of_book');
