@@ -72,4 +72,12 @@ class AccountController extends Controller
         ]);      
     }
 
+
+    function list(){
+        $a_list = Account::select()
+        ->where('a_logic_flag',TRUE)
+        ->get();
+        return view('account_management', compact('a_list'));
+    }
+
 }
