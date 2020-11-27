@@ -62,14 +62,25 @@ class AccountController extends Controller
         //登録アカウントのID用意
         $count_account++;
         //データ挿入
+        if($input["accounttype"]=="一般ユーザ"){
         $account_table->create([
             'account_number' => $count_account,
             'account_name' => $input["account_name"],
             'mail_address' => $input["address"],
             'password' => $input["password"],
-            'manager_flag' => $input["accounttype"],
+            'manager_flag' => FALSE,
             'logic_flag' => true
         ]);
+    }else{
+        $account_table->create([
+            'account_number' => $count_account,
+            'account_name' => $input["account_name"],
+            'mail_address' => $input["address"],
+            'password' => $input["password"],
+            'manager_flag' => TRUE,
+            'logic_flag' => TRUE
+        ]);
+    }
     }
 
 
