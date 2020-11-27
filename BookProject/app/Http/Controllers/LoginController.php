@@ -7,6 +7,9 @@ use App\Models\Account;
 
 class LoginController extends Controller
 {
+    function show(){
+        return view('list_of_books');
+    }
     function check(Request $request){
         
         $account = new Account;
@@ -19,7 +22,7 @@ class LoginController extends Controller
 
         if($pass_in == $pass)
         {
-            return view('list_of_books');
+            return redirect()->action('App\Http\Controllers\LoginController@show');
         }
 
         return view('login');
