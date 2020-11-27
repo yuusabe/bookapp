@@ -43,7 +43,7 @@
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
-  {{$data->category_name[5]}}
+  {{$data->title[5]}}
   @foreach($data as $d)
   <div id="book_p">
     <div id="book">
