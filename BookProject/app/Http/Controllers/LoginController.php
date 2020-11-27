@@ -19,7 +19,7 @@ class LoginController extends Controller
 
         if($pass_in == $pass)
         {
-            return view('list_of_books',compact('$data'));
+            return view('list_of_books');
         }
 
         return view('login');
