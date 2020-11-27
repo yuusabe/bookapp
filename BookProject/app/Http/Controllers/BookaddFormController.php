@@ -93,13 +93,13 @@ class BookaddFormController extends Controller
             'Author' => $input["author"],
             'Author_furigana' => $input["author_h"],
             'year_of_issue' => $input["year"],
-            'logic_flag' => true
+            'b_logic_flag' => true
         ]);
         $book_category_table->create([
             'category_kanrinum' => $count_book_category,
-            'book_number' => $count_book,
-            'category_number' => $category_number,
-            'logic_flag' => true
+            'bc_book_number' => $count_book,
+            'bc_category_number' => $category_number,
+            'bc_logic_flag' => true
         ]);
         //セッションを空にする
         $request->session()->forget("form_input");
