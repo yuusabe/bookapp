@@ -57,10 +57,10 @@
   <div id="account_p">
     <div id="account">
       <nobr id="a_text">
-      @if($d->manager_flag == FALSE)
-      {{$d->account_name }}：一般ユーザ
+      @if($a->manager_flag == FALSE)
+      {{$a->account_name }}：一般ユーザ
       @else
-      {{$d->account_name }}：管理者ユーザ
+      {{$a->account_name }}：管理者ユーザ
       @endif
       </nobr>
     </div>
