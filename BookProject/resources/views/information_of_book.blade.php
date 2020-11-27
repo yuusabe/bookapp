@@ -30,7 +30,7 @@
         </div>
         <form action="http://54.248.141.223/lend_book" method="post">
     @csrf
-    <input type = "hidden" name="number" value="{{$info}}">
+    <input type = "hidden" name="number" value="">
         <div id="button">
             <button type="submit" class="btn btn-outline-secondary" >
                 貸出手続きへ
