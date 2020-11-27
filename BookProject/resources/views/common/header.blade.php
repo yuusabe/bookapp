@@ -21,15 +21,24 @@
                 <img src="image/dtg_book_logo.png" alt="アイコン" width="135" height="130" />
 
                 <?php
-                if (!empty($_COOKIE["atype"]))
+                if (!empty($_COOKIE["mflag"]))
                 {
-                  $atype_in = $_COOKIE["atype"];
+                  $mflag = $_COOKIE["mflag"];
                 }
                 else
                 {
-                    $atype_in = "なし";
+                    $mflag = "なし";
                 }
-                if ($atype_in == "管理者ユーザ")
+                if (!empty($_COOKIE["aname"]))
+                {
+                  $aname = $_COOKIE["aname"];
+                }
+                else
+                {
+                    $aname = "なし";
+                }
+
+                if ($mflag == "1")
                 {
                     echo '<img src="image/administrator_logo.png" alt="アイコン" width="150" height="150" />';
                 }
@@ -37,23 +46,31 @@
                 {
                     echo '<img src="image/user_logo.png" alt="アイコン" width="150" height="150" />';
                 }
+
+                echo $aname."さん";
+
                 ?>
 
             </div>
             <div id="pine">
                 <div id="h_button">
-                    <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/RPA'">
-                        貸出情報
-                    </button>
-                    <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_add'">
-                        書籍登録
-                    </button>
-                    <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/category'">
-                        カテゴリ管理
-                    </button>
-                    <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/account_management'">
-                        アカウント管理
-                    </button>
+                    <?php
+                    if ($mflag == "1")
+                    {
+                        echo '<button type="button" id="button" class="btn btn-outline-danger" onclick="location.href=\'https://www-cf.dtg-shosekikanri2020-test.tk/RPA\'">
+                                    貸出情報
+                                </button>
+                                <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href=\'https://www-cf.dtg-shosekikanri2020-test.tk/book_add\'">
+                                    書籍登録
+                                </button>
+                                <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href=\'https://www-cf.dtg-shosekikanri2020-test.tk/category\'">
+                                    カテゴリ管理
+                                </button>
+                                <button type="button" id="button" class="btn btn-outline-danger" onclick="location.href=\'https://www-cf.dtg-shosekikanri2020-test.tk/account_management\'">
+                                    アカウント管理
+                                </button>';
+                    }
+                    ?>
                     <button type="button" id="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books'">
                         書籍一覧
                     </button>
