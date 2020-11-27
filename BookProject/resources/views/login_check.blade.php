@@ -7,44 +7,8 @@
   <div id="formContent">
     <!-- Tabs Titles -->
 
-<?php
 
-$email_in = "無し";
-$pass_in = "無し";
-$atype_in = "無し";
 
-  if (!empty($_COOKIE["email"]))
-  {
-    $email_in = $_COOKIE["email"];
-  }
-  if (!empty($_COOKIE["pass"]))
-  {
-    $pass_in = $_COOKIE["pass"];
-  }
-  if (!empty($_COOKIE["atype"]))
-  {
-    $atype_in = $_COOKIE["atype"];
-  }
-
-  if ($email_in == "email@email" || $pass_in == "password")
-  {
-      $comment = "ログインに成功しました!";
-      $address = "list_of_books";
-  }
-  else
-  {
-      $comment = "ログインに失敗しました";
-      $address = "login";
-  }
-
-  echo $email_in.$pass_in.$atype_in;
-  echo $comment.$address;
-
-?>
-
-<input type="text" id="email" class="fadeIn second" name="email" placeholder="メールアドレス">
-<input type="text" id="pass" class="fadeIn third" name="pass" placeholder="パスワード">
-<button onclick="readCookie()">読み込み</button><br>
 
 <script type="text/javascript">
       // cookieの値を読み書きする要素
@@ -71,8 +35,9 @@ $atype_in = "無し";
 </script>
 
     <!-- Login Form -->
+    <p>{{$adata -> account_name}}さん、いらっしゃいませ</p>
     <form>
-      <input type="button" value="<?php echo $comment ?>" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/<?php echo $address ?>'">
+      <input type="button" value="書籍一覧へ" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books'">
     </form>
 
     <p>  </p>

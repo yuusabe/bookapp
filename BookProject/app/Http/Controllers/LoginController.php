@@ -16,12 +16,12 @@ class LoginController extends Controller
         $email_in = $request["email"];
         $pass_in = $request["pass"];
 
-        $data = $account::where('mail_address', $email_in)->first();
-        $pass = $data["password"];
+        $adata = $account::where('mail_address', $email_in)->first();
+        $pass = $adata["password"];
 
-        if($pass_in == $pass)
+        if($pass != "" && $pass_in == $pass)
         {
-            return view('login_check');
+            return view('login_check',compact('adata'));
         }
 
         return view('login');
