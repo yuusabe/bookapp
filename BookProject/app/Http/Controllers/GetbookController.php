@@ -51,13 +51,13 @@ class GetbookController extends Controller
 
     function i_post(Request $request){
         $input = $request;
-        $request->session()->put("info_input", $input);
+        $request->session()->put("form_input", $input);
         return redirect()->action('App\Http\Controllers\GetbookFormController@i_show');
     } 
 
     function i_show(Request $request){
         //セッションから値を取り出す
-        $input = $request->session()->get("info_input");
+        $input = $request->session()->get("form_input");
         return view('information_of_book', ["input" => $input]);
     }
 }
