@@ -67,7 +67,7 @@
   <div id="button_p">
     <div id="button">
 
-    <form action="https://www-cf.dtg-shosekikanri2020-test.tk/information_of_book" method="post">
+    <form action="{{ route('book.i_post') }}" method="post">
     @csrf
     <input type = "hidden" name="number" value="{{$d->book_number}}">
       <button type="submit" class="btn btn-outline-secondary">

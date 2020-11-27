@@ -49,12 +49,14 @@ class GetbookController extends Controller
         Log::debug($data);
     }
 
-    public function info(Request $request){
-        $num = $request->number;
-        // $b_info=Book::where('book_number', $input('number'))
-        // ->leftjoin();
-
-        return view('information_of_book', compact('num'));
+    function i_post(Request $request){
+        $input = $request;
+        $request->session()->put("info_input", $input);
     } 
-    
+
+    function i_show(Request $request){
+        //セッションから値を取り出す
+        $input = $request->session()->get("info_input");
+        return view('information_of_book', compact('input'));
+    }
 }
