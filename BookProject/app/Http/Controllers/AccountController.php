@@ -65,11 +65,11 @@ class AccountController extends Controller
         $account_table->create([
             'account_number' => $count_account,
             'account_name' => $input["account_name"],
-            'mail_address' => $input["mail_address"],
+            'mail_address' => $input["address"],
             'password' => $input["password"],
-            'manager_flag' => $input["m_flag"],
+            'manager_flag' => $input["accounttype"],
             'logic_flag' => true
-        ]);      
+        ]);
     }
 
 
