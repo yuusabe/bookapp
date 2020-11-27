@@ -14,7 +14,7 @@ class LoginController extends Controller
         $email_in = $request["email"];
         $pass_in = $request["pass"];
 
-        $data = $account::where('mail_address', $email)->first();
+        $data = $account::where('mail_address', $email_in)->first();
         $pass = $data["password"];
 
         if($pass_in == $pass)
