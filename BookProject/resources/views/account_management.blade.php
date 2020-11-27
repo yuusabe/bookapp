@@ -52,9 +52,17 @@
   <div id="text">
     <p>アカウント一覧</p>
   </div>
+
+  @foreach($a_list as $a)
   <div id="account_p">
     <div id="account">
-      <nobr id="a_text">DTG太郎：一般ユーザ</nobr>
+      <nobr id="a_text">
+      @if($a->manager_flag == FALSE)
+      {{$a->account_name }}：一般ユーザ
+      @else
+      {{$a->account_name }}：管理者ユーザ
+      @endif
+      </nobr>
     </div>
     <div id="account">
       <div id="button_p">
@@ -71,6 +79,7 @@
       </div>
     </div>
   </div>
+  @endforeach
 <!--   </form> -->
 </main>
 
