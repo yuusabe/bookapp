@@ -49,4 +49,8 @@ class TestController extends Controller
         Log::debug($data);
     }
 
+    function i_post(Request $request){
+        $num = $request['number'];
+        return view('information_book',compact('num'));
+    }
 }

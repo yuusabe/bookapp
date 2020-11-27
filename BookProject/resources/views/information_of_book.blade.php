@@ -5,7 +5,7 @@
 @section('body')
 
 <main>
-{{$input}}
+{{$num}}
     <div id="book_p">
         <div id="book">
             <img src="image/book_001.png" id="image" alt="表紙画像" width="135" height="130" />
