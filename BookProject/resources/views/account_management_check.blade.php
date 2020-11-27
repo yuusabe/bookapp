@@ -4,32 +4,6 @@
 @extends("common.header")
 @section('body')
 
-<?php
-$account_name = "NULL";
-$address = "NULL";
-$password = "NULL";
-$accounttype = "NULL";
-if (!empty($_GET["account_name"]))
-{
-  $account_name = $_GET['account_name'];
-}
-else if (empty($_GET["account_name"]))
-{
-  $account_name = "なし";
-}
-if (!empty($_GET["address"]))
-{
-  $address = $_GET['address'];   
-}
-if (!empty($_GET["password"]))
-{
-  $password = $_GET['password'];   
-}
-if (!empty($_GET["accounttype"]))
-{
-  $accounttype = $_GET['accounttype'];   
-}
-?>
 
 <main>
     <form method="post" action="{{ route('book_add.send') }}">
