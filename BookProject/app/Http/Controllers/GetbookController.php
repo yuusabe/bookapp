@@ -51,7 +51,7 @@ class GetbookController extends Controller
 
     public function bookinfo(){
         $b_info=Book::where('book_number', $input('number'))
-        ->leftjoin()
+        ->leftjoin();
     } 
 
     

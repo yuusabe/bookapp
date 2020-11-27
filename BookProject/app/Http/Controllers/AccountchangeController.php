@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Account;
 use App\Models\Lend_book;
 use Validator;
+use Illuminate\Support\Facades\Log;
 
 class AccountchangeController extends Controller
 {
@@ -21,6 +22,7 @@ class AccountchangeController extends Controller
 
     function change(Request $request){
         $num = $request['number'];
+        Log::debug($num);
         return view('account_change', compact('num'));
     }
 
