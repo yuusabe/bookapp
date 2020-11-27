@@ -21,7 +21,7 @@ class AccountchangeController extends Controller
     ];
 
     function change(Request $request){
-        $num = $request['number'];
+        $num = $request->number;
         Log::debug($num);
         return view('account_change', compact('num'));
     }
