@@ -117,3 +117,4 @@ Route::get('/mypage', 'App\Http\Controllers\MypageController@showp');
 //test用ページ
 Route::get('/testpage', 'App\Http\Controllers\TestController@getbook');
 Route::post('/testpage', 'App\Http\Controllers\TestController@i_post')->name("book.i_post");
+Route::post('/information_of_book', 'App\Http\Controllers\TestController@l_post')->name("book.l_post");
