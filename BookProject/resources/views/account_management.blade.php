@@ -66,11 +66,14 @@
     </div>
     <div id="account">
       <div id="button_p">
+      <form method="get" action="{{ route('account_manage_change.change') }}" value = '{{$a->account_number}}'>
+        @csrf
         <div id="button">
-          <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/account_change'">
+          <button type="submit" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/account_change'">
             編集
           </button>
         </div>
+      </form>
         <div id="button">
           <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/account_delete_check'">
             削除

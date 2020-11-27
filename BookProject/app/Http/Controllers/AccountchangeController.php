@@ -7,7 +7,7 @@ use App\Models\Account;
 use App\Models\Lend_book;
 use Validator;
 
-class AccountController extends Controller
+class AccountchangeController extends Controller
 {
     //アカウント登録時のコントローラー
     private $formItems = ["account_name", "address", "password","accounttype"];
@@ -18,6 +18,11 @@ class AccountController extends Controller
         "password" => "required",
         "accounttype" => "required"
     ];
+
+    function change(Request $request){
+        $num = $request['number'];
+        return view('account_change', compact('num'));
+    }
 
     function show(){
         return view('account_management');
