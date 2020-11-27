@@ -69,7 +69,7 @@
 
     <form action="{{ route('book.i_post') }}" method="post">
       @csrf
-      <input type = "text" name="number">
+      <input type = "hidden" name="number" value="{{$d->book_number}}">
         <button type="submit" class="btn btn-outline-secondary">
           詳細表示
         </button>
