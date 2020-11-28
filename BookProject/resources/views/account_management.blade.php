@@ -42,7 +42,7 @@
     </div>
     <div id="button_p">
       <div id="button">
-        <button type="submit" class="btn btn-outline-secondary">
+        <button type="submit" class="btn btn-outline-secondary" name = "add">
           アカウント登録
         </button>
       </div>
@@ -66,7 +66,7 @@
     </div>
     <div id="account">
       <div id="button_p">
-      <form method="post" action= "/account_change" name = "change">
+      <form method="post" action= "{{ route('account_manage.post') }}" name = "change">
         @csrf
         <div id="button">
         <input type = "hidden" name="account_number" value="{{$a->account_number}}">
