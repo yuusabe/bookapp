@@ -89,7 +89,7 @@
         <form action="{{ route('book.check_post') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div id="button">
-                <button type="button" class="btn btn-outline-secondary" name = "cancel">
+                <button type="submit" class="btn btn-outline-secondary" name = "cancel">
                     キャンセル
                 </button>
             </div>
@@ -98,7 +98,7 @@
             @csrf
             <input type = "hidden" name="number" value="{{$num}}">
             <div id="button">
-                <button type="button" class="btn btn-outline-secondary" name = "change">
+                <button type="submit" class="btn btn-outline-secondary" name = "change">
                 書籍編集
                 </button>
             </div>
@@ -107,7 +107,7 @@
             @csrf
             <input type = "hidden" name="number" value="{{$num}}">
             <div id="button">
-                <button type="button" class="btn btn-outline-secondary" name = "delete">
+                <button type="submit" class="btn btn-outline-secondary" name = "delete">
                     削除
                 </button>
             </div>
