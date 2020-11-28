@@ -141,9 +141,6 @@ class TestController extends Controller
             return view('book_delete_check', compact('num'));
             
 
-        }elseif($request->has('cancel')){
-            //キャンセル用
-            return view(action('TestController@getbook'));
         }
     }
 
