@@ -44,6 +44,10 @@
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
   @foreach($data as $d)
+  
+  @foreach($d->category_array as $t)
+  {{$t}}
+  @endforeach
   <div id="book_p">
     <div id="book">
       <img src="{{$d->path}}" id="image" alt="表紙画像" width="135" height="135" />
@@ -51,7 +55,9 @@
     
     <div id="book">
       <div id="text">
-        <p id="category">{{$d -> category_array}}</p>
+        <p id="category">
+        {{$d -> category_array}}
+        /p>
         <p id="title">タイトル：{{$d -> title}}</p>
         <p>発行年：{{$d -> year_of_issue}}</p>
         <p>出版社：{{$d -> publisher}}</p>
