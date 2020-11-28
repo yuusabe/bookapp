@@ -84,7 +84,7 @@ class TestController extends Controller
             $path = $request['path'];
             $category_all = Category::where('c_logic_flag',TRUE)
             ->get(['category_name']);
-            $category_all->toArray();
+            $category_all = json_decode($category_all, true);
             return view('book_change', compact('b_data','category','path','category_all'));
         }
 
