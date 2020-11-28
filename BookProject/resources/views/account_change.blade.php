@@ -14,7 +14,7 @@
     <form method="post" action="{{ route('account_manage_change.post') }}">
       @csrf
       <div id=tb_p>          
-          <input type="hidden" name="acc_number" value=<?php echo $_GET["a_number"]?>>
+          <input type="hidden" name="acc_number" value={{ old(<?php echo $_GET["a_number"]?>) }}>
           <div id="tb">
             <p>アカウント名</p>
           </div>
