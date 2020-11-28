@@ -64,6 +64,8 @@ class TestController extends Controller
         $num = $request['number'];
         $category = $request['category'];
         return view('information_of_book',compact('num','category'));
+        Log::debug($num);
+        Log::debug($category);
     }
 
     function l_post(Request $request){
