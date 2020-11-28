@@ -102,4 +102,27 @@ class TestController extends Controller
         return view('lend_check',compact('num', 'last'));
     }
 
+    function check_post(Request $request){
+        if($request->has('change')){
+            //書籍編集確認画面用
+            
+
+            return view('completion');
+
+        }elseif($request->has('delete')){
+            //書籍削除画面用
+            $num = $request['number'];
+            Book::where('b_logic_flag',TRUE)
+            ->where('book_number',$num)
+            ->updata([
+                'b_logic_flag' => FALSE
+            ]);
+            return view('completion');
+            
+        }elseif($request->has('cancel')){
+            //キャンセル用
+            return view('list_of_books');
+        }
+    }
+
 }

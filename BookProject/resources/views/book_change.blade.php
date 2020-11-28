@@ -86,21 +86,32 @@
         </form>
     </div>
     <div id="button_p">
-        <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books'">
-                キャンセル
-            </button>
-        </div>
-        <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_change_check'">
+        <form action="{{ route('book.check_post') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div id="button">
+                <button type="button" class="btn btn-outline-secondary" name = "cancel">
+                    キャンセル
+                </button>
+            </div>
+        </form>
+        <form action="{{ route('book.check_post') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <input type = "hidden" name="number" value="{{$num}}">
+            <div id="button">
+                <button type="button" class="btn btn-outline-secondary" name = "change">
                 書籍編集
-            </button>
-        </div>
-        <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/book_delete_check'">
-                削除
-            </button>
-        </div>
+                </button>
+            </div>
+        </form>
+        <form action="{{ route('book.check_post') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <input type = "hidden" name="number" value="{{$num}}">
+            <div id="button">
+                <button type="button" class="btn btn-outline-secondary" name = "delete">
+                    削除
+                </button>
+            </div>
+        </form>
     </div>
 </main>
 
