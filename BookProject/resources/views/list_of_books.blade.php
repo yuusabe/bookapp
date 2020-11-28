@@ -55,7 +55,7 @@
             }
             $before = $d->book_number;
 ?>
-{{$cate1->name}}
+{{$cate5->name}}
   @foreach($data as $d)
   <div id="book_p">
     <div id="book">
