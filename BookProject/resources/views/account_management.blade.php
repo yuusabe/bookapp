@@ -66,7 +66,7 @@
     </div>
     <div id="account">
       <div id="button_p">
-      <form method="post" action= " App\Http\Controllers\AccountchangeController@change">
+      <form method="post" action= "{{ action('AccountchangeController@change') }}">
         @csrf
         <div id="button">
         <input type = "hidden" name="account_number" value="{{$a->account_number}}">
