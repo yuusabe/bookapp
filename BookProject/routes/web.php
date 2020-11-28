@@ -79,7 +79,8 @@ Route::get('/book_delete_check', 'App\Http\Controllers\AppController@book_delete
 
 Route::get('/category_check', 'App\Http\Controllers\AppController@category_check');
 
-Route::get('/category', 'App\Http\Controllers\AppController@category');
+// Route::get('/category', 'App\Http\Controllers\AppController@category');
+Route::get('/category', 'App\Http\Controllers\CategoryController@get_category');
 
 // Route::get('/completion_account', 'App\Http\Controllers\AppController@completion_account');
 
