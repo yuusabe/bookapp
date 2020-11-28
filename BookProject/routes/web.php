@@ -131,7 +131,7 @@ Route::post('/testpage', 'App\Http\Controllers\TestController@i_post')->name("bo
 
 //書籍一覧画面からの遷移
 //書籍一覧画面表示
-Route::get('/list_of_books', 'App\Http\Controllers\GetbookController@getbook');
+Route::get('/list_of_books', 'App\Http\Controllers\TestController@getbook');
 //書籍一覧画面、各ボタン押下時
 Route::post('/list_of_books', 'App\Http\Controllers\TestController@i_post')->name("book.i_post");
 
