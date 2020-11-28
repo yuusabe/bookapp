@@ -62,7 +62,7 @@ class TestController extends Controller
 
     function i_post(Request $request){
         $num = $request['number'];
-        $category = array($request['category']);
+        $category = $request['category'];
         return view('information_of_book',compact('num','category'));
     }
 
