@@ -25,7 +25,7 @@ class TestController extends Controller
         ->where('b_logic_flag', TRUE)
         ->orderBy('book_number', 'asc')
         // ->where('bc_logic_flag', TRUE)
-        ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','return_flag')
+        // ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','return_flag')
         ->get();
 
         $data = json_decode(json_encode($data_obj),true);
@@ -71,11 +71,16 @@ class TestController extends Controller
     }
 
     function i_post(Request $request){
-        $num = $request['number'];
-        $category = $request['category'];
-        return view('information_of_book',compact('num','category'));
-        Log::debug($num);
-        Log::debug($category);
+        if($request->has('info')){
+            $num = $request['number'];
+            $category = $request['category'];
+            return view('information_of_book',compact('num','category'));
+        }elseif($request->has('change')){
+            $b_data = $request;
+            return view('book_change', compact('b_data'));
+        }
+
+
     }
 
     function l_post(Request $request){
