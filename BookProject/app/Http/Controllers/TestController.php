@@ -114,7 +114,7 @@ class TestController extends Controller
             $num = $request['number'];
             Book::where('b_logic_flag',TRUE)
             ->where('book_number',$num)
-            ->updata([
+            ->update([
                 'b_logic_flag' => FALSE
             ]);
             return view('completion');
