@@ -99,8 +99,8 @@ Route::get('/category', 'App\Http\Controllers\CategoryController@get_category');
 Route::get('/lend_check', 'App\Http\Controllers\AppController@lend_check');
 
 // Route::get('/list_of_books', 'App\Http\Controllers\AppController@list_of_books');
-Route::get('/list_of_books', 'App\Http\Controllers\GetbookController@getbook');
-Route::post('/list_of_books', 'App\Http\Controllers\GetbookController@i_post')->name("book.i_post");
+// Route::get('/list_of_books', 'App\Http\Controllers\GetbookController@getbook');
+// Route::post('/list_of_books', 'App\Http\Controllers\GetbookController@i_post')->name("book.i_post");
 
 
 Route::get('/login', 'App\Http\Controllers\AppController@login');
@@ -127,9 +127,10 @@ Route::get('/mypage', 'App\Http\Controllers\MypageController@showp');
 
 
 //書籍一覧画面からの遷移
-Route::get('/testpage', 'App\Http\Controllers\TestController@getbook');
-//書籍一覧画面、詳細ボタン押下時
-Route::post('/testpage', 'App\Http\Controllers\TestController@i_post')->name("book.i_post");
+Route::get('/list_of_books', 'App\Http\Controllers\TestController@getbook');
+//書籍一覧画面、各ボタン押下時
+Route::post('/list_of_books', 'App\Http\Controllers\TestController@i_post')->name("book.i_post");
+
 //書籍詳細画面表示
 Route::get('/information_of_book', 'App\Http\Controllers\TestController@i_show')->name("book.i_show");
 //書籍詳細画面、貸出ボタン押下時

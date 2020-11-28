@@ -76,16 +76,19 @@
       @csrf
       <input type = "hidden" name="number" value="{{$d['book_number']}}">
       <input type = "hidden" name="category" value="{{$d['category_array']}}">
-        <button type="submit" class="btn btn-outline-secondary">
+        <button type="submit" class="btn btn-outline-secondary" name = "info">
           詳細表示
         </button>
     </form>
     </div>
-    <div id="button">
-      <button type="button" class="btn btn-outline-danger">
-        書籍編集
-      </button>
-    </div>
+    <form action="{{ route('book.i_post') }}" method="post" enctype="multipart/form-data">
+      @csrf
+      <div id="button">
+        <button type="submit" class="btn btn-outline-danger" name = "change">
+          書籍編集
+        </button>
+      </div>
+    </form>
   </div>
   @endforeach
 
