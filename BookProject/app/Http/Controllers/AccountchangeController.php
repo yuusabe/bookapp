@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Log;
 class AccountchangeController extends Controller
 {
     //アカウント登録時のコントローラー
-    private $formItems = ["account_name", "address", "password","accounttype"];
+    private $formItems = ["acc_number","account_name", "address", "password","accounttype"];
 
     private $validator = [
         "account_name" => "required",
@@ -27,21 +27,21 @@ class AccountchangeController extends Controller
     }
 
     function show(){
-        return view('account_management');
+        return view('account_change');
     }
     function post(Request $request){
         $input = $request->only($this->formItems);
         
         $validator = Validator::make($input, $this->validator);
 		if($validator->fails()){
-			return redirect()->action('App\Http\Controllers\AccountController@show')
+			return redirect()->action('App\Http\Controllers\AccountchangeController@show')
 				->withInput()
 				->withErrors($validator);
         }
         
         //セッションに書き込む
         $request->session()->put("account_input", $input);
-        return redirect()->action('App\Http\Controllers\AccountController@confirm');
+        return redirect()->action('App\Http\Controllers\AccountchangeController@confirm');
     }
 
     function confirm(Request $request){
@@ -49,7 +49,7 @@ class AccountchangeController extends Controller
         $input = $request->session()->get("account_input");
         //セッションに値が無い時はフォームに戻る
         if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountController@show');
+            return redirect()->action('App\Http\Controllers\AccountchangeController@show');
         }
         return view("account_management_check",["input" => $input]);
     }
@@ -59,7 +59,7 @@ class AccountchangeController extends Controller
         $input = $request->session()->get("account_input");
         //セッションに値が無い時はフォームに戻る
         if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountController@show');
+            return redirect()->action('App\Http\Controllers\AccountchangeController@show');
         }
 
 
