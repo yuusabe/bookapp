@@ -15,7 +15,7 @@ class TestController extends Controller
     public function getbook() 
     {
         // 書籍一覧情報取得
-        $data = DB::table('books')
+        $data_obj = DB::table('books')
         ->leftjoin('book_categories',function ($bc){
             $bc->on('book_categories.bc_book_number', 'books.book_number')
             ->where('bc_logic_flag',TRUE);
@@ -28,20 +28,31 @@ class TestController extends Controller
         ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','return_flag')
         ->get();
 
-        // $data = (array)$obj_data;
+        $data = json_decode(json_encode($data_obj),true);
 
         // S3の画像パス取得
         $before = 0;
         foreach($data as $index => $d){
-            $path = Storage::disk('s3')->url($d->cover_pic);
-            $d->path = $path;
+            $path = Storage::disk('s3')->url($d['cover_pic']);
+            $d['path'] = $path;
 
-            if($d->book_number == $before){
-                $d->multi = 'ON' ;
+            if($d['book_number'] == $before){
+                $d['multi'] = 'ON' ;
             }else{
-                $d->multi = 'OFF' ;
+                $d['multi'] = 'OFF' ;
             }
-            $before = $d->book_number;
+            $before = $d['book_number'];
+        }
+        for($i=0; $i<count($data); $i++){
+            for($n=$i; $n<count($data)-1; $n++){
+                if($data[$n]['book_number'] == $data[$n+1]['book_number']){
+                    $c_name[] = $data[$n]['category_name'];
+                }else{
+                    $c_name[] = $data[$n]['category_name'];
+                    $data[i]['category_array'] = $c_name;
+                    break;
+                }
+            }
         }
 
         return view('list_of_books', compact('data'));
@@ -50,12 +61,12 @@ class TestController extends Controller
     }
 
     function i_post(Request $request){
-        $num = $request['number'];
-        return view('information_of_book',compact('num'));
+        $num_cate = $request;
+        return view('information_of_book',compact('num_cate'));
     }
 
     function l_post(Request $request){
-        $num = $request['number'];
-        return view('lend_book',compact('num'));
+        $num_cate = $request;
+        return view('lend_book',compact('num_cate'));
     }
 }

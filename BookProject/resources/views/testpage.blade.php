@@ -44,21 +44,26 @@
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
   @foreach($data as $d)
+  @if($d['multi'] == 'OFF')
   <div id="book_p">
     <div id="book">
-      <img src="{{$d->path}}" id="image" alt="表紙画像" width="135" height="135" />
+      <img src="{{$d['path']" id="image" alt="表紙画像" width="135" height="135" />
     </div>
     
     <div id="book">
       <div id="text">
-        <p id="category">{{$d -> category_name}}</p>
-        <p id="title">タイトル：{{$d -> title}}</p>
-        <p>発行年：{{$d -> year_of_issue}}</p>
-        <p>出版社：{{$d -> publisher}}</p>
-        @if($d->return_flag == TRUE)
-        <p>貸出状況：貸出可</p>
-        @elseif($d->return_flag == FALSE)
+        <p id="category">
+        @foreach($d['category_array'] as $c)
+        {{$c}}
+        @endforeach
+        </p>
+        <p id="title">タイトル：{{$d['title']}}</p>
+        <p>発行年：{{$d['year_of_issue']}}</p>
+        <p>出版社：{{$d['publisher']}}</p>
+        @if($d['return_flag'] == FALE)
         <p>貸出状況：貸出中</p>
+        @else
+        <p>貸出状況：貸出可</p>
         @endif
       </div>
     </div>
@@ -68,7 +73,8 @@
 
     <form action="{{ route('book.i_post') }}" method="post" enctype="multipart/form-data">
       @csrf
-      <input type = "hidden" name="number" value="{{$d->book_number}}">
+      <input type = "hidden" name="number" value="{{$d['book_number']}}">
+      <input type = "hidden" name="category" value="{{$d['category_array']}}">
         <button type="submit" class="btn btn-outline-secondary">
           詳細表示
         </button>
