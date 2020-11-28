@@ -57,7 +57,7 @@ class TestController extends Controller
             }
         }
 
-        return view('list_of_books', compact('data','before'));
+        return view('list_of_books', compact('data'));
 
         Log::debug($data);
     }
