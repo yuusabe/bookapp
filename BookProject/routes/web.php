@@ -130,6 +130,6 @@ Route::get('/mypage', 'App\Http\Controllers\MypageController@showp');
 Route::get('/testpage', 'App\Http\Controllers\TestController@getbook');
 Route::post('/testpage', 'App\Http\Controllers\TestController@i_post')->name("book.i_post");
 // Route::get('/information_of_book', 'App\Http\Controllers\GetbookController@i_show')->name("book.i_show");
-Route::get('/testpage', 'App\Http\Controllers\TestController@i_show')->name("book.i_show");
+Route::get('/information_of_book', 'App\Http\Controllers\TestController@i_show')->name("book.i_show");
 Route::post('/information_of_book', 'App\Http\Controllers\TestController@l_post')->name("book.l_post");
 Route::post('/lend_book', 'App\Http\Controllers\TestController@check_post')->name("book.check_post");
