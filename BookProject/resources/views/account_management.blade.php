@@ -66,13 +66,13 @@
     </div>
     <div id="account">
       <div id="button_p">
-      <form method="post" action= "{{ action('AccountchangeController@change') }}">
+      <form method="post" action= "/account_change" name = "change">
         @csrf
         <div id="button">
         <input type = "hidden" name="account_number" value="{{$a->account_number}}">
-        <input type = "hidden" name="account_name" value="{{$a->account_name}}">
+        <!-- <input type = "hidden" name="account_name" value="{{$a->account_name}}">
         <input type = "hidden" name="mail_address" value="{{$a->mail_address}}">
-        <input type = "hidden" name="manager_flag" value="{{$a->manager_flag}}">
+        <input type = "hidden" name="manager_flag" value="{{$a->manager_flag}}"> -->
           <button type="submit" class="btn btn-outline-secondary">
             編集
           </button>
