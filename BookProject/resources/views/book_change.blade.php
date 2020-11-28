@@ -38,7 +38,7 @@
         </div>
     </div>
     <div id="b_info">
-        <!-- <form> -->
+        
             <div id="tbox">
                 　　　　　　タイトル
                 <input type="text" name="title" placeholder="タイトルを入力してください" id="b_tbox" value="{{$b_data->title}}">
@@ -83,7 +83,7 @@
                     </span>
                 </label>
             </div>
-        <!-- </form> -->
+        
     </div>
     <div id="button_p">
         <form action="{{ route('book.check_post') }}" method="post" enctype="multipart/form-data">
