@@ -88,6 +88,10 @@ class TestController extends Controller
             return view('book_change', compact('num','b_data','category','path','category_all'));
         }
 
+        function i_show(){
+            return view('information_of_book');
+        }
+
 
     }
 
