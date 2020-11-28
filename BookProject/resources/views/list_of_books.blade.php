@@ -43,11 +43,19 @@
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
+<?php
+  foreach($data as $d)
+  if($d->book_number == $before){
+                $d->multi = 'ON' ;
+                ${'cate'.$d->book_number}->number=$d->book_number;
+                ${'cate'.$d->book_number}->name=$d->category_name;
+            }else{
+                $d->multi = 'OFF' ;
+            }
+            $before = $d->book_number;
+?>
+{{$cate1->name}}
   @foreach($data as $d)
-  
-  @foreach($d->category_array as $t)
-  {{$t}}
-  @endforeach
   <div id="book_p">
     <div id="book">
       <img src="{{$d->path}}" id="image" alt="表紙画像" width="135" height="135" />

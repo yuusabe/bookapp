@@ -32,16 +32,18 @@ class TestController extends Controller
 
         // S3の画像パス取得
         $before = 0;
-        foreach($data as $index => $d){
+        foreach($data as $d){
             $path = Storage::disk('s3')->url($d['cover_pic']);
             $d['path'] = $path;
 
-            if($d['book_number'] == $before){
-                $d['multi'] = 'ON' ;
-            }else{
-                $d['multi'] = 'OFF' ;
-            }
-            $before = $d['book_number'];
+            // if($d['book_number'] == $before){
+            //     $d['multi'] = 'ON' ;
+            //     ${'cate'.$d['book_number']}['number']=$d['book_number'];
+            //     ${'cate'.$d['book_number']}['name']=$d['category_name'];
+            // }else{
+            //     $d['multi'] = 'OFF' ;
+            // }
+            // $before = $d['book_number'];
         }
         for($i=0; $i<count($data); $i++){
             for($n=$i; $n<count($data)-1; $n++){
@@ -55,7 +57,7 @@ class TestController extends Controller
             }
         }
 
-        return view('list_of_books', compact('data'));
+        return view('list_of_books', compact('data','before'));
 
         Log::debug($data);
     }
