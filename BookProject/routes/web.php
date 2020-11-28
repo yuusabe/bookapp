@@ -154,7 +154,7 @@ Route::post('/book_change', 'App\Http\Controllers\TestController@check_post')->n
 //書籍編集確認画面表示
 Route::get('/book_change_check', 'App\Http\Controllers\TestController@book_change_check_show');
 //書籍編集確認画面、確定ボタン押下時
-Route::post('/book_change', 'App\Http\Controllers\TestController@change_check_send')->name("book.change_check_send");
+Route::post('/book_change_check', 'App\Http\Controllers\TestController@change_check_send')->name("book.change_check_send");
 //書籍削除確認画面表示
 Route::get('/book_delete_check', 'App\Http\Controllers\TestController@delete_check_show');
 //書籍削除確認画面、確定ボタン押下時
