@@ -21,8 +21,9 @@ class AccountchangeController extends Controller
     ];
 
     function change(Request $request){
-        $a_data = $request;
-        $request->session()->put("accountc_input", $a_data);
+        $a_data_origin = $request;
+        $request->session()->put("accountc_input", $a_data_origin);
+        $a_data->$request->session()->get("accountc_input");
         return view('account_change', compact('a_data'));
         Log::debug($a_data);
     }
