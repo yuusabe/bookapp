@@ -5,7 +5,7 @@
 @section('body')
 
 <main>
-  <!-- <form method="post" action="{{ route('account_manage.post') }}"> -->
+  <!-- <form method="post" action=""> -->
     @csrf
     <!-- <form action="https://www-cf.dtg-shosekikanri2020-test.tk/account_management_check" method="get"> -->
     <div id="text">
