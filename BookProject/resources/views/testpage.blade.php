@@ -43,6 +43,7 @@
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
+  var_dump($data)
   @foreach($data as $d)
   @if($d['multi'] == 'OFF')
   <div id="book_p">
