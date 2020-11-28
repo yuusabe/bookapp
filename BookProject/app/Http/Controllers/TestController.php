@@ -77,7 +77,9 @@ class TestController extends Controller
             return view('information_of_book',compact('num','category'));
         }elseif($request->has('change')){
             $num = $request['number'];
-            $b_data = Book::where('b_logic_flag',TRUE)->get();
+            $b_data = Book::where('b_logic_flag',TRUE)
+            ->where('book_number',$num)
+            ->first();
             $category = $request['category'];
             $path = $request['path'];
             return view('book_change', compact('b_data','category','path'));
