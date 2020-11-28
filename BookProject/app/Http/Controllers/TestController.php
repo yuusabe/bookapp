@@ -82,7 +82,9 @@ class TestController extends Controller
             ->first();
             $category = $request['category'];
             $path = $request['path'];
-            return view('book_change', compact('b_data','category','path'));
+            $category_all = Category::where('c_logic_flag',TRUE)
+            ->select('category_name')->get();
+            return view('book_change', compact('b_data','category','path','category_all'));
         }
 
 

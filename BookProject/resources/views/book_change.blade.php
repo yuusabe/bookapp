@@ -51,22 +51,22 @@
                 <label>
                     <span class="btn btn-outline-ssecondary">
                         　　　　　　　発行年
-                        <select name="year" id="id_year">
+                        <select name="year" id="id_year" value="{{$b_data->year_of_issue}}">
                         </select>
                     </span>
                 </label>
             </div>
             <div id="tbox">
                 　　　　　　　　著者
-                <input type="text" name="author" placeholder="著者を入力してください" id="b_tbox">
+                <input type="text" name="author" placeholder="著者を入力してください" id="b_tbox" value="{{$b_data->Author}}">
             </div>
             <div id="tbox">
                 　　著者（フリガナ）
-                <input type="text" name="author_h" placeholder="著者のフリガナを入力してください" id="b_tbox">
+                <input type="text" name="author_h" placeholder="著者のフリガナを入力してください" id="b_tbox" value="{{$b_data->Author_furigana}}">
             </div>
             <div id="tbox">
                 　　　　　　　出版社
-                <input type="text" name="publisher" placeholder="出版社を入力してください" id="b_tbox">
+                <input type="text" name="publisher" placeholder="出版社を入力してください" id="b_tbox" value="{{$b_data->publisher}}">
             </div>
             <div id="tbox">
                 <label>
@@ -74,9 +74,11 @@
                         　　　　　　カテゴリ
                         <select name="category" id="b_cbox" multiple>
                             <option value="">選択してください
-                            <option value="0">RPA
-                            <option value="1">統計学
-                            <option value="2">AI
+                            @foreach($category_all as $c)
+                            <option value="{{$c}}">{{$c}}
+                            <!-- <option value="1">統計学
+                            <option value="2">AI -->
+                            @endforeach
                         </select>
                     </span>
                 </label>
