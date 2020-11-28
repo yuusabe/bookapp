@@ -33,18 +33,16 @@ class TestController extends Controller
 
         // S3の画像パス取得
         $before = 0;
-        foreach($data as $d){
-            $path = Storage::disk('s3')->url($d['cover_pic']);
-            $d['path'] = $path;
+        foreach($data as $index => $d){
+            $path = Storage::disk('s3')->url($d->cover_pic);
+            $d->path = $path;
 
-            if($d['book_number'] == $before){
-                $d['multi'] = 'ON' ;
-                ${'cate'.$d['book_number']}['number']=$d['book_number'];
-                ${'cate'.$d['book_number']}['name']=$d['category_name'];
+            if($d->book_number == $before){
+                $d->multi = 'ON' ;
             }else{
-                $d['multi'] = 'OFF' ;
+                $d->multi = 'OFF' ;
             }
-            $before = $d['book_number'];
+            $before = $d->book_number;
         }
 
         // foreach($data as $d){
