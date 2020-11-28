@@ -12,7 +12,7 @@
     </div>
     <div id=tb_p>
         <div id="tb">
-          <p>アカウントNo.{{$num}}</p>
+        <p>アカウントID：<?php echo $_GET['number']?></p>
         </div>
         <div id="tb">
           <p>アカウント名</p>
