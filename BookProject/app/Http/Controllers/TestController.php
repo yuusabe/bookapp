@@ -85,7 +85,7 @@ class TestController extends Controller
             $category_all = Category::where('c_logic_flag',TRUE)
             ->get(['category_name']);
             $category_all = json_decode($category_all, true);
-            return view('book_change', compact('b_data','category','path','category_all'));
+            return view('book_change', compact('num','b_data','category','path','category_all'));
         }
 
 
@@ -118,7 +118,7 @@ class TestController extends Controller
                 'b_logic_flag' => FALSE
             ]);
             return view('completion');
-            
+
         }elseif($request->has('cancel')){
             //キャンセル用
             return view('list_of_books');
