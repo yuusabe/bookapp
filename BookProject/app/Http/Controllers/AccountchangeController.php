@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Log;
 
 class AccountchangeController extends Controller
 {
-    //アカウント登録時のコントローラー
+    //アカウント編集時のコントローラー
     private $formItems = ["acc_number","account_name", "address", "password","accounttype"];
 
     private $validator = [
@@ -26,15 +26,16 @@ class AccountchangeController extends Controller
         Log::debug($num);
     }
 
-    function show(){
+    function show1(){
         return view('account_change');
     }
+
     function post(Request $request){
         $input = $request->only($this->formItems);
         
         $validator = Validator::make($input, $this->validator);
 		if($validator->fails()){
-			return redirect()->action('App\Http\Controllers\AccountchangeController@show')
+			return redirect()->action('App\Http\Controllers\AccountchangeController@show1')
 				->withInput()
 				->withErrors($validator);
         }
@@ -49,7 +50,7 @@ class AccountchangeController extends Controller
         $input = $request->session()->get("accountc_input");
         //セッションに値が無い時はフォームに戻る
         if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountchangeController@show');
+            return redirect()->action('App\Http\Controllers\AccountchangeController@show1');
         }
         return view("account_management_check",["input" => $input]);
     }
@@ -59,7 +60,7 @@ class AccountchangeController extends Controller
         $input = $request->session()->get("accountc_input");
         //セッションに値が無い時はフォームに戻る
         if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountchangeController@show');
+            return redirect()->action('App\Http\Controllers\AccountchangeController@show1');
         }
 
 

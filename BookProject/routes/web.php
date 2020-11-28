@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/account_change_check', 'App\Http\Controllers\AppController@account_change_check');
 
 // Route::get('/account_change', 'App\Http\Controllers\AppController@account_change');
-Route::get('/account_change', 'App\Http\Controllers\AccountchangeController@show')->name("account_manage_change.show");
+Route::get('/account_change', 'App\Http\Controllers\AccountchangeController@show1')->name("account_manage_change.show");
 
 Route::get('/account_change', 'App\Http\Controllers\AccountchangeController@change')->name("account_manage_change.change");
 Route::post('/account_change', 'App\Http\Controllers\AccountchangeController@post')->name("account_manage_change.post");
