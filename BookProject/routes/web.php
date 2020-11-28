@@ -22,8 +22,8 @@ Route::get('/account_change', 'App\Http\Controllers\AccountchangeController@show
 
 Route::get('/account_change', 'App\Http\Controllers\AccountchangeController@change')->name("account_manage_change.change");
 Route::post('/account_change', 'App\Http\Controllers\AccountchangeController@post')->name("account_manage_change.post");
-Route::get('/account_change', 'App\Http\Controllers\AccountchangeController@confirm')->name("account_manage_change.confirm");
-Route::post('/account_change', 'App\Http\Controllers\AccountchangeController@send')->name("account_manage_change.send");
+Route::get('/account_change_check', 'App\Http\Controllers\AccountchangeController@confirm')->name("account_manage_change.confirm");
+Route::post('/account_change_check', 'App\Http\Controllers\AccountchangeController@send')->name("account_manage_change.send");
 
 Route::get('/account_delete_check', 'App\Http\Controllers\AppController@account_delete_check');
 
