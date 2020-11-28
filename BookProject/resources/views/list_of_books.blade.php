@@ -43,7 +43,6 @@
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
-  {{$data[0]['book_name']}}
   @foreach($data as $d)
   <div id="book_p">
     <div id="book">
@@ -81,6 +80,7 @@
       </button>
     </div>
   </div>
+  {{$d->multi}}
   @endforeach
 
   <div id="button_p">
