@@ -125,6 +125,7 @@ Route::get('/testpage', 'App\Http\Controllers\TestController@test');
 Route::post('/login', 'App\Http\Controllers\LoginController@check')->name("login.check");
 Route::get('/mypage', 'App\Http\Controllers\MypageController@showp');
 
+
 Route::get('/testpage', 'App\Http\Controllers\TestController@getbook');
 Route::post('/testpage', 'App\Http\Controllers\TestController@i_post')->name("book.i_post");
 
@@ -132,6 +133,7 @@ Route::post('/testpage', 'App\Http\Controllers\TestController@i_post')->name("bo
 Route::get('/list_of_books', 'App\Http\Controllers\TestController@getbook');
 //書籍一覧画面、各ボタン押下時
 Route::post('/list_of_books', 'App\Http\Controllers\TestController@i_post')->name("book.i_post");
+Route::get('/list_of_books', 'App\Http\Controllers\AppController@list_of_books');
 
 //書籍詳細画面表示
 Route::get('/information_of_book', 'App\Http\Controllers\TestController@i_show')->name("book.i_show");
