@@ -16,7 +16,7 @@ class TestController extends Controller
     public function getbook() 
     {
         // 書籍一覧情報取得
-        $data_obj = DB::table('books')
+        $data = DB::table('books')
         ->leftjoin('book_categories',function ($bc){
             $bc->on('book_categories.bc_book_number', 'books.book_number')
             ->where('bc_logic_flag',TRUE);
@@ -29,7 +29,6 @@ class TestController extends Controller
         // ->select('book_number','title','year_of_issue','publisher','cover_pic','category_name','return_flag')
         ->get();
 
-        $data = json_decode(json_encode($data_obj),true);
 
         // S3の画像パス取得
         $before = 0;
