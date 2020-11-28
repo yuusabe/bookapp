@@ -42,17 +42,16 @@ class AccountController extends Controller
                 $request->session()->put("account_input", $input);
                 return redirect()->action('App\Http\Controllers\AccountController@confirm');
 
-                
+
         }elseif($request->has('change')){
 
-            $a_data_origin = $request;
-            $request->session()->put("accountc_input", $a_data_origin);
-            $a_data->$request->session()->get("accountc_input");
-            return view('account_change', compact('a_data'));
+            $input = $request;
+            $request->session()->put("accountc_input", $input);
+            return view('account_change');
         }
 
     }
-
+    //書籍登録関連画面
     function confirm(Request $request){
             //セッションから値を取り出す
             $input = $request->session()->get("account_input");
@@ -62,10 +61,6 @@ class AccountController extends Controller
             }
             return view("account_management_check",["input" => $input]);
     }
-
-
-    
-
 
     function send(Request $request){
         //セッションから値を取り出す
@@ -108,11 +103,22 @@ class AccountController extends Controller
         return view("completion");
     }
 
-
     function list(){
         $a_list = Account::select()
         ->where('a_logic_flag',TRUE)
         ->get();
         return view('account_management', compact('a_list'));
     }
+
+
+    //書籍編集関連画面
+    function change(Request $request){
+        //セッションから値を取り出す
+        $input = $request->session()->get("accountc_input");
+        //セッションに値が無い時はフォームに戻る
+        if(!$input){
+            return redirect()->action('App\Http\Controllers\AccountController@show');
+        }
+        return view("account_change",["input" => $input]);
+}
 }
