@@ -46,12 +46,12 @@ class TestController extends Controller
             $before = $d['book_number'];
         }
 
-        foreach($data as $d){
-            if($d['book_number'] == ${'cate'.$d['book_number']}['number']){
+        // foreach($data as $d){
+        //     if($d['book_number'] == ${'cate'.$d['book_number']}['number']){
                 
-            }
+        //     }
 
-        }
+        
 
         // for($i=0; $i<count($data); $i++){
         //     for($n=$i; $n<count($data)-1; $n++){
@@ -63,7 +63,7 @@ class TestController extends Controller
         //             break;
         //         }
         //     }
-        }
+        
 
         return view('list_of_books', compact('data'));
 
