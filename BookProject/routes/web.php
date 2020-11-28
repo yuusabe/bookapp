@@ -20,7 +20,9 @@ Route::get('/account_change_check', 'App\Http\Controllers\AppController@account_
 // Route::get('/account_change', 'App\Http\Controllers\AppController@account_change');
 /* Route::get('/account_change', 'App\Http\Controllers\AccountchangeController@show')->name("account_manage_change.show"); */
 
-Route::post('/account_management', 'App\Http\Controllers\AccountchangeController@change')->name("account_change.change");
+// Route::post('/account_management', 'App\Http\Controllers\AccountchangeController@change')->name("account_change.change");
+
+
 Route::post('/account_change', 'App\Http\Controllers\AccountchangeController@post')->name("account_manage_change.post");
 Route::get('/account_change_check', 'App\Http\Controllers\AccountchangeController@confirm')->name("account_manage_change.confirm");
 Route::post('/account_change_check', 'App\Http\Controllers\AccountchangeController@send')->name("account_manage_change.send");

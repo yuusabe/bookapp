@@ -5,7 +5,7 @@
 @section('body')
 
 <main>
-  <form method="post" action="{{ route('account_manage.post') }}">
+  <!-- <form method="post" action="{{ route('account_manage.post') }}"> -->
     @csrf
     <!-- <form action="https://www-cf.dtg-shosekikanri2020-test.tk/account_management_check" method="get"> -->
     <div id="text">
@@ -42,12 +42,14 @@
     </div>
     <div id="button_p">
       <div id="button">
-        <button type="submit" class="btn btn-outline-secondary" >
+
+      <!-- typeはsubmit -->
+        <button type="button" class="btn btn-outline-secondary" >
           アカウント登録
         </button>
       </div>
     </div>
-  </form>
+  <!-- </form> -->
 
   <div id="text">
     <p>アカウント一覧</p>
