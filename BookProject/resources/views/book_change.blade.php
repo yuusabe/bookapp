@@ -9,6 +9,8 @@
     <div id="text">
         <p>編集する書籍の内容を入力してください。</p>
     </div>
+    <form action="{{ route('book.check_post') }}" method="post" enctype="multipart/form-data">
+            @csrf
     <div id="b_info">
         <div id="b_image">
             <label>
@@ -86,11 +88,9 @@
         
     </div>
     <div id="button_p">
-        <form action="{{ route('book.check_post') }}" method="post" enctype="multipart/form-data">
-            @csrf
             <div id="button">
-                <button type="submit" class="btn btn-outline-secondary" name = "cancel">
-                    キャンセル
+                <button type="submit" class="btn btn-outline-secondary" name = "change">
+                    書籍編集
                 </button>
             </div>
         </form>
@@ -98,8 +98,8 @@
             @csrf
             <input type = "hidden" name="number" value="{{$num}}">
             <div id="button">
-                <button type="submit" class="btn btn-outline-secondary" name = "change">
-                書籍編集
+                <button type="submit" class="btn btn-outline-secondary" name = "cancel">
+                キャンセル
                 </button>
             </div>
         </form>
