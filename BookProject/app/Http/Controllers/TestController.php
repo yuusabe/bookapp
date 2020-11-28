@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Log;
 
 class TestController extends Controller
 {
+    //書籍一覧画面表示
     public function getbook() 
     {
         // 書籍一覧情報取得
@@ -70,6 +71,7 @@ class TestController extends Controller
         Log::debug($data);
     }
 
+    //書籍一覧画面、詳細ボタン押下時
     function i_post(Request $request){
         if($request->has('info')){
             $num = $request['number'];
@@ -87,41 +89,62 @@ class TestController extends Controller
             $category_all = json_decode($category_all, true);
             return view('book_change', compact('num','b_data','category','path','category_all'));
         }
-
-        function i_show(){
-            return view('information_of_book');
-        }
-
-
     }
 
+    //書籍詳細画面表示
+    function i_show(){
+        return view('information_of_book');
+    }
+
+
+    //書籍詳細画面、貸出ボタン押下時
     function l_post(Request $request){
         $num = $request['number'];
         return view('lend_book',compact('num'));
     }
 
+    //貸出画面表示
+    function lend_show(){
+        return view('lend_book');
+    }
+
+    //貸出画面、貸出ボタン押下時
     function lc_post(Request $request){
         $num = $request['number'];
         $last = $request['last'];
         return view('lend_check',compact('num', 'last'));
     }
 
+    //貸出確認画面表示
+    function lend_check_show(){
+        return view('lend_check');
+    }
+
+    //貸出確認画面、確定ボタン押下時
+    function lend_send(Request $request){
+
+        return view('completion');
+    }
+
+    //書籍編集画面表示
+    function book_change_show(){
+        return view('book_change');
+    }
+
+
+    //書籍編集画面、各ボタン押下時
     function check_post(Request $request){
         if($request->has('change')){
-            //書籍編集確認画面用
+            //書籍編集画面用
             
 
-            return view('completion');
+            return view('book_change_check');
 
         }elseif($request->has('delete')){
             //書籍削除画面用
             $num = $request['number'];
-            Book::where('b_logic_flag',TRUE)
-            ->where('book_number',$num)
-            ->update([
-                'b_logic_flag' => FALSE
-            ]);
-            return view('completion');
+            return view('book_delete_check', compact('num'));
+            
 
         }elseif($request->has('cancel')){
             //キャンセル用
@@ -129,4 +152,29 @@ class TestController extends Controller
         }
     }
 
+    //書籍編集確認画面表示
+    function book_change_check_show(){
+        return view('book_change_check');
+    }
+
+    //書籍編集確認画面、確定ボタン押下時
+    function change_check_send(){
+        return view('completion');
+    }
+
+    //書籍削除確認画面表示
+    function delete_check_show(){
+        return view('book_delete_check');
+    }
+
+    //書籍削除確認画面、確定ボタン押下時
+    function delete_send(Request $request){
+        $num = $request['number'];
+        Book::where('b_logic_flag',TRUE)
+            ->where('book_number',$num)
+            ->update([
+                'b_logic_flag' => FALSE
+            ]);
+            return view('completion');
+    }
 }

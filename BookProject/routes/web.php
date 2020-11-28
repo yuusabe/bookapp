@@ -71,11 +71,11 @@ Route::post('/book_add_check', 'App\Http\Controllers\BookaddFormController@send'
 /* Route::post('/book_add', 'App\Http\Controllers\MemoryImageController@upload');
 // */
 
-Route::get('/book_change_check', 'App\Http\Controllers\AppController@book_change_check');
+// Route::get('/book_change_check', 'App\Http\Controllers\AppController@book_change_check');
 
-Route::get('/book_change', 'App\Http\Controllers\AppController@book_change');
+// Route::get('/book_change', 'App\Http\Controllers\AppController@book_change');
 
-Route::get('/book_delete_check', 'App\Http\Controllers\AppController@book_delete_check');
+// Route::get('/book_delete_check', 'App\Http\Controllers\AppController@book_delete_check');
 
 Route::get('/category_check', 'App\Http\Controllers\AppController@category_check');
 
@@ -89,16 +89,16 @@ Route::get('/category', 'App\Http\Controllers\CategoryController@get_category');
 
 // Route::get('/completion', 'App\Http\Controllers\AppController@completion');
 
-Route::get('/information_of_book', 
-'App\Http\Controllers\AppController@information_of_book');
+// Route::get('/information_of_book', 'App\Http\Controllers\AppController@information_of_book');
 // Route::post('/information_of_book', 'App\Http\Controllers\ListbookController@listbook');
+// Route::get('/information_of_book', 'App\Http\Controllers\GetbookController@i_show')->name("book.i_show");
 
-Route::get('/lend_book', 'App\Http\Controllers\AppController@lend_book');
+// Route::get('/lend_book', 'App\Http\Controllers\AppController@lend_book');
 // Route::post('/lend_book', 'App\Http\Controllers\ListbookController@lendbook');
 
 Route::get('/lend_check', 'App\Http\Controllers\AppController@lend_check');
 
-Route::get('/list_of_books', 'App\Http\Controllers\AppController@list_of_books');
+// Route::get('/list_of_books', 'App\Http\Controllers\AppController@list_of_books');
 Route::get('/list_of_books', 'App\Http\Controllers\GetbookController@getbook');
 Route::post('/list_of_books', 'App\Http\Controllers\GetbookController@i_post')->name("book.i_post");
 
@@ -126,10 +126,31 @@ Route::post('/login', 'App\Http\Controllers\LoginController@check')->name("login
 Route::get('/mypage', 'App\Http\Controllers\MypageController@showp');
 
 
-//test用ページ
+//書籍一覧画面からの遷移
 Route::get('/testpage', 'App\Http\Controllers\TestController@getbook');
+//書籍一覧画面、詳細ボタン押下時
 Route::post('/testpage', 'App\Http\Controllers\TestController@i_post')->name("book.i_post");
-// Route::get('/information_of_book', 'App\Http\Controllers\GetbookController@i_show')->name("book.i_show");
+//書籍詳細画面表示
 Route::get('/information_of_book', 'App\Http\Controllers\TestController@i_show')->name("book.i_show");
+//書籍詳細画面、貸出ボタン押下時
 Route::post('/information_of_book', 'App\Http\Controllers\TestController@l_post')->name("book.l_post");
-Route::post('/lend_book', 'App\Http\Controllers\TestController@check_post')->name("book.check_post");
+//貸出画面表示
+Route::get('/lend_book', 'App\Http\Controllers\TestController@lend_show');
+//貸出画面、貸出ボタン押下時
+Route::post('/lend_book', 'App\Http\Controllers\TestController@lc_post')->name("book.lc_post");
+//貸出確認画面表示
+Route::get('/lend_check', 'App\Http\Controllers\TestController@lend_check_show');
+//貸出確認画面、確定ボタン押下時
+Route::post('/lend_check', 'App\Http\Controllers\TestController@lend_send')->name("book.lend_send");
+//書籍編集画面表示
+Route::get('/book_change', 'App\Http\Controllers\TestController@book_change_show');
+//書籍編集画面、各ボタン押下時
+Route::post('/book_change', 'App\Http\Controllers\TestController@check_post')->name("book.check_post");
+//書籍編集確認画面表示
+Route::get('/book_change_check', 'App\Http\Controllers\TestController@book_change_check_show');
+//書籍編集確認画面、確定ボタン押下時
+Route::post('/book_change', 'App\Http\Controllers\TestController@change_check_send')->name("book.change_check_send");
+//書籍削除確認画面表示
+Route::get('/book_delete_check', 'App\Http\Controllers\TestController@delete_check_show');
+//書籍削除確認画面、確定ボタン押下時
+Route::post('/book_delete_check', 'App\Http\Controllers\TestController@delete_send')->name("book.delete_send");
