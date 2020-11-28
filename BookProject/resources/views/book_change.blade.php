@@ -41,11 +41,11 @@
         <form>
             <div id="tbox">
                 　　　　　　タイトル
-                <input type="text" name="title" placeholder="タイトルを入力してください" id="b_tbox">
+                <input type="text" name="title" placeholder="タイトルを入力してください" id="b_tbox" value="{{$b_data->title}}">
             </div>
             <div id="tbox">
                 タイトル（フリガナ）
-                <input type="text" name="title_h" placeholder="タイトルのフリガナを入力してください" id="b_tbox">
+                <input type="text" name="title_h" placeholder="タイトルのフリガナを入力してください" id="b_tbox" value="{{$b_data->title_furigana}}">
             </div>
             <div id="tbox">
                 <label>
