@@ -49,11 +49,9 @@ class TestController extends Controller
 
         // foreach($data as $d){
         //     if($d['book_number'] == ${'cate'.$d['book_number']}['number']){
-                
         //     }
 
-        
-
+    
         // for($i=0; $i<count($data); $i++){
         //     for($n=$i; $n<count($data)-1; $n++){
         //         if($data[$n]['book_number'] == $data[$n+1]['book_number']){
