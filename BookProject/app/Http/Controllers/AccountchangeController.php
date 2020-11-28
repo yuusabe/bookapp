@@ -26,7 +26,7 @@ class AccountchangeController extends Controller
         Log::debug($num);
     }
 
-    function show1(){
+    function show(){
         return view('account_change');
     }
 
@@ -35,7 +35,7 @@ class AccountchangeController extends Controller
         
         $validator = Validator::make($input, $this->validator);
 		if($validator->fails()){
-			return redirect()->action('App\Http\Controllers\AccountchangeController@show1')
+			return view('account_change')
 				->withInput()
 				->withErrors($validator);
         }
@@ -50,7 +50,7 @@ class AccountchangeController extends Controller
         $input = $request->session()->get("accountc_input");
         //セッションに値が無い時はフォームに戻る
         if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountchangeController@show1');
+            return view('account_change');
         }
         return view("account_management_check",["input" => $input]);
     }
@@ -60,7 +60,7 @@ class AccountchangeController extends Controller
         $input = $request->session()->get("accountc_input");
         //セッションに値が無い時はフォームに戻る
         if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountchangeController@show1');
+            return view('account_change');
         }
 
 
