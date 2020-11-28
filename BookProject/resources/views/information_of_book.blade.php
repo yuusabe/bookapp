@@ -5,8 +5,8 @@
 @section('body')
 
 <main>
-{{$num_cate['number']}}
-@foreach($num_cate['category'] as $c)
+{{$num}}
+@foreach(array($category) as $c)
 {{$c}}
 @endforeach
     <div id="book_p">

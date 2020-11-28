@@ -67,7 +67,7 @@ class TestController extends Controller
     }
 
     function l_post(Request $request){
-        $num_cate = $request;
+        $num = $request['number'];
         return view('lend_book',compact('num_cate'));
     }
 }
