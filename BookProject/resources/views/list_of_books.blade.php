@@ -43,18 +43,7 @@
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
-<?php
-  $before = 0;
-  foreach($data as $d)
-  if($d->book_number == $before){
-                $d->multi = 'ON' ;
-                ${'cate'.$d->book_number}->number=$d->book_number;
-                ${'cate'.$d->book_number}->name=$d->category_name;
-            }else{
-                $d->multi = 'OFF' ;
-            }
-            $before = $d->book_number;
-?>
+
 
   @foreach($data as $d)
   <div id="book_p">

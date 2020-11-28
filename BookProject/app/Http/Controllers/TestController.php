@@ -36,25 +36,33 @@ class TestController extends Controller
             $path = Storage::disk('s3')->url($d['cover_pic']);
             $d['path'] = $path;
 
-            // if($d['book_number'] == $before){
-            //     $d['multi'] = 'ON' ;
-            //     ${'cate'.$d['book_number']}['number']=$d['book_number'];
-            //     ${'cate'.$d['book_number']}['name']=$d['category_name'];
-            // }else{
-            //     $d['multi'] = 'OFF' ;
-            // }
-            // $before = $d['book_number'];
-        }
-        for($i=0; $i<count($data); $i++){
-            for($n=$i; $n<count($data)-1; $n++){
-                if($data[$n]['book_number'] == $data[$n+1]['book_number']){
-                    $c_name[] = $data[$n]['category_name'];
-                }else{
-                    $c_name[] = $data[$n]['category_name'];
-                    $data[i]['category_array'] = $c_name;
-                    break;
-                }
+            if($d['book_number'] == $before){
+                $d['multi'] = 'ON' ;
+                ${'cate'.$d['book_number']}['number']=$d['book_number'];
+                ${'cate'.$d['book_number']}['name']=$d['category_name'];
+            }else{
+                $d['multi'] = 'OFF' ;
             }
+            $before = $d['book_number'];
+        }
+
+        foreach($data as $d){
+            if($d['book_number'] == ${'cate'.$d['book_number']}['number']){
+                
+            }
+
+        }
+
+        // for($i=0; $i<count($data); $i++){
+        //     for($n=$i; $n<count($data)-1; $n++){
+        //         if($data[$n]['book_number'] == $data[$n+1]['book_number']){
+        //             $c_name[] = $data[$n]['category_name'];
+        //         }else{
+        //             $c_name[] = $data[$n]['category_name'];
+        //             $data[i]['category_array'] = $c_name;
+        //             break;
+        //         }
+        //     }
         }
 
         return view('list_of_books', compact('data'));
