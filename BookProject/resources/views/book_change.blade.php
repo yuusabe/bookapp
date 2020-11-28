@@ -75,7 +75,7 @@
                         <select name="category" id="b_cbox" multiple>
                             <option value="">選択してください
                             @foreach($category_all as $c)
-                            <option value="">{{$c}}
+                            <option value="">{{$c['category_name']}}
                             <!-- <option value="1">統計学
                             <option value="2">AI -->
                             @endforeach
