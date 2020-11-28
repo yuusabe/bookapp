@@ -143,7 +143,7 @@ class TestController extends Controller
 
         }elseif($request->has('cancel')){
             //キャンセル用
-            return view(action('TestController@Getbook'));
+            return view(action('TestController@getbook'));
         }
     }
 
