@@ -1,6 +1,8 @@
 <?php $title = "DTGBOOK【アカウント編集画面】";?>
 <?php $csspath = "css/account.css";?>
 
+<?php $input_data = $_GET['number'];?>
+
 @extends("common.header")
 @section('body')
 
@@ -12,7 +14,7 @@
     </div>
     <div id=tb_p>
         <div id="tb">
-        <p>アカウントID：<?php echo $_GET['number']?></p>
+        <p>アカウントID：<?php echo $input_data?></p>
         </div>
         <div id="tb">
           <p>アカウント名</p>
