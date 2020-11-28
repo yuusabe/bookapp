@@ -54,7 +54,7 @@
     <div id="book">
       <div id="text">
         <p id="category">
-        @foreach($d['category_array'] as $c)
+        @foreach(array($d['category_array']) as $c)
         {{$c}}
         @endforeach
         </p>

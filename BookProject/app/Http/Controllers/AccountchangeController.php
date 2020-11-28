@@ -21,14 +21,15 @@ class AccountchangeController extends Controller
     ];
 
     function change(Request $request){
-        $num = $request->number;
-        return view('account_change', compact('num'));
-        Log::debug($num);
+        $a_data = $request;
+        $request->session()->put("accountc_input", $a_data);
+        return view('account_change', compact('a_data'));
+        Log::debug($a_data);
     }
 
-    function show(){
-        return view('account_change');
-    }
+    // function show(){
+    //     return view('account_change');
+    // }
 
     function post(Request $request){
         $input = $request->only($this->formItems);

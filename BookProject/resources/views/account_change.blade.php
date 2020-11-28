@@ -6,7 +6,7 @@
 @section('body')
 
 <main>
-{{$num}}
+{{$a_data->account_number}}
  <!--  <form> -->
     <div id="text">
       <p>編集する内容を入力してください。</p>
@@ -14,15 +14,14 @@
     <form method="post" action="{{ route('account_manage_change.post') }}">
       @csrf
       <div id=tb_p>          
-          <input type="hidden" name="acc_number" value={{ old(<?php echo $_GET["a_number"]?>) }}>
           <div id="tb">
             <p>アカウント名</p>
           </div>
-          <input type="text" id="tbox" name="account_name" placeholder="DTG太郎">
+          <input type="text" id="tbox" name="account_name" placeholder="DTG太郎" value = "{{a_data->account_name}}">
           <div id="tb">
             <p>メールアドレス</p>
           </div>
-          <input type="email" id="tbox" name="address" placeholder="abc@example.com">
+          <input type="email" id="tbox" name="address" placeholder="abc@example.com" value = "{{a_data->mail_address}}">
           <div id="tb">
             <p>パスワード</p>
           </div>

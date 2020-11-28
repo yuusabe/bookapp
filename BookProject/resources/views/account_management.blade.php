@@ -66,10 +66,14 @@
     </div>
     <div id="account">
       <div id="button_p">
-      <form method="get" action="{{ route('account_manage_change.change') }}">
+      <form method="post" action="{{ route('account_manage_change.change') }}">
         @csrf
         <div id="button">
-          <button type="submit" class="btn btn-outline-secondary"  value='{{$a->account_number}}' name="a_number">
+        <input type = "hidden" name="account_number" value="{{$a->account_number}}">
+        <input type = "hidden" name="account_name" value="{{$a->account_name}}">
+        <input type = "hidden" name="mail_address" value="{{$a->mail_address}}">
+        <input type = "hidden" name="manager_flag" value="{{$a->manager_flag}}">
+          <button type="submit" class="btn btn-outline-secondary">
             編集
           </button>
         </div>
