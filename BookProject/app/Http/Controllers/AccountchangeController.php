@@ -35,9 +35,7 @@ class AccountchangeController extends Controller
         
         $validator = Validator::make($input, $this->validator);
 		if($validator->fails()){
-			return view('account_change')
-				->withInput()
-				->withErrors($validator);
+			return view('account_change');
         }
         
         //セッションに書き込む
