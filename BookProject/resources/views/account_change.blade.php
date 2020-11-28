@@ -12,10 +12,7 @@
       <p>編集する内容を入力してください。</p>
     </div>
     <div id=tb_p>
-        <div id="tb">
-        <p>アカウントID：
-        <input type="text" id="tbox" name="acc_number" value=<?php echo $_GET["a_number"]?> readonly></p>
-        </div>
+        <input type="hidden" name="acc_number" value=<?php echo $_GET["a_number"]?>></p>
         <div id="tb">
           <p>アカウント名</p>
         </div>
