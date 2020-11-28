@@ -125,6 +125,8 @@ Route::get('/testpage', 'App\Http\Controllers\TestController@test');
 Route::post('/login', 'App\Http\Controllers\LoginController@check')->name("login.check");
 Route::get('/mypage', 'App\Http\Controllers\MypageController@showp');
 
+Route::get('/testpage', 'App\Http\Controllers\TestController@getbook');
+Route::post('/testpage', 'App\Http\Controllers\TestController@i_post')->name("book.i_post");
 
 //書籍一覧画面からの遷移
 Route::get('/list_of_books', 'App\Http\Controllers\TestController@getbook');
