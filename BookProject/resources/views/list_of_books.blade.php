@@ -82,12 +82,6 @@
     <form action="{{ route('book.i_post') }}" method="post" enctype="multipart/form-data">
       @csrf
       <input type = "hidden" name="number" value="{{$d->book_number}}">
-      <!-- <input type = "hidden" name="title" value="{{$d->title}}">
-      <input type = "hidden" name="title_f" value="{{$d->title_furigana}}">
-      <input type = "hidden" name="publisher" value="{{$d->publisher}}">
-      <input type = "hidden" name="author" value="{{$d->Author}}">
-      <input type = "hidden" name="author_f" value="{{$d->Author_furigana}}">
-      <input type = "hidden" name="year" value="{{$d->year_of_issue}}"> -->
       <input type = "hidden" name="path" value="{{$d->path}}"> 
       <input type = "hidden" name="category" value="{{$d->category_name}}">
 
