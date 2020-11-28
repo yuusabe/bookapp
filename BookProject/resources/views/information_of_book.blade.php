@@ -6,7 +6,7 @@
 
 <main>
 {{$num}}
-@foreach(array($category) as $c)
+@foreach($category as $c)
 {{$c}}
 @endforeach
     <div id="book_p">
