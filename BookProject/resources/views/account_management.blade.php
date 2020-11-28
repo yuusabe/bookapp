@@ -5,7 +5,7 @@
 @section('body')
 
 <main>
-  <!-- <form method="post" action=""> -->
+  <form method="post" action="{{ route('account_manage.post') }}">
     @csrf
     <!-- <form action="https://www-cf.dtg-shosekikanri2020-test.tk/account_management_check" method="get"> -->
     <div id="text">
@@ -42,14 +42,12 @@
     </div>
     <div id="button_p">
       <div id="button">
-
-      <!-- submit -->
-        <button type="button" class="btn btn-outline-secondary" >
+        <button type="submit" class="btn btn-outline-secondary">
           アカウント登録
         </button>
       </div>
     </div>
-  <!-- </form> -->
+  </form>
 
   <div id="text">
     <p>アカウント一覧</p>
@@ -68,7 +66,7 @@
     </div>
     <div id="account">
       <div id="button_p">
-      <form method="post" action= " {{route('account_change.change')}}">
+      <form method="post" action= " App\Http\Controllers\AccountchangeController@change">
         @csrf
         <div id="button">
         <input type = "hidden" name="account_number" value="{{$a->account_number}}">
@@ -89,7 +87,7 @@
     </div>
   </div>
   @endforeach
-<!--   </form> -->
+  <!-- </form> -->
 </main>
 
 @endsection

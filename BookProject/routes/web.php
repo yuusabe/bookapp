@@ -37,7 +37,7 @@ Route::get('/account_delete_check', 'App\Http\Controllers\AppController@account_
 Route::get('/account_management', 'App\Http\Controllers\AccountController@show')->name("account_manage.show");
 
 
-// Route::post('/account_management', 'App\Http\Controllers\AccountController@post')->name("account_manage.post");
+Route::post('/account_management', 'App\Http\Controllers\AccountController@post')->name("account_manage.post");
 
 
 //追記20201127：アカウント管理画面、アカウントリスト表示、のちにshowに合併予定
