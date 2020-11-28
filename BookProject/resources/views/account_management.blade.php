@@ -66,7 +66,7 @@
     </div>
     <div id="account">
       <div id="button_p">
-      <form method="post" action= "{{route('account_manage_change.change') }}">
+      <form method="post" action= "{{ route('account_manage_change.change') }}">
         @csrf
         <div id="button">
         <input type = "hidden" name="account_number" value="{{$a->account_number}}">
