@@ -111,5 +111,5 @@
     </div>
   </div>
 </main>
-
+{{$d->multi}}
 @endsection
