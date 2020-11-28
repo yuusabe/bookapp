@@ -69,7 +69,7 @@
       <form method="get" action="{{ route('account_manage_change.change') }}" value='{{$a->account_number}}' name="number">
         @csrf
         <div id="button">
-          <button type="submit" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/account_change'">
+          <button type="submit" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/account_change'" value='{{$a->account_number}}' name="a_number">
             編集
           </button>
         </div>
