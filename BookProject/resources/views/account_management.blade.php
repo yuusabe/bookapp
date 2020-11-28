@@ -66,10 +66,10 @@
     </div>
     <div id="account">
       <div id="button_p">
-      <form method="get" action="{{ route('account_manage_change.change') }}" value='{{$a->account_number}}' name="number">
+      <form method="get" action="{{ route('account_manage_change.change') }}">
         @csrf
         <div id="button">
-          <button type="submit" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/account_change'" value='{{$a->account_number}}' name="a_number">
+          <button type="submit" class="btn btn-outline-secondary"  value='{{$a->account_number}}' name="a_number">
             編集
           </button>
         </div>
