@@ -11,15 +11,15 @@
     </div>
     <div id="category_p">
         <div id="category">
+        @foreach($category as $c)
             <div id="input_pluralBox">
                 <div id="input_plural" style="display:inline-flex">
-            @foreach($category as $c)
                   <input type="text" id="textbox" name="category" value="{{$c['category_name']}}" class="form-control" placeholder="入力して下さい">
                   <input type="button" id="add_del" value="追加" class="add pluralBtn btn btn-outline-secondary">
                   <input type="button" id="add_del" value="削除" class="del pluralBtn btn btn-outline-secondary">
-            @endforeach
                 </div>
             </div>
+        @endforeach
         </div>
     </div>
     <div id="button_p">
