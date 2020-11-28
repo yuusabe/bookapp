@@ -60,7 +60,7 @@
         <p>発行年：{{$d -> year_of_issue}}</p>
         <p>出版社：{{$d -> publisher}}</p>
         @if($d->return_flag == FALSE)
-        <p>貸出状況：貸出</p>
+        <p>貸出状況：貸出中</p>
         @else
         <p>貸出状況：貸出可</p>
         @endif

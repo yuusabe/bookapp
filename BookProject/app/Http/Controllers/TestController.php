@@ -80,6 +80,13 @@ class TestController extends Controller
 
     function l_post(Request $request){
         $num = $request['number'];
-        return view('lend_book',compact('num_cate'));
+        return view('lend_book',compact('num'));
     }
+
+    function lc_post(Request $request){
+        $num = $request['number'];
+        $last = $request['last'];
+        return view('lend_check',compact('num', 'last'));
+    }
+
 }
