@@ -31,7 +31,7 @@ class GetbookController extends Controller
         // $data = (array)$obj_data;
 
         // S3の画像パス取得
-        $before = 255;
+        $before = 0;
         foreach($data as $index => $d){
             $path = Storage::disk('s3')->url($d->cover_pic);
             $d->path = $path;
