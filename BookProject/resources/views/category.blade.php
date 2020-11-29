@@ -19,7 +19,7 @@
     </div>
     <div id="category_p">
         <div id="category_ch">
-            <input type="text" id="textbox" name="category" class="form-control">
+            <input type="text" id="textbox_ch" name="category" class="form-control">
         </div>
         <div id="category_ch">
             <div id="button_p">
@@ -29,7 +29,7 @@
                     </button>
                 </div>
                 <div id="button">
-                    <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/account_delete_check'">
+                    <button type="button" class="btn btn-outline-secondary">
                     削除
                 </button>
             </div>
