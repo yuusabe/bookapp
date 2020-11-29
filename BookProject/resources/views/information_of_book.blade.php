@@ -20,15 +20,11 @@
                 <p>カテゴリ：分類なし</p>
             @else
                 <p>カテゴリ：{{$category_name}}</p>
-<<<<<<< HEAD
-                <p>貸出状況：{{}}</p>
-=======
             @endif
             @if($return_day == '0000年00月00日')
                 <p>貸出状況：貸出可</p>
             @else
                 <p>貸出状況：貸出中</p>
->>>>>>> 6f4912eff29b39e56c0b760a22f9e9d8e182ba55
                 <p>返却予定日：{{$return_day}}</p>
                 <p>貸出者：{{$account_name}}</p>
             @endif
