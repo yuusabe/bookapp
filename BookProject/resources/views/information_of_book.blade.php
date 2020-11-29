@@ -16,7 +16,11 @@
                 <p>発行年：{{$book_data->year_of_issue}}</p>
                 <p>著者：{{$book_data->Author}}</p>
                 <p>出版社：{{$book_data->publisher}}</p>
+            @if($category_name == 'a')
+                <p>カテゴリ：分類無し</p>
+            @else
                 <p>カテゴリ：{{$category_name}}</p>
+            @endif
             @if($return_day == '0000年00月00日')
                 <p>貸出状況：貸出可</p>
             @else
