@@ -19,7 +19,7 @@
     </div>
     <div id="category_p">
         <div id="category_ch">
-            <input type="text" id="textbox" name="category" class="form-control">
+            <input type="text" id="textbox_ch" name="category" class="form-control">
         </div>
         <div id="category_ch">
             <div id="button_p">
