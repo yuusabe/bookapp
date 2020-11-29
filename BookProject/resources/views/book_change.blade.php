@@ -94,7 +94,7 @@
                 </button>
             </div>
         </form>
-        <form action="https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books" method="post" enctype="multipart/form-data">
+        <form action="{{ route('book.check_post') }}" method="post" enctype="multipart/form-data">
             @csrf
             <input type = "hidden" name="number" value="{{$num}}">
             <div id="button">
