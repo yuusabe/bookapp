@@ -19,10 +19,14 @@
                 <p>著者：{{$book_data->Author}}</p>
                 <p>出版社：{{$book_data->publisher}}</p>
                 <p>カテゴリ：{{$category_name}}</p>
-                <p>
-                貸出状況：{{}}</p>
+            @if($return_day == '0000年00月00日')
+                <p>貸出状況：貸出可</p>
+            @else
+                <p>貸出状況：貸出中</p>
                 <p>返却予定日：{{$return_day}}</p>
                 <p>貸出者：{{$account_name}}</p>
+            @endif
+                
             </div>
         </div>
     </div>
