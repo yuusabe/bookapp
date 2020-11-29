@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Request as PostRequest;
 use App\Models\Account;
 use App\Models\Lend_book;
 use Validator;
@@ -48,7 +49,7 @@ class AccountController extends Controller
 
         }elseif($request->has('change')){
 
-            $input_change = Request::input('account_number');
+            $input_change = PostRequest::input('account_number');
             $request->session()->put("accountc_input",$input_change);
             return redirect()->action('App\Http\Controllers\AccountchangeController@confirm');
         }
