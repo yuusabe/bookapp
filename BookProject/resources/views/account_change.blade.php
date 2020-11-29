@@ -17,11 +17,11 @@
           <div id="tb">
             <p>アカウント名</p>
           </div>
-          <input type="text" id="tbox" name="account_name" placeholder="DTG太郎" value = "{{$a_data->account_name}}">
+          <input type="text" id="tbox" name="account_name" placeholder="DTG太郎" value = "{{input[1]}}">
           <div id="tb">
             <p>メールアドレス</p>
           </div>
-          <input type="email" id="tbox" name="address" placeholder="abc@example.com" value = "{{$a_data->mail_address}}">
+          <input type="email" id="tbox" name="address" placeholder="abc@example.com" value = "{{input[2]}}">
           <div id="tb">
             <p>パスワード</p>
           </div>
