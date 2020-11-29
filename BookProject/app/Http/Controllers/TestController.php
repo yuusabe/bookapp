@@ -134,18 +134,18 @@ class TestController extends Controller
 
     //書籍編集画面、各ボタン押下時
     function check_post(Request $request){
-            //書籍編集画面用
+            //編集ボタン押下時
         if($request->has('change')){
             
 
             return view('book_change_check');
-            //書籍削除画面用
+            //削除ボタン押下時
         }elseif($request->has('delete')){
             
             $num = $request['number'];
             return view('book_delete_check', compact('num'));
 
-            //キャンセル用
+            //キャンセルボタン押下時
         }elseif($request->has('cancel')){
             return redirect()->route('book.list');
         }
