@@ -46,7 +46,6 @@
 
 
   @foreach($data as $d)
-  @if($b_logic_flag == TRUE)
   <div id="book_p">
     <div id="book">
       <img src="{{$d->path}}" id="image" alt="表紙画像" width="135" height="135" />
@@ -94,7 +93,6 @@
     </form>
     </div>
   </div>
-  @endif
   @endforeach
 
   <div id="button_p">
