@@ -19,8 +19,7 @@
                 <p>著者：{{$book_data->Author}}</p>
                 <p>出版社：{{$book_data->publisher}}</p>
                 <p>カテゴリ：{{$category_name}}</p>
-                <p>
-                貸出状況：{{}}</p>
+                <p>貸出状況：{{}}</p>
                 <p>返却予定日：{{$return_day}}</p>
                 <p>貸出者：{{$account_name}}</p>
             </div>
