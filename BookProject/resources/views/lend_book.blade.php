@@ -11,10 +11,10 @@
         </div>
         <div id="book">
             <div id="text">
-                <p id="title">タイトル：{{book_data->title}}</p>
-                <p>発行年：{{book_data->year_of_issue}}</p>
-                <p>著者：{{book_data->Author}}</p>
-                <p>出版社：{{book_data->publisher}}</p>
+                <p id="title">タイトル：{{$book_data->title}}</p>
+                <p>発行年：{{$book_data->year_of_issue}}</p>
+                <p>著者：{{$book_data->Author}}</p>
+                <p>出版社：{{$book_data->publisher}}</p>
                 <p>カテゴリ：{{$category_name}}</p>
                 <p>貸出者：{{$account_name}}</p>
                 <p>返却予定日：{{$return_day}}</p>
