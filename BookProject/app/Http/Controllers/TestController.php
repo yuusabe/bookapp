@@ -108,6 +108,7 @@ class TestController extends Controller
             ->where('bc_book_number',$num)
             ->first();
         }else{
+            $$category_data = new stdClass;
             $category_data->bc_category_name = "NULL";
         }
             $category_exist2 = Category::where('c_logic_flag',TRUE)
