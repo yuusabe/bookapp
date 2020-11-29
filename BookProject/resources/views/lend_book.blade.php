@@ -41,6 +41,7 @@
         </div>
         <div id="button_p">
             <div id="button">
+                <input type = "hidden" name="number" value="{{$num}}">
                 <button type="submit" class="btn btn-outline-secondary" name = "lend">
                     確認
                 </button>
