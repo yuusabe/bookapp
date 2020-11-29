@@ -59,10 +59,12 @@
         <p id="title">タイトル：{{$d -> title}}</p>
         <p>発行年：{{$d -> year_of_issue}}</p>
         <p>出版社：{{$d -> publisher}}</p>
-        @if($d->return_flag == FALSE)
-        <p>貸出状況：貸出中</p>
-        @else
+        @if(empty($d->return_flag))
         <p>貸出状況：貸出可</p>
+        @elseif($d->return_flag == TRUE)
+        <p>貸出状況：貸出可</p>
+        @else
+        <p>貸出状況：貸出中
         @endif
       </div>
     </div>
