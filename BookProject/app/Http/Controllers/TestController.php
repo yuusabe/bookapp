@@ -212,7 +212,35 @@ class TestController extends Controller
         if($request->has('lend')){
             $num = $request['number'];
             $last = $request['last'];
-            return view('lend_check',compact('num', 'last'));
+
+            $book_data = Book::where('b_logic_flag',TRUE)
+                ->where('book_number',$num)
+                ->first();
+                $category_exist = Book_category::where('bc_logic_flag',TRUE)
+                ->where('bc_book_number',$num)
+                ->exists();
+            if($category_exist == TRUE){
+                $category_data = Book_category::where('bc_logic_flag',TRUE)
+                ->where('bc_book_number',$num)
+                ->first();
+            }else{
+                $category_data = new \stdClass();
+                $category_data->bc_category_number = 0;
+            }
+                $category_exist2 = Category::where('c_logic_flag',TRUE)
+                ->where('category_number',$category_data->bc_category_number)
+                ->exists();
+            if($category_exist == TRUE){
+                $category_data2 = Category::where('c_logic_flag',TRUE)
+                ->where('category_number',$category_data->bc_category_number)
+                ->first();
+            }else{
+                $category_data2 = new \stdClass();
+                $category_data2->category_name = 'a';
+            }
+            $category_name = $category_data2->category_name;
+
+            return view('lend_check',compact('num', 'start','last','book_data','category_name'));
 
         }elseif($request->has('cancel')){
             return redirect()->route('book.list');
