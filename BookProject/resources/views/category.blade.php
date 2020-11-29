@@ -29,7 +29,7 @@
                     </button>
                 </div>
                 <div id="button">
-                    <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/account_delete_check'">
+                    <button type="button" class="btn btn-outline-secondary">
                     削除
                 </button>
             </div>
