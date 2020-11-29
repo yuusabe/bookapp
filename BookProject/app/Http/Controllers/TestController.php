@@ -169,12 +169,16 @@ class TestController extends Controller
 
     //書籍削除確認画面、確定ボタン押下時
     function delete_send(Request $request){
-        $num = $request['number'];
-        Book::where('b_logic_flag',TRUE)
-            ->where('book_number',$num)
-            ->update([
-                'b_logic_flag' => FALSE
-            ]);
+        if($request->has('delete')){
+            $num = $request['number'];
+            Book::where('b_logic_flag',TRUE)
+                ->where('book_number',$num)
+                ->update([
+                    'b_logic_flag' => FALSE
+                ]);
             return view('completion');
+        }elseif($request->has('cancel')){
+            return redirect()->route('book.list');
+        }
     }
 }
