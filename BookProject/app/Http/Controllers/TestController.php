@@ -71,9 +71,58 @@ class TestController extends Controller
     //書籍一覧画面、詳細ボタン押下時
     function i_post(Request $request){
         if($request->has('info')){
-            $num = $request['number'];
-            $category = $request['category'];
-            return view('information_of_book',compact('num','category'));
+                $num = $request['number'];
+                $book_data = Book::where('b_logic_flag',TRUE)
+                ->where('book_number',$num)
+                ->first();
+                $category_exist = Book_category::where('bc_logic_flag',TRUE)
+                ->where('bc_book_number',$num)
+                ->exists();
+            if($category_exist == TRUE){
+                $category_data = Book_category::where('bc_logic_flag',TRUE)
+                ->where('bc_book_number',$num)
+                ->first();
+            }else{
+                $category_data = new \stdClass();
+                $category_data->bc_category_number = 0;
+            }
+                $category_exist2 = Category::where('c_logic_flag',TRUE)
+                ->where('category_number',$category_data->bc_category_number)
+                ->exists();
+            if($category_exist == TRUE){
+                $category_data2 = Category::where('c_logic_flag',TRUE)
+                ->where('category_number',$category_data->bc_category_number)
+                ->first();
+            }else{
+                $category_data2 = new \stdClass();
+                $category_data2->category_name = 'a';
+            }
+                $lend_exist = Lend_book::where('return_flag',FALSE)
+                ->where('l_book_number',$num)
+                ->exists();
+            if($lend_exist == TRUE){
+                $lend_data = Lend_book::where('return_flag',FALSE)
+                ->where('l_book_number',$num)
+                ->first();
+            }else{
+                $lend_data = new \stdClass();
+                $lend_data->return_day = '0000年00月00日';
+            }
+            if(!empty($lend_data->l_account_number)){
+                $account_data = Account::where('a_logic_flag',TRUE)
+                ->where('account_number',$lend_data->l_account_number)
+                ->first();
+            }else{
+                $account_data = new \stdClass();
+                $account_data->account_name = 'a';
+            }
+                $account_name = $account_data->account_name;
+                $return_day = $lend_data->return_day;
+                $category_name = $category_data2->category_name;
+                return view('information_of_book',compact('num','book_data','account_name','return_day', 'category_name'));
+        //     $num = $request['number'];
+        //     $category = $request['category'];
+        //     return view('information_of_book',compact('num','category'));
         }elseif($request->has('change')){
             $num = $request['number'];
             $b_data = Book::where('b_logic_flag',TRUE)
@@ -85,6 +134,7 @@ class TestController extends Controller
             ->get(['category_name']);
             $category_all = json_decode($category_all, true);
             return view('book_change', compact('num','b_data','category','path','category_all'));
+        
         }
     }
 
