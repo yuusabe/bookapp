@@ -13,6 +13,7 @@ class AccountController extends Controller
 {
     //アカウント登録時のコントローラー
     private $formItems = ["account_name", "address", "password","accounttype"];
+    private $formItems_change = ["account_number"];
 
     private $validator = [
         "account_name" => "required",
@@ -31,25 +32,25 @@ class AccountController extends Controller
 
 
 
-                $input = $request->only($this->formItems);
-                
-                $validator = Validator::make($input, $this->validator);
-                if($validator->fails()){
-                    return redirect()->action('App\Http\Controllers\AccountController@show')
-                        ->withInput()
-                        ->withErrors($validator);
-                }
-                
-                //セッションに書き込む
-                $request->session()->put("account_input", $input);
-                return redirect()->action('App\Http\Controllers\AccountController@confirm');
+            $input = $request->only($this->formItems);
+            
+            $validator = Validator::make($input, $this->validator);
+            if($validator->fails()){
+                return redirect()->action('App\Http\Controllers\AccountController@show')
+                    ->withInput()
+                    ->withErrors($validator);
+            }
+            
+            //セッションに書き込む
+            $request->session()->put("account_input", $input);
+            return redirect()->action('App\Http\Controllers\AccountController@confirm');
 
 
         }elseif($request->has('change')){
 
-            $input = $request;
-            $request->session()->put("accountc_input", $input);
-            return view('account_change');
+            $input_change = $request->only($this->$formItems_change);
+            $request->session()->put("accountc_input",$input_change);
+            return redirect()->action('App\Http\Controllers\AccountchangeController@confirm');
         }
 
     }
