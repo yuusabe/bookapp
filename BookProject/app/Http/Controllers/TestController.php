@@ -103,7 +103,7 @@ class TestController extends Controller
         $lend_data = Lend_book::where('return_flag',FALSE)
         ->where('l_book_number',$num)
         ->first();
-        $account_data = Account::where('logic_flag',TRUE)
+        $account_data = Account::where('a_logic_flag',TRUE)
         ->where('account_number',$lend_data->l_account_number)
         ->first();
         $category_data = Book_category::where('bc_logic_flag',TRUE)
