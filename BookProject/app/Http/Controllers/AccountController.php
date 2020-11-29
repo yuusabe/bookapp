@@ -49,7 +49,7 @@ class AccountController extends Controller
 
             $input = $request;
             $request->session()->put("accountc_input", $input);
-            return view('account_change');
+            return redirect()->action('App\Http\Controllers\AccountchangeController@confirm');
         }
 
     }
@@ -114,7 +114,7 @@ class AccountController extends Controller
 
 
     //書籍編集関連画面
-    function change(Request $request){
+    function change1(Request $request){
         //セッションから値を取り出す
         $input = $request->session()->get("accountc_input");
         Log::debug($data);
