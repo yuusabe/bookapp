@@ -129,9 +129,16 @@ class AccountController extends Controller
         $input = $request->session()->get("accountc_input");
         Log::debug($input);
         //セッションに値が無い時はフォームに戻る
-        if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountController@show');
-        }
-        return view("account_change",["input" => $input]);
-}
+        return view("account_change_check",["input" => $input]);
+    }
+
+    function confirm1(Request $request){
+    //セッションから値を取り出す
+    $input = $request->session()->get("account_input");
+    //セッションに値が無い時はフォームに戻る
+    if(!$input){
+        return redirect()->action('App\Http\Controllers\AccountController@show');
+    }
+    return view("account_management_check",["input" => $input]);
+    }
 }

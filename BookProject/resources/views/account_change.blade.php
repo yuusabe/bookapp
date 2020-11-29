@@ -10,9 +10,8 @@
     <div id="text">
       <p>編集する内容を入力してください。</p>
     </div>
-    <form method="post" action="{{ route('account_manage_change.post') }}">
+    <form method="post" action="{{ route('account_manage.send') }}">
       @csrf
-      var_dump($a_list as $a)
       <div id=tb_p>          
           <div id="tb">
             <p>アカウント名</p>
