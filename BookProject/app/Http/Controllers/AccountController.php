@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Log;
 class AccountController extends Controller
 {
     //アカウント登録時のコントローラー
-    private $formItems = ["account_number","account_name", "address", "password","accounttype"];
+    private $formItems = ["account_name", "address", "password","accounttype"];
+    private $formItems_change = ["account_number"];
 
     private $validator = [
         "account_name" => "required",
@@ -47,8 +48,8 @@ class AccountController extends Controller
 
         }elseif($request->has('change')){
 
-            //$input = $request;
-            $request->session()->put("accountc_input");
+            $input_change = $request->only($this->$formItems_change);
+            $request->session()->put("accountc_input",$input_change);
             return redirect()->action('App\Http\Controllers\AccountchangeController@confirm');
         }
 
