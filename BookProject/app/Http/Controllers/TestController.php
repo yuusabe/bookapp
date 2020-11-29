@@ -134,20 +134,19 @@ class TestController extends Controller
 
     //書籍編集画面、各ボタン押下時
     function check_post(Request $request){
-        if($request->has('change')){
             //書籍編集画面用
+        if($request->has('change')){
             
 
             return view('book_change_check');
-
-        }elseif($request->has('delete')){
             //書籍削除画面用
+        }elseif($request->has('delete')){
+            
             $num = $request['number'];
             return view('book_delete_check', compact('num'));
-            
 
-        }elseif($request->has('cancel')){
             //キャンセル用
+        }elseif($request->has('cancel')){
             return redirect()->route('book.list');
         }
     }
@@ -159,7 +158,11 @@ class TestController extends Controller
 
     //書籍編集確認画面、確定ボタン押下時
     function change_check_send(){
-        return view('completion');
+        if($request->has('change')){
+            return view('completion');
+        }elseif($request->has('cancel')){
+            return redirect()->route('book.list');
+        }
     }
 
     //書籍削除確認画面表示
