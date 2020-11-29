@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\Category;
 use App\Models\Book_category;
+use App\Models\Lend_book;
 use Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -95,7 +96,25 @@ class TestController extends Controller
     //書籍詳細画面、貸出ボタン押下時
     function l_post(Request $request){
         $num = $request['number'];
-        return view('lend_book',compact('num'));
+        $book_data = Book::where('b_logic_flag',TRUE)
+        ->where('book_number',$num)
+        ->first();
+        $lend_data = Lend_book::where('return_flag',FALSE)
+        ->where('l_book_number',$num)
+        ->first();
+        $account_data = Account::where('logic_flag',TRUE)
+        ->where('account_number',$lend_data->l_account_number)
+        ->first();
+        $category_data = Book_category::where('bc_logic_flag',TRUE)
+        ->where('bc_book_number',$num)
+        ->first();
+        $category_data2 = Category::where('c_logic_flag',TRUE)
+        ->where('category_number',$category_data->bc_category_number)
+        ->first();
+        $account_name = $account_data->account_name;
+        $return_day = $lend_data->return_day;
+        $category_name = $category_data2->category_name;
+        return view('lend_book',compact('num','book_data','account_name','return_day', 'category_name'));
     }
 
     //貸出画面表示
