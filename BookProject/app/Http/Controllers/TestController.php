@@ -109,7 +109,7 @@ class TestController extends Controller
             ->first();
         }else{
             $category_data = new \stdClass();
-            $category_data->bc_category_name = "a";
+            $category_data->bc_category_name = 0;
         }
             $category_exist2 = Category::where('c_logic_flag',TRUE)
             ->where('category_number',$category_data->bc_category_number)
@@ -131,7 +131,7 @@ class TestController extends Controller
             ->first();
         }else{
             $lend_data = new \stdClass();
-            $lend_data->return_day = 'a';
+            $lend_data->return_day = '0000年00月00日';
         }
         if(!empty($lend_data->l_account_number)){
             $account_data = Account::where('a_logic_flag',TRUE)
