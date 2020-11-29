@@ -119,7 +119,7 @@ class AccountController extends Controller
     function change(Request $request){
         //セッションから値を取り出す
         $input = $request->session()->get("accountc_input");
-        Log::debug($data);
+        //Log::debug($data);
         //セッションに値が無い時はフォームに戻る
         if(!$input){
             return redirect()->action('App\Http\Controllers\AccountController@show');
