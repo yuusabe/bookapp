@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Log;
 class AccountController extends Controller
 {
     //アカウント登録時のコントローラー
-    private $formItems = ["account_name", "address", "password","accounttype"];
+    private $formItems = ["account_number","account_name", "address", "password","accounttype"];
 
     private $validator = [
         "account_name" => "required",
@@ -114,7 +114,7 @@ class AccountController extends Controller
 
 
     //書籍編集関連画面
-    function change1(Request $request){
+    function change(Request $request){
         //セッションから値を取り出す
         $input = $request->session()->get("accountc_input");
         Log::debug($data);
