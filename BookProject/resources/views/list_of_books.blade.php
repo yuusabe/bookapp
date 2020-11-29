@@ -46,6 +46,7 @@
 
 
   @foreach($data as $d)
+  @if($b_logic_flag == TRUE)
   <div id="book_p">
     <div id="book">
       <img src="{{$d->path}}" id="image" alt="表紙画像" width="135" height="135" />
@@ -60,11 +61,11 @@
         <p>発行年：{{$d -> year_of_issue}}</p>
         <p>出版社：{{$d -> publisher}}</p>
         @if(empty($d->return_flag))
-        <p>貸出状況：貸出可</p>
+          <p>貸出状況：貸出可</p>
         @elseif($d->return_flag == TRUE)
-        <p>貸出状況：貸出可</p>
+          <p>貸出状況：貸出可</p>
         @else
-        <p>貸出状況：貸出中
+          <p>貸出状況：貸出中</p>
         @endif
       </div>
     </div>
@@ -93,7 +94,7 @@
     </form>
     </div>
   </div>
-  {{$d->return_flag}}
+  @endif
   @endforeach
 
   <div id="button_p">
