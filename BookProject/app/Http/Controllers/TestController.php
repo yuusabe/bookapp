@@ -139,7 +139,7 @@ class TestController extends Controller
             ->first();
         }else{
             $account_data = new \stdClass();
-            $account_data->accont_name = 'a';
+            $account_data->account_name = 'a';
         }
             $account_name = $account_data->account_name;
             $return_day = $lend_data->return_day;
