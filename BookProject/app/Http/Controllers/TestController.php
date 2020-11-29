@@ -108,8 +108,8 @@ class TestController extends Controller
             ->where('bc_book_number',$num)
             ->first();
         }else{
-            $$category_data = new stdClass;
-            $category_data->bc_category_name = "NULL";
+            $category_data = new \stdClass();
+            $category_data->bc_category_name = "a";
         }
             $category_exist2 = Category::where('c_logic_flag',TRUE)
             ->where('category_number',$category_data->bc_category_number)
@@ -119,7 +119,8 @@ class TestController extends Controller
             ->where('category_number',$category_data->bc_category_number)
             ->first();
         }else{
-            $category_data2->category_name = 'NULL';
+            $category_data2 = new \stdClass();
+            $category_data2->category_name = 'a';
         }
             $lend_exist = Lend_book::where('return_flag',FALSE)
             ->where('l_book_number',$num)
@@ -129,14 +130,16 @@ class TestController extends Controller
             ->where('l_book_number',$num)
             ->first();
         }else{
-            $lend_data->return_day = 'NULL';
+            $lend_data = new \stdClass();
+            $lend_data->return_day = 'a';
         }
         if(!empty($lend_data->l_account_number)){
             $account_data = Account::where('a_logic_flag',TRUE)
             ->where('account_number',$lend_data->l_account_number)
             ->first();
         }else{
-            $account_data->accont_name = 'NULL';
+            $account_data = new \stdClass();
+            $account_data->accont_name = 'a';
         }
             $account_name = $account_data->account_name;
             $return_day = $lend_data->return_day;
