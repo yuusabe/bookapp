@@ -143,7 +143,7 @@ class TestController extends Controller
 
         }elseif($request->has('cancel')){
             //キャンセル用
-            return redirect()->action('App\Http\Controllers\TestController@i_show');
+            return redirect()->action('App\Http\Controllers\TestController@getbook');
         }
     }
 
