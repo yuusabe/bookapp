@@ -5,8 +5,6 @@
 @section('body')
 
 <main>
-{{$num}}
-{{$category}}
 
     <div id="book_p">
         <div id="book">
