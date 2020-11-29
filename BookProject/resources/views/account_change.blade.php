@@ -12,15 +12,16 @@
     </div>
     <form method="post" action="{{ route('account_manage_change.post') }}">
       @csrf
+      var_dump($a_list as $a)
       <div id=tb_p>          
           <div id="tb">
             <p>アカウント名</p>
           </div>
-          <input type="text" id="tbox" name="account_name" placeholder="DTG太郎" value = "{{$a->account_name}}">
+          <input type="text" id="tbox" name="account_name" placeholder="DTG太郎" value = "{{$a_data->account_name}}">
           <div id="tb">
             <p>メールアドレス</p>
           </div>
-          <input type="email" id="tbox" name="address" placeholder="abc@example.com" value = "{{$a->mail_address}}">
+          <input type="email" id="tbox" name="address" placeholder="abc@example.com" value = "{{$a_data->mail_address}}">
           <div id="tb">
             <p>パスワード</p>
           </div>

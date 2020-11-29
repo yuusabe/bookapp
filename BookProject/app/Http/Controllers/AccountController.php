@@ -49,7 +49,15 @@ class AccountController extends Controller
 
         }elseif($request->has('change')){
 
-            $input_change = PostRequest::input('account_number');
+            $input_change1 = PostRequest::input('account_number');
+            $input_change2 = PostRequest::input('account_name');
+            $input_change3 = PostRequest::input('mail_address');
+            $input_change4 = PostRequest::input('manager_flag');
+
+            $input_change = array(
+                $input_change1,$input_change2,$input_change3,$input_change4
+            );
+
             $request->session()->put("accountc_input",$input_change);
             return redirect()->action('App\Http\Controllers\AccountController@change');
         }
