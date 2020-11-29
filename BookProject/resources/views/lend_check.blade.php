@@ -17,7 +17,7 @@
                 <p>著者：DTG花子</p>
                 <p>出版社：技術評論社</p>
                 <p>カテゴリ：RPA</p>
-                <p>貸出期間：yyyyMMdd 〜 yyyyMMdd</p>
+                <p>貸出期間：yyyyMMdd 〜 {{$last}}</p>
             </div>
         </div>
     </div>

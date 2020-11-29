@@ -23,8 +23,6 @@
             </div>
         </div>
     </div>
-    <form action="{{ route('book.lc_post') }}" method="post">
-        @csrf
         <div id="lend">
             <p>貸出期間選択</p>
         </div>
@@ -33,6 +31,8 @@
                 <div class="col-sm-9 form-inline" id="lend">
                     <div class="input-daterange input-group" id="datepicker">
                         <input type="date" class="input-sm form-control" name="start" id="dbox" value="<?php echo date('Y年m月d日');?>"/>
+    <form action="{{ route('book.lc_post') }}" method="post">
+        @csrf
                         <span class="input-group-addon" id="dbox">　〜　</span>
                         <input type="date" class="input-sm form-control" name="last" id="dbox" value="<?php echo date('Y年m月d日');?>"/>
                     </div>
