@@ -91,7 +91,7 @@
     </form>
     </div>
   </div>
-  {{$d->multi}}
+  {{$d->return_flag}}
   @endforeach
 
   <div id="button_p">
@@ -107,5 +107,4 @@
     </div>
   </div>
 </main>
-{{$d->multi}}
 @endsection
