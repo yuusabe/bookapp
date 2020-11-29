@@ -87,9 +87,22 @@
       <input type = "hidden" name="path" value="{{$d->path}}"> 
       <input type = "hidden" name="category" value="{{$d->category_name}}">
 
-      <button type="submit" class="btn btn-outline-danger" name = "change">
-        書籍編集
-      </button>
+      <?php
+      if (!empty($_COOKIE["mflag"]))
+      {
+        $mflag = $_COOKIE["mflag"];
+      }
+      else
+      {
+          $mflag = "なし";
+      }
+      if ($mflag == "1")
+      {
+          echo '<button type="submit" class="btn btn-outline-danger" name = "change">
+                書籍編集
+              </button>';
+            }
+      ?>
     </form>
     </div>
   </div>
