@@ -15,7 +15,11 @@
                 <p>発行年：{{$book_data->year_of_issue}}</p>
                 <p>著者：{{$book_data->Author}}</p>
                 <p>出版社：{{$book_data->publisher}}</p>
+            @if($category_name == 'a')
+                <p>カテゴリ：分類なし</p>
+            @else
                 <p>カテゴリ：{{$category_name}}</p>
+            @endif
             </div>
         </div>
     </div>
