@@ -51,7 +51,7 @@ class AccountController extends Controller
 
             $input_change = PostRequest::input('account_number');
             $request->session()->put("accountc_input",$input_change);
-            return redirect()->action('App\Http\Controllers\AccountchangeController@confirm');
+            return redirect()->action('App\Http\Controllers\AccountController@change');
         }
 
     }
