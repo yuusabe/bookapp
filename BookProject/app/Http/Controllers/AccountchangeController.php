@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Log;
 
 class AccountchangeController extends Controller
 {
-    //アカウント登録時のコントローラー
-    private $formItems = ["account_name", "address", "password","accounttype"];
+    //アカウント編集時のコントローラー
+    private $formItems = ["acc_number","account_name", "address", "password","accounttype"];
 
     private $validator = [
         "account_name" => "required",
@@ -21,45 +21,46 @@ class AccountchangeController extends Controller
     ];
 
     function change(Request $request){
-        $num = $request['number'];
-        Log::debug($num);
-        return view('account_change', compact('num'));
+        $a_data_origin = $request;
+        $request->session()->put("accountc_input", $a_data_origin);
+        $a_data->$request->session()->get("accountc_input");
+        return view('account_change', compact('a_data'));
+        Log::debug($a_data);
     }
 
-    function show(){
-        return view('account_management');
-    }
+    // function show(){
+    //     return view('account_change');
+    // }
+
     function post(Request $request){
         $input = $request->only($this->formItems);
         
         $validator = Validator::make($input, $this->validator);
 		if($validator->fails()){
-			return redirect()->action('App\Http\Controllers\AccountController@show')
-				->withInput()
-				->withErrors($validator);
+			return view('account_change');
         }
         
         //セッションに書き込む
-        $request->session()->put("account_input", $input);
-        return redirect()->action('App\Http\Controllers\AccountController@confirm');
+        $request->session()->put("accountc_input", $input);
+        return redirect()->action('App\Http\Controllers\AccountchangeController@confirm');
     }
 
     function confirm(Request $request){
         //セッションから値を取り出す
-        $input = $request->session()->get("account_input");
+        $input = $request->session()->get("accountc_input");
         //セッションに値が無い時はフォームに戻る
         if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountController@show');
+            return view('account_change');
         }
         return view("account_management_check",["input" => $input]);
     }
 
     function send(Request $request){
         //セッションから値を取り出す
-        $input = $request->session()->get("account_input");
+        $input = $request->session()->get("accountc_input");
         //セッションに値が無い時はフォームに戻る
         if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountController@show');
+            return view('account_change');
         }
 
 
@@ -91,7 +92,7 @@ class AccountchangeController extends Controller
             ]);
         }
         //セッションを空にする
-        $request->session()->forget("account_input");
+        $request->session()->forget("accountc_input");
         return view("completion");
     }
 

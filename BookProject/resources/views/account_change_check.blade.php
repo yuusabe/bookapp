@@ -4,6 +4,7 @@
 @extends("common.header")
 @section('body')
 <main>
+  
   <div id="account">
     <p>アカウント名：</p>
     <p>メールアドレス：</p>
