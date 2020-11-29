@@ -109,7 +109,7 @@ class TestController extends Controller
             ->first();
         }else{
             $category_data = new \stdClass();
-            $category_data->bc_category_name = 0;
+            $category_data->bc_category_number = 0;
         }
             $category_exist2 = Category::where('c_logic_flag',TRUE)
             ->where('category_number',$category_data->bc_category_number)
