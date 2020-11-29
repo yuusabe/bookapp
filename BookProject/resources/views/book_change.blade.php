@@ -98,7 +98,7 @@
             @csrf
             <input type = "hidden" name="number" value="{{$num}}">
             <div id="button">
-                <button type="submit" class="btn btn-outline-secondary">
+                <button type="submit" class="btn btn-outline-secondary" name = "cancel">
                 キャンセル
                 </button>
             </div>

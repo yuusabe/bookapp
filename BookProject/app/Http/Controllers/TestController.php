@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Account;
 use App\Models\Book;
 use App\Models\Category;
 use App\Models\Book_category;
+use App\Models\Lend_book;
 use Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -94,8 +96,55 @@ class TestController extends Controller
 
     //書籍詳細画面、貸出ボタン押下時
     function l_post(Request $request){
-        $num = $request['number'];
-        return view('lend_book',compact('num'));
+            $num = $request['number'];
+            $book_data = Book::where('b_logic_flag',TRUE)
+            ->where('book_number',$num)
+            ->first();
+            $category_exist = Book_category::where('bc_logic_flag',TRUE)
+            ->where('bc_book_number',$num)
+            ->exists();
+        if($category_exist == TRUE){
+            $category_data = Book_category::where('bc_logic_flag',TRUE)
+            ->where('bc_book_number',$num)
+            ->first();
+        }else{
+            $category_data = new \stdClass();
+            $category_data->bc_category_number = 0;
+        }
+            $category_exist2 = Category::where('c_logic_flag',TRUE)
+            ->where('category_number',$category_data->bc_category_number)
+            ->exists();
+        if($category_exist == TRUE){
+            $category_data2 = Category::where('c_logic_flag',TRUE)
+            ->where('category_number',$category_data->bc_category_number)
+            ->first();
+        }else{
+            $category_data2 = new \stdClass();
+            $category_data2->category_name = 'a';
+        }
+            $lend_exist = Lend_book::where('return_flag',FALSE)
+            ->where('l_book_number',$num)
+            ->exists();
+        if($lend_exist == TRUE){
+            $lend_data = Lend_book::where('return_flag',FALSE)
+            ->where('l_book_number',$num)
+            ->first();
+        }else{
+            $lend_data = new \stdClass();
+            $lend_data->return_day = '0000年00月00日';
+        }
+        if(!empty($lend_data->l_account_number)){
+            $account_data = Account::where('a_logic_flag',TRUE)
+            ->where('account_number',$lend_data->l_account_number)
+            ->first();
+        }else{
+            $account_data = new \stdClass();
+            $account_data->account_name = 'a';
+        }
+            $account_name = $account_data->account_name;
+            $return_day = $lend_data->return_day;
+            $category_name = $category_data2->category_name;
+            return view('lend_book',compact('num','book_data','account_name','return_day', 'category_name'));
     }
 
     //貸出画面表示
@@ -105,9 +154,14 @@ class TestController extends Controller
 
     //貸出画面、貸出ボタン押下時
     function lc_post(Request $request){
-        $num = $request['number'];
-        $last = $request['last'];
-        return view('lend_check',compact('num', 'last'));
+        if($request->has('lend')){
+            $num = $request['number'];
+            $last = $request['last'];
+            return view('lend_check',compact('num', 'last'));
+
+        }elseif($request->has('cancel')){
+            return redirect()->route('book.list');
+        }
     }
 
     //貸出確認画面表示
@@ -129,21 +183,20 @@ class TestController extends Controller
 
     //書籍編集画面、各ボタン押下時
     function check_post(Request $request){
+            //編集ボタン押下時
         if($request->has('change')){
-            //書籍編集画面用
             
 
             return view('book_change_check');
-
+            //削除ボタン押下時
         }elseif($request->has('delete')){
-            //書籍削除画面用
+            
             $num = $request['number'];
             return view('book_delete_check', compact('num'));
-            
 
+            //キャンセルボタン押下時
         }elseif($request->has('cancel')){
-            //キャンセル用
-            return redirect()->action('App\Http\Controllers\TestController@getbook');
+            return redirect()->route('book.list');
         }
     }
 
@@ -154,7 +207,11 @@ class TestController extends Controller
 
     //書籍編集確認画面、確定ボタン押下時
     function change_check_send(){
-        return view('completion');
+        if($request->has('change')){
+            return view('completion');
+        }elseif($request->has('cancel')){
+            return redirect()->route('book.list');
+        }
     }
 
     //書籍削除確認画面表示
@@ -164,12 +221,16 @@ class TestController extends Controller
 
     //書籍削除確認画面、確定ボタン押下時
     function delete_send(Request $request){
-        $num = $request['number'];
-        Book::where('b_logic_flag',TRUE)
-            ->where('book_number',$num)
-            ->update([
-                'b_logic_flag' => FALSE
-            ]);
+        if($request->has('delete')){
+            $num = $request['number'];
+            Book::where('b_logic_flag',TRUE)
+                ->where('book_number',$num)
+                ->update([
+                    'b_logic_flag' => FALSE
+                ]);
             return view('completion');
+        }elseif($request->has('cancel')){
+            return redirect()->route('book.list');
+        }
     }
 }
