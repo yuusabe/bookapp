@@ -211,6 +211,7 @@ class TestController extends Controller
     function lc_post(Request $request){
         if($request->has('lend')){
             $num = $request['number'];
+            $start = $request['start'];
             $last = $request['last'];
 
             $book_data = Book::where('b_logic_flag',TRUE)
