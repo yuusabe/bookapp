@@ -105,9 +105,14 @@ class TestController extends Controller
 
     //貸出画面、貸出ボタン押下時
     function lc_post(Request $request){
-        $num = $request['number'];
-        $last = $request['last'];
-        return view('lend_check',compact('num', 'last'));
+        if($request->has('lend')){
+            $num = $request['number'];
+            $last = $request['last'];
+            return view('lend_check',compact('num', 'last'));
+
+        }elseif($request->has('cancel')){
+            return redirect()->route('book.list');
+        }
     }
 
     //貸出確認画面表示
@@ -143,7 +148,7 @@ class TestController extends Controller
 
         }elseif($request->has('cancel')){
             //キャンセル用
-            return redirect()->action('App\Http\Controllers\TestController@getbook');
+            return redirect()->route('book.list');
         }
     }
 
