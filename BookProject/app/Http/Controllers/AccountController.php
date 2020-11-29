@@ -13,7 +13,7 @@ class AccountController extends Controller
 {
     //アカウント登録時のコントローラー
     private $formItems = ["account_name", "address", "password","accounttype"];
-    private $formItems_change = ["account_number"];
+    //private $formItems_change = ["account_number"];
 
     private $validator = [
         "account_name" => "required",
@@ -48,7 +48,7 @@ class AccountController extends Controller
 
         }elseif($request->has('change')){
 
-            $input_change = $request->only($this->$formItems_change);
+            $input_change = Request::input('account_number');
             $request->session()->put("accountc_input",$input_change);
             return redirect()->action('App\Http\Controllers\AccountchangeController@confirm');
         }
