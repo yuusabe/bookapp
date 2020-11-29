@@ -6,7 +6,6 @@
 @section('body')
 
 <main>
-{{$a_data->account_number}}
  <!--  <form> -->
     <div id="text">
       <p>編集する内容を入力してください。</p>
