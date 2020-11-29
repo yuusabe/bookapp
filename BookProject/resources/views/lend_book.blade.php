@@ -19,7 +19,8 @@
             </div>
         </div>
     </div>
-    
+    <form action="{{ route('book.lc_post') }}" method="post">
+    @csrf
     <div id="lend">
         <p>貸出期間選択</p>
     </div>
@@ -40,8 +41,9 @@
                 キャンセル
             </button>
         </div>
+    <input type = "hidden" name="number" value="{{$num}}">
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary" onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/lend_check'">
+            <button type="submit" class="btn btn-outline-secondary" >
                 確認
             </button>
         </div>

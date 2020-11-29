@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Account;
 use App\Models\Lend_book;
 use Validator;
+use Illuminate\Support\Facades\Log;
+
 
 class AccountController extends Controller
 {
@@ -23,28 +25,43 @@ class AccountController extends Controller
         return view('account_management');
     }
     function post(Request $request){
-        $input = $request->only($this->formItems);
-        
-        $validator = Validator::make($input, $this->validator);
-		if($validator->fails()){
-			return redirect()->action('App\Http\Controllers\AccountController@show')
-				->withInput()
-				->withErrors($validator);
-        }
-        
-        //セッションに書き込む
-        $request->session()->put("account_input", $input);
-        return redirect()->action('App\Http\Controllers\AccountController@confirm');
-    }
 
-    function confirm(Request $request){
-        //セッションから値を取り出す
-        $input = $request->session()->get("account_input");
-        //セッションに値が無い時はフォームに戻る
-        if(!$input){
-            return redirect()->action('App\Http\Controllers\AccountController@show');
+
+        if($request->has('add')){
+
+
+
+                $input = $request->only($this->formItems);
+                
+                $validator = Validator::make($input, $this->validator);
+                if($validator->fails()){
+                    return redirect()->action('App\Http\Controllers\AccountController@show')
+                        ->withInput()
+                        ->withErrors($validator);
+                }
+                
+                //セッションに書き込む
+                $request->session()->put("account_input", $input);
+                return redirect()->action('App\Http\Controllers\AccountController@confirm');
+
+
+        }elseif($request->has('change')){
+
+            $input = $request;
+            $request->session()->put("accountc_input", $input);
+            return view('account_change');
         }
-        return view("account_management_check",["input" => $input]);
+
+    }
+    //書籍登録関連画面
+    function confirm(Request $request){
+            //セッションから値を取り出す
+            $input = $request->session()->get("account_input");
+            //セッションに値が無い時はフォームに戻る
+            if(!$input){
+                return redirect()->action('App\Http\Controllers\AccountController@show');
+            }
+            return view("account_management_check",["input" => $input]);
     }
 
     function send(Request $request){
@@ -88,11 +105,23 @@ class AccountController extends Controller
         return view("completion");
     }
 
-
     function list(){
         $a_list = Account::select()
         ->where('a_logic_flag',TRUE)
         ->get();
         return view('account_management', compact('a_list'));
     }
+
+
+    //書籍編集関連画面
+    function change(Request $request){
+        //セッションから値を取り出す
+        $input = $request->session()->get("accountc_input");
+        Log::debug($data);
+        //セッションに値が無い時はフォームに戻る
+        if(!$input){
+            return redirect()->action('App\Http\Controllers\AccountController@show');
+        }
+        return view("account_change",["input" => $input]);
+}
 }

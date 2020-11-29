@@ -43,6 +43,8 @@
   
   <input id="sbtn" id="search" type="submit" value="検索" /></div>
   </form> -->
+
+
   @foreach($data as $d)
   <div id="book_p">
     <div id="book">
@@ -51,14 +53,16 @@
     
     <div id="book">
       <div id="text">
-        <p id="category">{{$d -> category_name}}</p>
+        <p id="category">
+        {{$d -> category_name}}
+        </p>
         <p id="title">タイトル：{{$d -> title}}</p>
         <p>発行年：{{$d -> year_of_issue}}</p>
         <p>出版社：{{$d -> publisher}}</p>
-        @if($d->return_flag == TRUE)
-        <p>貸出状況：貸出可</p>
-        @elseif($d->return_flag == FALSE)
+        @if($d->return_flag == FALSE)
         <p>貸出状況：貸出中</p>
+        @else
+        <p>貸出状況：貸出可</p>
         @endif
       </div>
     </div>
@@ -69,17 +73,25 @@
     <form action="{{ route('book.i_post') }}" method="post" enctype="multipart/form-data">
       @csrf
       <input type = "hidden" name="number" value="{{$d->book_number}}">
-        <button type="submit" class="btn btn-outline-secondary">
+        <button type="submit" class="btn btn-outline-secondary" name = "info">
           詳細表示
         </button>
     </form>
     </div>
     <div id="button">
-      <button type="button" class="btn btn-outline-danger">
+    <form action="{{ route('book.i_post') }}" method="post" enctype="multipart/form-data">
+      @csrf
+      <input type = "hidden" name="number" value="{{$d->book_number}}">
+      <input type = "hidden" name="path" value="{{$d->path}}"> 
+      <input type = "hidden" name="category" value="{{$d->category_name}}">
+
+      <button type="submit" class="btn btn-outline-danger" name = "change">
         書籍編集
       </button>
+    </form>
     </div>
   </div>
+  {{$d->multi}}
   @endforeach
 
   <div id="button_p">
@@ -95,5 +107,5 @@
     </div>
   </div>
 </main>
-
+{{$d->multi}}
 @endsection
