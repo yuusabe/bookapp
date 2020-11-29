@@ -31,24 +31,24 @@ class AccountController extends Controller
 
 
 
-                $input = $request->only($this->formItems);
-                
-                $validator = Validator::make($input, $this->validator);
-                if($validator->fails()){
-                    return redirect()->action('App\Http\Controllers\AccountController@show')
-                        ->withInput()
-                        ->withErrors($validator);
-                }
-                
-                //セッションに書き込む
-                $request->session()->put("account_input", $input);
-                return redirect()->action('App\Http\Controllers\AccountController@confirm');
+            $input = $request->only($this->formItems);
+            
+            $validator = Validator::make($input, $this->validator);
+            if($validator->fails()){
+                return redirect()->action('App\Http\Controllers\AccountController@show')
+                    ->withInput()
+                    ->withErrors($validator);
+            }
+            
+            //セッションに書き込む
+            $request->session()->put("account_input", $input);
+            return redirect()->action('App\Http\Controllers\AccountController@confirm');
 
 
         }elseif($request->has('change')){
 
-            $input = $request;
-            $request->session()->put("accountc_input", $input);
+            //$input = $request;
+            $request->session()->put("accountc_input");
             return redirect()->action('App\Http\Controllers\AccountchangeController@confirm');
         }
 
