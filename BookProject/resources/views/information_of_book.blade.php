@@ -5,8 +5,6 @@
 @section('body')
 
 <main>
-{{$num}}
-{{$category}}
 
     <div id="book_p">
         <div id="book">
@@ -18,31 +16,48 @@
                 <p>発行年：{{$book_data->year_of_issue}}</p>
                 <p>著者：{{$book_data->Author}}</p>
                 <p>出版社：{{$book_data->publisher}}</p>
+            @if($category_name == 'a')
+                <p>カテゴリ：分類なし</p>
+            @else
                 <p>カテゴリ：{{$category_name}}</p>
+<<<<<<< HEAD
                 <p>貸出状況：{{}}</p>
+=======
+            @endif
+            @if($return_day == '0000年00月00日')
+                <p>貸出状況：貸出可</p>
+            @else
+                <p>貸出状況：貸出中</p>
+>>>>>>> 6f4912eff29b39e56c0b760a22f9e9d8e182ba55
                 <p>返却予定日：{{$return_day}}</p>
                 <p>貸出者：{{$account_name}}</p>
+            @endif
+                
             </div>
         </div>
     </div>
     <div id="button_p">
+    <form action="{{ route('book.l_post') }}" method="post">
+        @csrf
         <div id="button">
-            <button type="button" class="btn btn-outline-secondary"  onclick="location.href='https://www-cf.dtg-shosekikanri2020-test.tk/list_of_books'">
+            <button type="submit" class="btn btn-outline-secondary"  name = "list">
                 一覧へ
             </button>
         </div>
+    </form>
         <form action="{{ route('book.l_post') }}" method="post">
     @csrf
     <input type = "hidden" name="number" value="{{$num}}">
         <div id="button">
-            <button type="submit" class="btn btn-outline-secondary" >
+        @if($return_day == '0000年00月00日')
+            <button type="submit" class="btn btn-outline-secondary" name = "lend">
                 貸出手続きへ
             </button>
-
+        @else
             <button type="submit" class="btn btn-outline-secondary" disabled>
                 貸出手続きへ
             </button>
-
+        @endif
             </form>
 
         </div>
