@@ -68,12 +68,12 @@
       <div id="button_p">
       <form method="post" action= "{{ route('account_manage.post') }}">
         @csrf
-        <div id="button">
         <input type = "hidden" name="account_number" value="{{$a->account_number}}">
+        <div id="button">
         <!-- <input type = "hidden" name="account_name" value="{{$a->account_name}}">
         <input type = "hidden" name="mail_address" value="{{$a->mail_address}}">
         <input type = "hidden" name="manager_flag" value="{{$a->manager_flag}}"> -->
-          <button type="submit" class="btn btn-outline-secondary"  name = "change">
+          <button type="submit" class="btn btn-outline-secondary" name = "change">
             編集
           </button>
         </div>
